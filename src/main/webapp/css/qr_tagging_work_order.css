@@ -1,0 +1,310 @@
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #eef5ff;
+            color: #08348f;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .no-print {
+            background: #ffffff;
+            border-bottom: 1px solid #d8e6f7;
+            padding: 16px 18px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .toolbar {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .toolbar h1 {
+            margin: 0;
+            color: #08348f;
+            font-size: 22px;
+            font-weight: 950;
+            text-transform: uppercase;
+        }
+
+        .toolbar p {
+            margin: 4px 0 0 0;
+            color: #64748b;
+            font-size: 12px;
+            font-weight: 760;
+        }
+
+        .btn-row {
+            display: flex;
+            gap: 9px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            min-height: 38px;
+            padding: 0 14px;
+            border-radius: 999px;
+            border: 1px solid #d7e5f7;
+            background: #ffffff;
+            color: #08348f;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 12px;
+            font-weight: 900;
+            cursor: pointer;
+        }
+
+        .btn.primary {
+            background: #08348f;
+            color: #ffffff;
+            border-color: #08348f;
+        }
+
+        .page {
+            max-width: 1280px;
+            margin: 18px auto;
+            background: #ffffff;
+            border: 1px solid #d8e6f7;
+            border-radius: 18px;
+            padding: 22px;
+        }
+
+        .header {
+            display: grid;
+            grid-template-columns: 80px minmax(0, 1fr) 220px;
+            gap: 14px;
+            align-items: center;
+            border-bottom: 2px solid #08348f;
+            padding-bottom: 14px;
+            margin-bottom: 16px;
+        }
+
+        .header img {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+        }
+
+        .header h2 {
+            margin: 0;
+            color: #08348f;
+            font-size: 22px;
+            font-weight: 950;
+            text-transform: uppercase;
+            line-height: 1.25;
+        }
+
+        .header p {
+            margin: 5px 0 0 0;
+            color: #04733b;
+            font-size: 12px;
+            font-weight: 900;
+            line-height: 1.35;
+        }
+
+        .meta-box {
+            text-align: right;
+            color: #14336f;
+            font-size: 11px;
+            font-weight: 850;
+            line-height: 1.45;
+        }
+
+        .summary {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+
+        .summary div {
+            border: 1px solid #d8e6f7;
+            border-radius: 12px;
+            padding: 10px;
+            background: #f8fbff;
+        }
+
+        .summary b {
+            display: block;
+            color: #08348f;
+            font-size: 18px;
+            font-weight: 950;
+        }
+
+        .summary span {
+            color: #64748b;
+            font-size: 10px;
+            font-weight: 850;
+            text-transform: uppercase;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 11px;
+        }
+
+        th {
+            background: #08348f;
+            color: #ffffff;
+            padding: 9px 7px;
+            text-align: left;
+            font-weight: 900;
+            text-transform: uppercase;
+            border: 1px solid #08348f;
+        }
+
+        td {
+            padding: 8px 7px;
+            color: #14336f;
+            font-weight: 760;
+            border: 1px solid #cdddf2;
+            vertical-align: top;
+        }
+
+        .qr-img {
+            width: 58px;
+            height: 58px;
+            object-fit: contain;
+            border: 1px solid #d8e6f7;
+            padding: 3px;
+        }
+
+        .sign-section {
+            margin-top: 24px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .sign-box {
+            border-top: 1px solid #08348f;
+            padding-top: 8px;
+            color: #14336f;
+            font-size: 11px;
+            font-weight: 850;
+            min-height: 58px;
+        }
+
+        @media print {
+            @page {
+                size: A4 landscape;
+                margin: 8mm;
+            }
+
+            body {
+                background: #ffffff;
+            }
+
+            .no-print {
+                display: none !important;
+            }
+
+            .page {
+                margin: 0;
+                max-width: none;
+                border: 0;
+                border-radius: 0;
+                padding: 0;
+            }
+
+            .qr-img {
+                width: 45px;
+                height: 45px;
+            }
+
+            table {
+                font-size: 9px;
+            }
+
+            th, td {
+                padding: 5px;
+            }
+        }
+    
+        /* ===== PRINT / WORK ORDER OFFICIAL RAILWAY POLISH ===== */
+        :root {
+            --ir-blue: #08348f;
+            --ir-line: #d8e4f5;
+            --ir-text: #06215f;
+        }
+
+        body {
+            color: var(--ir-text) !important;
+            background: #ffffff !important;
+            font-family: "Segoe UI", Arial, sans-serif !important;
+        }
+
+        .print-header,
+        .header,
+        section.header,
+        .page-header {
+            border: 1px solid var(--ir-line) !important;
+            border-radius: 14px !important;
+            color: var(--ir-blue) !important;
+            background:
+                linear-gradient(90deg, rgba(255,255,255,0.98), rgba(238,248,255,0.96), rgba(255,248,238,0.86)) !important;
+            box-shadow: 0 8px 20px rgba(8, 52, 143, 0.08) !important;
+        }
+
+        .summary,
+        .sign-section,
+        .label-grid,
+        .label-card,
+        .qr-card,
+        .print-card,
+        .panel,
+        table {
+            position: relative !important;
+            border-color: var(--ir-line) !important;
+        }
+
+        .no-print,
+        .print-actions,
+        .action-bar {
+            position: relative !important;
+            z-index: 5 !important;
+        }
+
+        @media print {
+            body {
+                background: #ffffff !important;
+            }
+
+            .no-print,
+            .print-actions,
+            .action-bar,
+            button {
+                display: none !important;
+            }
+
+            .print-header,
+            .header,
+            section.header,
+            .page-header,
+            .summary,
+            .sign-section,
+            .label-grid,
+            .label-card,
+            .qr-card,
+            .print-card,
+            .panel,
+            table {
+                box-shadow: none !important;
+            }
+        }
+
+    

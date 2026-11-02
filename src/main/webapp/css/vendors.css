@@ -1,0 +1,1484 @@
+﻿
+        body.railway-ui .suppliers-board {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 16px !important;
+        }
+
+        body.railway-ui .supplier-hero {
+            border: 1px solid var(--ir-line) !important;
+            border-radius: 22px !important;
+            background:
+                linear-gradient(135deg, rgba(255,255,255,0.98), rgba(232,245,255,0.96)),
+                radial-gradient(circle at 92% 18%, rgba(8,52,143,0.13), transparent 36%) !important;
+            box-shadow: var(--ir-shadow-soft) !important;
+            padding: 24px !important;
+        }
+
+        body.railway-ui .supplier-hero h1 {
+            margin: 0 !important;
+            color: var(--ir-blue) !important;
+            font-size: 30px !important;
+            line-height: 1.1 !important;
+            font-weight: 950 !important;
+            text-transform: uppercase !important;
+        }
+
+        body.railway-ui .supplier-hero p {
+            margin: 8px 0 0 0 !important;
+            color: #36527f !important;
+            font-size: 13px !important;
+            line-height: 1.5 !important;
+            font-weight: 800 !important;
+        }
+
+        body.railway-ui .hero-pills {
+            display: flex !important;
+            gap: 9px !important;
+            flex-wrap: wrap !important;
+            margin-top: 16px !important;
+        }
+
+        body.railway-ui .hero-pill {
+            min-height: 32px !important;
+            padding: 0 12px !important;
+            border-radius: 999px !important;
+            background: #ffffff !important;
+            border: 1px solid #dbe8f7 !important;
+            color: #163b78 !important;
+            font-size: 11px !important;
+            font-weight: 900 !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 7px !important;
+        }
+
+        body.railway-ui .kpi-grid {
+            display: grid !important;
+            grid-template-columns: repeat(6, minmax(185px, 1fr)) !important;
+            gap: 14px !important;
+        }
+
+        body.railway-ui .kpi-card {
+            border-radius: 18px !important;
+            border: 1px solid var(--ir-line) !important;
+            background: rgba(255,255,255,0.98) !important;
+            box-shadow: var(--ir-shadow-soft) !important;
+            padding: 16px 17px !important;
+            min-height: 112px !important;
+            overflow: hidden !important;
+
+            display: grid !important;
+            grid-template-columns: 56px minmax(0, 1fr) !important;
+            grid-template-rows: auto auto !important;
+            align-items: center !important;
+            column-gap: 14px !important;
+            row-gap: 4px !important;
+        }
+
+        body.railway-ui .kpi-icon {
+            grid-column: 1 !important;
+            grid-row: 1 / span 2 !important;
+
+            width: 52px !important;
+            height: 52px !important;
+            min-width: 52px !important;
+            border-radius: 16px !important;
+            background: #eef5ff !important;
+            color: var(--ir-blue) !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            font-size: 20px !important;
+            flex-shrink: 0 !important;
+            border: 1px solid #d7e5f7 !important;
+        }
+
+        body.railway-ui .kpi-card h3 {
+            grid-column: 2 !important;
+            grid-row: 1 !important;
+
+            margin: 0 !important;
+            color: #5f6f8a !important;
+            font-size: 12px !important;
+            line-height: 1.05 !important;
+            font-weight: 950 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.15px !important;
+            white-space: nowrap !important;
+            overflow: visible !important;
+            text-overflow: clip !important;
+            min-width: 0 !important;
+        }
+
+        body.railway-ui .kpi-card p {
+            grid-column: 2 !important;
+            grid-row: 2 !important;
+
+            margin: 0 !important;
+            color: var(--ir-blue) !important;
+            font-size: clamp(25px, 1.8vw, 33px) !important;
+            line-height: 1 !important;
+            font-weight: 950 !important;
+            text-align: left !important;
+            min-width: 0 !important;
+            max-width: 100% !important;
+            white-space: nowrap !important;
+            overflow: hidden !important;
+            text-overflow: ellipsis !important;
+            font-variant-numeric: tabular-nums !important;
+            letter-spacing: -0.7px !important;
+        }
+
+        body.railway-ui .glass-panel {
+            border-radius: 20px !important;
+            border: 1px solid var(--ir-line) !important;
+            background: rgba(255,255,255,0.97) !important;
+            box-shadow: var(--ir-shadow-soft) !important;
+            padding: 18px !important;
+            overflow: hidden !important;
+        }
+
+        body.railway-ui .registry-toolbar {
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            gap: 12px !important;
+            flex-wrap: wrap !important;
+            margin-bottom: 14px !important;
+        }
+
+        body.railway-ui .registry-toolbar h2 {
+            margin: 0 !important;
+            color: var(--ir-blue) !important;
+            font-size: 17px !important;
+            font-weight: 950 !important;
+            text-transform: uppercase !important;
+        }
+
+        body.railway-ui .table-subtext {
+            color: #64748b !important;
+            font-size: 11px !important;
+            font-weight: 760 !important;
+            line-height: 1.35 !important;
+        }
+
+        body.railway-ui .registry-actions {
+            display: flex !important;
+            gap: 9px !important;
+            flex-wrap: wrap !important;
+            align-items: center !important;
+        }
+
+        body.railway-ui .btn,
+        body.railway-ui .supplier-action-btn {
+            min-height: 36px !important;
+            padding: 0 12px !important;
+            border-radius: 999px !important;
+            border: 1px solid #d7e5f7 !important;
+            background: #ffffff !important;
+            color: var(--ir-blue) !important;
+            text-decoration: none !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 7px !important;
+            font-size: 11px !important;
+            font-weight: 900 !important;
+            white-space: nowrap !important;
+            cursor: pointer !important;
+            font-family: inherit !important;
+        }
+
+        body.railway-ui button.btn {
+            border: 1px solid #d7e5f7 !important;
+            outline: none !important;
+        }
+
+        body.railway-ui .btn.primary {
+            background: var(--ir-blue) !important;
+            color: #ffffff !important;
+            border-color: var(--ir-blue) !important;
+        }
+
+        body.railway-ui .status-filter-select {
+            min-height: 36px !important;
+            padding: 0 12px !important;
+            border-radius: 999px !important;
+            border: 1px solid #d7e5f7 !important;
+            background: #ffffff !important;
+            color: var(--ir-blue) !important;
+            font-size: 11px !important;
+            font-weight: 900 !important;
+            outline: none !important;
+        }
+
+        body.railway-ui .registry-search {
+            min-height: 42px !important;
+            width: min(560px, 100%) !important;
+            border-radius: 999px !important;
+            border: 1px solid #d7e5f7 !important;
+            background: #ffffff !important;
+            display: flex !important;
+            align-items: center !important;
+            gap: 10px !important;
+            padding: 0 14px !important;
+            color: var(--ir-blue) !important;
+        }
+
+        body.railway-ui .registry-search input {
+            border: 0 !important;
+            outline: 0 !important;
+            flex: 1 !important;
+            color: #14336f !important;
+            font-size: 13px !important;
+            font-weight: 800 !important;
+            background: transparent !important;
+        }
+
+        body.railway-ui .registry-table-wrap {
+            width: 100% !important;
+            overflow-x: auto !important;
+            border-radius: 18px !important;
+        }
+
+        body.railway-ui .supplier-table {
+            width: 100% !important;
+            min-width: 1180px !important;
+            table-layout: fixed !important;
+            border-collapse: separate !important;
+            border-spacing: 0 10px !important;
+        }
+
+        body.railway-ui .supplier-table col.supplier-col-id {
+            width: 8% !important;
+        }
+
+        body.railway-ui .supplier-table col.supplier-col-main {
+            width: 18% !important;
+        }
+
+        body.railway-ui .supplier-table col.supplier-col-contact {
+            width: 12% !important;
+        }
+
+        body.railway-ui .supplier-table col.supplier-col-email {
+            width: 16% !important;
+        }
+
+        body.railway-ui .supplier-table col.supplier-col-phone {
+            width: 11% !important;
+        }
+
+        body.railway-ui .supplier-table col.supplier-col-address {
+            width: 16% !important;
+        }
+
+        body.railway-ui .supplier-table col.supplier-col-linked {
+            width: 10% !important;
+        }
+
+        body.railway-ui .supplier-table col.supplier-col-value {
+            width: 11% !important;
+        }
+
+        body.railway-ui .supplier-table col.supplier-col-actions {
+            width: 16% !important;
+        }
+
+        body.railway-ui .supplier-table th {
+            text-align: left !important;
+            padding: 10px 10px !important;
+            color: #64748b !important;
+            font-size: 10px !important;
+            font-weight: 950 !important;
+            text-transform: uppercase !important;
+            white-space: nowrap !important;
+        }
+
+        body.railway-ui .supplier-table td {
+            padding: 14px 10px !important;
+            color: #14336f !important;
+            font-size: 12px !important;
+            font-weight: 820 !important;
+            vertical-align: middle !important;
+            background: #ffffff !important;
+            border-top: 1px solid #e6eef9 !important;
+            border-bottom: 1px solid #e6eef9 !important;
+            word-break: break-word !important;
+        }
+
+        body.railway-ui .supplier-table tbody tr td:first-child {
+            border-left: 1px solid #e6eef9 !important;
+            border-top-left-radius: 16px !important;
+            border-bottom-left-radius: 16px !important;
+        }
+
+        body.railway-ui .supplier-table tbody tr td:last-child {
+            border-right: 1px solid #e6eef9 !important;
+            border-top-right-radius: 16px !important;
+            border-bottom-right-radius: 16px !important;
+        }
+
+        body.railway-ui .supplier-table tbody tr:hover td {
+            background: #f8fbff !important;
+            border-color: #c9dcf5 !important;
+            box-shadow: 0 9px 18px rgba(8,52,143,0.045) !important;
+        }
+
+        body.railway-ui .supplier-id-pill,
+        body.railway-ui .supplier-value-pill,
+        body.railway-ui .supplier-linked-pill,
+        body.railway-ui .supplier-free-pill {
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 6px !important;
+            min-height: 28px !important;
+            padding: 0 10px !important;
+            border-radius: 999px !important;
+            font-size: 10px !important;
+            font-weight: 950 !important;
+            max-width: 100% !important;
+            overflow: hidden !important;
+            text-overflow: ellipsis !important;
+            white-space: nowrap !important;
+        }
+
+        body.railway-ui .supplier-id-pill {
+            background: #eef5ff !important;
+            border: 1px solid #d7e5f7 !important;
+            color: var(--ir-blue) !important;
+        }
+
+        body.railway-ui .supplier-value-pill {
+            background: #eaf7ef !important;
+            border: 1px solid #bde8cf !important;
+            color: #04733b !important;
+        }
+
+        body.railway-ui .supplier-linked-pill {
+            background: #fff8ea !important;
+            border: 1px solid #ffe0a8 !important;
+            color: #9a5a00 !important;
+        }
+
+        body.railway-ui .supplier-free-pill {
+            background: #f5f8fd !important;
+            border: 1px solid #d7e5f7 !important;
+            color: #64748b !important;
+        }
+
+        body.railway-ui .supplier-status-active,
+        body.railway-ui .supplier-status-inactive {
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 6px !important;
+            min-height: 28px !important;
+            padding: 0 10px !important;
+            border-radius: 999px !important;
+            font-size: 10px !important;
+            font-weight: 950 !important;
+            white-space: nowrap !important;
+        }
+
+        body.railway-ui .supplier-status-active {
+            background: #f0faf1 !important;
+            border: 1px solid #bfe8c6 !important;
+            color: #1b7a34 !important;
+        }
+
+        body.railway-ui .supplier-status-inactive {
+            background: #fff0f0 !important;
+            border: 1px solid #ffc7c7 !important;
+            color: #c62828 !important;
+        }
+
+        body.railway-ui .supplier-main strong {
+            display: block !important;
+            color: var(--ir-blue) !important;
+            font-size: 13px !important;
+            font-weight: 950 !important;
+            line-height: 1.3 !important;
+            margin-bottom: 5px !important;
+        }
+
+        body.railway-ui .supplier-actions {
+            display: grid !important;
+            grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            gap: 7px !important;
+            width: 100% !important;
+        }
+
+        body.railway-ui .supplier-action-btn {
+            min-height: 34px !important;
+            padding: 0 9px !important;
+            font-size: 10px !important;
+            width: 100% !important;
+        }
+
+        body.railway-ui .supplier-action-btn.inspect-btn {
+            background: #eef5ff !important;
+            color: var(--ir-blue) !important;
+        }
+
+        body.railway-ui .supplier-action-btn.edit-btn {
+            background: #fff8ea !important;
+            color: #9a5a00 !important;
+            border-color: #ffe0a8 !important;
+        }
+
+        body.railway-ui .supplier-action-btn.delete-btn {
+            background: #fff0f0 !important;
+            color: #c62828 !important;
+            border-color: #ffc7c7 !important;
+        }
+
+        body.railway-ui .supplier-disabled-action {
+            opacity: 0.72 !important;
+            cursor: not-allowed !important;
+            pointer-events: none !important;
+            background: #f5f8fd !important;
+            border: 1px solid #d7e5f7 !important;
+            color: #64748b !important;
+        }
+
+        body.railway-ui .page-success,
+        body.railway-ui .page-error {
+            border-radius: 15px !important;
+            padding: 13px 15px !important;
+            font-size: 12px !important;
+            font-weight: 900 !important;
+            display: flex !important;
+            align-items: center !important;
+            gap: 9px !important;
+        }
+
+        body.railway-ui .page-success {
+            border: 1px solid #bde8cf !important;
+            background: #eaf7ef !important;
+            color: #04733b !important;
+        }
+
+        body.railway-ui .page-error {
+            border: 1px solid #ffc7c7 !important;
+            background: #fff5f5 !important;
+            color: #b42318 !important;
+        }
+
+        body.railway-ui .no-records-message {
+            margin-top: 14px !important;
+            border-radius: 16px !important;
+            border: 1px dashed #c8daf3 !important;
+            background: #f8fbff !important;
+            color: var(--ir-blue) !important;
+            padding: 18px !important;
+            text-align: center !important;
+            font-size: 13px !important;
+            font-weight: 850 !important;
+        }
+
+        @media (max-width: 1500px) {
+            body.railway-ui .kpi-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+            }
+        }
+
+        @media (max-width: 900px) {
+            body.railway-ui .kpi-grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
+    
+        /* ===== IR-AMS official restored hero image for this module ===== */
+        body.railway-ui .supplier-hero {
+            position: relative !important;
+            min-height: 272px !important;
+            border-radius: 24px !important;
+            overflow: hidden !important;
+            border: 1px solid #cfdff5 !important;
+            box-shadow: 0 14px 34px rgba(8, 52, 143, 0.10) !important;
+            background:
+                url("../images/vendors-hero-bg.png") center center / cover no-repeat,
+                linear-gradient(135deg, #ffffff 0%, #edf7ff 58%, #fff8ee 100%) !important;
+        }
+
+        body.railway-ui .supplier-hero::before {
+            content: "" !important;
+            position: absolute !important;
+            inset: 0 !important;
+            z-index: 1 !important;
+            pointer-events: none !important;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(255,255,255,0.985) 0%,
+                    rgba(247,251,255,0.965) 16%,
+                    rgba(231,244,255,0.86) 31%,
+                    rgba(214,236,255,0.62) 45%,
+                    rgba(236,246,255,0.32) 59%,
+                    rgba(255,255,255,0.08) 100%
+                ) !important;
+        }
+
+        body.railway-ui .supplier-hero > * {
+            position: relative !important;
+            z-index: 2 !important;
+        }
+
+        body.railway-ui .supplier-hero h1 {
+            color: var(--ir-blue) !important;
+            font-family: Georgia, "Times New Roman", serif !important;
+            font-weight: 950 !important;
+            letter-spacing: -0.7px !important;
+        }
+
+        body.railway-ui .supplier-hero p {
+            color: #18366f !important;
+            font-weight: 850 !important;
+        }
+
+        /* ===== FINAL MODULE REFERENCE FIX: uses dashboard/assets/employees shell ===== */
+        body.railway-ui {
+            --ir-body-watermark-left: 50vw;
+            --ir-body-watermark-top: 54vh;
+        }
+
+        body.railway-ui .main,
+        body.railway-ui .railway-main {
+            position: fixed !important;
+            left: calc(var(--ir-sidebar-width) + var(--ir-left-strip-width)) !important;
+            top: 0 !important;
+            right: 0 !important;
+            bottom: 0 !important;
+            width: auto !important;
+            min-height: 100vh !important;
+            margin-left: 0 !important;
+            padding: 14px 17px 14px 17px !important;
+            overflow: hidden !important;
+        }
+
+        body.railway-ui.sidebar-collapsed .main,
+        body.railway-ui.sidebar-collapsed .railway-main {
+            left: var(--ir-left-strip-width) !important;
+        }
+
+        body.railway-ui .main-scroll-content {
+            position: absolute !important;
+            left: 17px !important;
+            right: 17px !important;
+            top: 83px !important;
+            bottom: 14px !important;
+            width: auto !important;
+            overflow-y: auto !important;
+            overflow-x: hidden !important;
+            padding: 0 7px 18px 0 !important;
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 12px !important;
+            z-index: 2 !important;
+        }
+
+
+        body.railway-ui .supplier-hero {
+            width: 100% !important;
+            min-height: 272px !important;
+            height: 272px !important;
+            margin: 0 !important;
+            padding: 34px 38px !important;
+            border-radius: 17px !important;
+            border: 1px solid #cfdff5 !important;
+            overflow: hidden !important;
+            box-shadow: 0 14px 34px rgba(8, 52, 143, 0.10) !important;
+            position: relative !important;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: center !important;
+            align-items: flex-start !important;
+            background:
+                url("../images/vendors-hero-bg.png") center center / 100% 100% no-repeat,
+                linear-gradient(135deg, #ffffff 0%, #edf7ff 58%, #fff8ee 100%) !important;
+            color: var(--ir-blue) !important;
+        }
+
+        body.railway-ui .supplier-hero::before {
+            content: "" !important;
+            position: absolute !important;
+            inset: 0 !important;
+            z-index: 1 !important;
+            pointer-events: none !important;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(255,255,255,0.98) 0%,
+                    rgba(247,251,255,0.96) 18%,
+                    rgba(231,244,255,0.84) 34%,
+                    rgba(214,236,255,0.58) 48%,
+                    rgba(236,246,255,0.25) 62%,
+                    rgba(255,255,255,0.04) 100%
+                ) !important;
+        }
+
+        body.railway-ui .supplier-hero > * {
+            position: relative !important;
+            z-index: 2 !important;
+            max-width: 700px !important;
+        }
+
+        body.railway-ui .supplier-hero h1 {
+            color: var(--ir-blue) !important;
+            font-family: Georgia, "Times New Roman", serif !important;
+            font-size: clamp(30px, 3.1vw, 44px) !important;
+            line-height: 1.05 !important;
+            font-weight: 950 !important;
+            letter-spacing: -0.8px !important;
+            margin: 0 0 14px 0 !important;
+            text-shadow: none !important;
+            max-width: 700px !important;
+            white-space: normal !important;
+            overflow-wrap: normal !important;
+            word-break: normal !important;
+        }
+
+        body.railway-ui .supplier-hero p {
+            color: #18366f !important;
+            font-size: 14px !important;
+            line-height: 1.5 !important;
+            font-weight: 850 !important;
+            max-width: 690px !important;
+            margin: 0 0 14px 0 !important;
+            text-shadow: none !important;
+            white-space: normal !important;
+            overflow-wrap: normal !important;
+            word-break: normal !important;
+        }
+
+        body.railway-ui .hero-pills,
+        body.railway-ui .hero-pills-new,
+        body.railway-ui .allocation-hero-actions,
+        body.railway-ui .employee-hero-pills,
+        body.railway-ui .asset-hero-pills {
+            display: flex !important;
+            flex-wrap: wrap !important;
+            gap: 10px !important;
+            max-width: 700px !important;
+            position: relative !important;
+            z-index: 2 !important;
+        }
+
+        body.railway-ui .hero-pill,
+        body.railway-ui .hero-pill-new,
+        body.railway-ui .allocation-hero-tab,
+        body.railway-ui .employee-hero-pill {
+            background: rgba(255,255,255,0.86) !important;
+            color: var(--ir-blue) !important;
+            border: 1px solid #cfdff5 !important;
+            box-shadow: 0 8px 18px rgba(8, 52, 143, 0.06) !important;
+            text-shadow: none !important;
+        }
+
+        body.railway-ui .ir-global-body-watermark {
+            z-index: 3 !important;
+            pointer-events: none !important;
+        }
+
+        body.railway-ui .ir-global-body-watermark img {
+            opacity: 0.042 !important;
+        }
+
+        body.railway-ui .kpi-grid,
+        body.railway-ui .stats-grid,
+        body.railway-ui .glass-panel,
+        body.railway-ui .official-panel,
+        body.railway-ui .panel {
+            position: relative !important;
+            z-index: 2 !important;
+        }
+
+        body.railway-ui a,
+        body.railway-ui button,
+        body.railway-ui input,
+        body.railway-ui select,
+        body.railway-ui textarea,
+        body.railway-ui .btn,
+        body.railway-ui .asset-action-btn,
+        body.railway-ui .top-icon-btn {
+            position: relative !important;
+            z-index: 5 !important;
+        }
+
+        @media (max-width: 1280px) {
+            body.railway-ui .supplier-hero > *,
+            body.railway-ui .supplier-hero h1,
+            body.railway-ui .supplier-hero p,
+            body.railway-ui .hero-pills,
+            body.railway-ui .hero-pills-new {
+                max-width: 58% !important;
+            }
+        }
+/* =========================================================
+   TARGETED REGISTER PANEL + KPI CARD STRUCTURE FIX
+   Scope: this module stylesheet only. No backend or JSP logic changed.
+   ========================================================= */
+body.railway-ui .kpi-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(176px, 1fr)) !important;
+    gap: 14px !important;
+    align-items: stretch !important;
+    overflow: visible !important;
+    width: 100% !important;
+    margin-bottom: 18px !important;
+}
+
+body.railway-ui .kpi-card {
+    min-width: 0 !important;
+    min-height: 106px !important;
+    padding: 16px 16px !important;
+    border-radius: 20px !important;
+    display: grid !important;
+    grid-template-columns: 54px minmax(0, 1fr) !important;
+    grid-template-rows: auto auto !important;
+    column-gap: 13px !important;
+    row-gap: 5px !important;
+    align-items: center !important;
+    overflow: hidden !important;
+}
+
+body.railway-ui .kpi-icon {
+    grid-column: 1 !important;
+    grid-row: 1 / span 2 !important;
+    width: 52px !important;
+    height: 52px !important;
+    min-width: 52px !important;
+    flex: 0 0 52px !important;
+}
+
+body.railway-ui .kpi-card h3,
+body.railway-ui .kpi-card .kpi-title {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    min-width: 0 !important;
+    width: 100% !important;
+    margin: 0 !important;
+    color: #062b75 !important;
+    font-size: 12px !important;
+    line-height: 1.18 !important;
+    font-weight: 950 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.02em !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    overflow-wrap: break-word !important;
+    word-break: normal !important;
+    text-overflow: clip !important;
+}
+
+body.railway-ui .kpi-card p,
+body.railway-ui .kpi-card .kpi-value {
+    grid-column: 2 !important;
+    grid-row: 2 !important;
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    color: #062b75 !important;
+    font-size: clamp(22px, 1.55vw, 30px) !important;
+    line-height: 1.02 !important;
+    font-weight: 950 !important;
+    white-space: nowrap !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    letter-spacing: -0.04em !important;
+    font-variant-numeric: tabular-nums !important;
+}
+
+body.railway-ui .glass-panel {
+    position: relative !important;
+    z-index: 2 !important;
+    border-radius: 24px !important;
+    border: 1px solid #cfe0f6 !important;
+    background: rgba(255, 255, 255, 0.985) !important;
+    box-shadow: 0 18px 44px rgba(8, 52, 143, 0.08) !important;
+    padding: 22px 24px 24px !important;
+    overflow: hidden !important;
+}
+
+body.railway-ui .registry-toolbar {
+    display: grid !important;
+    grid-template-columns: minmax(300px, 1fr) auto !important;
+    align-items: start !important;
+    justify-content: space-between !important;
+    gap: 14px 18px !important;
+    width: 100% !important;
+    margin: 0 0 16px 0 !important;
+    padding: 0 !important;
+}
+
+body.railway-ui .registry-toolbar:first-child {
+    padding-bottom: 16px !important;
+    border-bottom: 1px solid #e6eef9 !important;
+}
+
+body.railway-ui .registry-toolbar + .registry-toolbar {
+    display: block !important;
+    margin: 0 0 18px 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+}
+
+body.railway-ui .registry-toolbar h2,
+body.railway-ui .glass-panel h2 {
+    margin: 0 !important;
+    color: #06337a !important;
+    font-size: clamp(22px, 1.5vw, 28px) !important;
+    line-height: 1.15 !important;
+    font-weight: 950 !important;
+    text-transform: none !important;
+    letter-spacing: -0.02em !important;
+}
+
+body.railway-ui .registry-toolbar .table-subtext,
+body.railway-ui .glass-panel .table-subtext {
+    display: block !important;
+    margin-top: 8px !important;
+    color: #566b8d !important;
+    font-size: 13px !important;
+    line-height: 1.45 !important;
+    font-weight: 750 !important;
+}
+
+body.railway-ui .registry-actions {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+    width: auto !important;
+    max-width: 860px !important;
+    min-width: 0 !important;
+}
+
+body.railway-ui .registry-actions .btn,
+body.railway-ui .registry-actions a.btn,
+body.railway-ui .registry-actions button.btn {
+    width: auto !important;
+    min-width: 0 !important;
+    min-height: 42px !important;
+    height: 42px !important;
+    padding: 0 16px !important;
+    border-radius: 14px !important;
+    font-size: 12px !important;
+    line-height: 1 !important;
+    font-weight: 950 !important;
+    white-space: nowrap !important;
+}
+
+body.railway-ui .registry-actions .status-filter-select,
+body.railway-ui .status-filter-select {
+    width: auto !important;
+    min-width: 190px !important;
+    max-width: 320px !important;
+    flex: 0 1 240px !important;
+    min-height: 42px !important;
+    height: 42px !important;
+    border-radius: 14px !important;
+    padding: 0 42px 0 16px !important;
+    font-size: 12px !important;
+    font-weight: 950 !important;
+}
+
+body.railway-ui .registry-search {
+    width: min(760px, 100%) !important;
+    max-width: 100% !important;
+    min-height: 48px !important;
+    height: 48px !important;
+    border-radius: 16px !important;
+    border: 1px solid #cfe0f6 !important;
+    background: #ffffff !important;
+    box-shadow: 0 10px 24px rgba(8, 52, 143, 0.055) !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    padding: 0 16px !important;
+}
+
+body.railway-ui .registry-search i {
+    flex: 0 0 auto !important;
+    color: #08348f !important;
+    font-size: 17px !important;
+}
+
+body.railway-ui .registry-search input {
+    width: 100% !important;
+    min-width: 0 !important;
+    border: 0 !important;
+    outline: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    color: #14336f !important;
+    font-size: 13px !important;
+    font-weight: 800 !important;
+    text-overflow: ellipsis !important;
+}
+
+body.railway-ui .registry-table-wrap {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    overflow-y: visible !important;
+    border-radius: 18px !important;
+    border: 1px solid #e1ebfa !important;
+    background: #ffffff !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
+}
+
+body.railway-ui .asset-table,
+body.railway-ui .maintenance-table {
+    width: 100% !important;
+    min-width: 1080px !important;
+    max-width: none !important;
+    table-layout: fixed !important;
+    border-collapse: separate !important;
+    border-spacing: 0 !important;
+}
+
+body.railway-ui .asset-table thead th,
+body.railway-ui .maintenance-table thead th {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 2 !important;
+    padding: 13px 12px !important;
+    background: #f4f7fc !important;
+    color: #06337a !important;
+    font-size: 11px !important;
+    line-height: 1.25 !important;
+    font-weight: 950 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.035em !important;
+    white-space: normal !important;
+    overflow-wrap: normal !important;
+    border-bottom: 1px solid #e1ebfa !important;
+}
+
+body.railway-ui .asset-table tbody td,
+body.railway-ui .maintenance-table tbody td {
+    padding: 14px 12px !important;
+    background: #ffffff !important;
+    color: #18366f !important;
+    font-size: 12px !important;
+    line-height: 1.35 !important;
+    font-weight: 760 !important;
+    vertical-align: middle !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+    word-break: normal !important;
+    border-bottom: 1px solid #edf2fb !important;
+    border-top: 0 !important;
+}
+
+body.railway-ui .asset-table tbody tr:hover td,
+body.railway-ui .maintenance-table tbody tr:hover td {
+    background: #f8fbff !important;
+}
+
+body.railway-ui .asset-table strong,
+body.railway-ui .asset-table b,
+body.railway-ui .asset-table span,
+body.railway-ui .maintenance-table strong,
+body.railway-ui .maintenance-table b,
+body.railway-ui .maintenance-table span {
+    max-width: 100% !important;
+    overflow-wrap: anywhere !important;
+}
+
+@media (max-width: 1360px) {
+    body.railway-ui .registry-toolbar {
+        grid-template-columns: 1fr !important;
+    }
+
+    body.railway-ui .registry-actions {
+        justify-content: flex-start !important;
+        max-width: 100% !important;
+    }
+
+    body.railway-ui .kpi-grid {
+        grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)) !important;
+    }
+}
+
+
+/* =========================================================
+   STRICT EMPLOYEE REFERENCE STRUCTURE FIX
+   Scope: this module CSS only. Employee module is not changed.
+========================================================= */
+body.railway-ui .glass-panel,
+body.railway-ui .allocation-panel,
+body.railway-ui .department-control-panel {
+    border-radius: 22px !important;
+    border: 1px solid var(--ir-line) !important;
+    background: rgba(255,255,255,0.98) !important;
+    box-shadow: var(--ir-shadow-soft) !important;
+    padding: 20px !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+    position: relative !important;
+    z-index: 6 !important;
+}
+
+body.railway-ui .registry-toolbar,
+body.railway-ui .allocation-toolbar,
+body.railway-ui .department-panel-head {
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: space-between !important;
+    gap: 16px !important;
+    flex-wrap: wrap !important;
+    margin: 0 0 14px 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+}
+
+/* Supplier "Add Supplier" button (and any other single-row .registry-toolbar
+   action) was flex-start aligned against the two-line title+subtext block
+   next to it, so it sat noticeably higher than the block's vertical middle
+   instead of looking centered against it. Scoped to .registry-toolbar alone
+   (not the shared selector above) so .allocation-toolbar/.department-panel-
+   head keep their existing alignment untouched. */
+body.railway-ui .registry-toolbar {
+    align-items: center !important;
+}
+
+body.railway-ui .registry-toolbar + .registry-toolbar {
+    display: none !important;
+}
+
+body.railway-ui .registry-toolbar h2,
+body.railway-ui .allocation-toolbar h2,
+body.railway-ui .department-panel-head h2,
+body.railway-ui .glass-panel h2,
+body.railway-ui .allocation-panel h2,
+body.railway-ui .department-control-panel h2 {
+    margin: 0 !important;
+    color: var(--ir-blue) !important;
+    font-size: 22px !important;
+    line-height: 1.12 !important;
+    font-weight: 950 !important;
+    text-transform: uppercase !important;
+    letter-spacing: -0.25px !important;
+}
+
+body.railway-ui .registry-toolbar .table-subtext,
+body.railway-ui .allocation-toolbar .table-subtext,
+body.railway-ui .department-panel-head p,
+body.railway-ui .glass-panel .table-subtext,
+body.railway-ui .allocation-panel .table-subtext {
+    margin: 4px 0 0 0 !important;
+    color: #64748b !important;
+    font-size: 12px !important;
+    line-height: 1.45 !important;
+    font-weight: 760 !important;
+}
+
+body.railway-ui .registry-actions,
+body.railway-ui .allocation-actions,
+body.railway-ui .department-toolbar {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    gap: 10px !important;
+    flex-wrap: wrap !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: auto !important;
+    max-width: 100% !important;
+}
+
+body.railway-ui .registry-actions .btn,
+body.railway-ui .registry-actions a.btn,
+body.railway-ui .registry-actions button.btn,
+body.railway-ui .registry-filter-grid .btn,
+body.railway-ui .registry-filter-grid button.btn,
+body.railway-ui .allocation-actions .btn,
+body.railway-ui .allocation-actions a.btn,
+body.railway-ui .allocation-filter-grid .btn,
+body.railway-ui .department-btn,
+body.railway-ui .btn {
+    min-height: 38px !important;
+    height: 38px !important;
+    padding: 0 14px !important;
+    border-radius: 999px !important;
+    border: 1px solid #d7e5f7 !important;
+    background: #ffffff !important;
+    color: var(--ir-blue) !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    text-decoration: none !important;
+    font-size: 12px !important;
+    line-height: 1 !important;
+    font-weight: 950 !important;
+    cursor: pointer !important;
+    white-space: nowrap !important;
+    box-shadow: 0 8px 18px rgba(8,52,143,0.05) !important;
+}
+
+body.railway-ui .registry-actions .btn.primary,
+body.railway-ui .registry-actions .btn.btn-primary,
+body.railway-ui .registry-actions a.btn.primary,
+body.railway-ui .allocation-actions .btn-primary,
+body.railway-ui .allocation-actions .btn.primary,
+body.railway-ui .department-btn.primary,
+body.railway-ui .btn.primary,
+body.railway-ui .btn.btn-primary {
+    background: var(--ir-blue) !important;
+    border-color: var(--ir-blue) !important;
+    color: #ffffff !important;
+}
+
+body.railway-ui .registry-actions .btn.green,
+body.railway-ui .registry-actions a.btn.green,
+body.railway-ui .department-btn.green,
+body.railway-ui .btn.green {
+    background: #eaf7ef !important;
+    border-color: #bde8cf !important;
+    color: #04733b !important;
+}
+
+body.railway-ui .registry-filter-grid,
+body.railway-ui .allocation-filter-grid,
+body.railway-ui .department-filter-grid {
+    display: grid !important;
+    grid-template-columns: minmax(280px, 1fr) 220px 170px !important;
+    gap: 12px !important;
+    align-items: center !important;
+    margin: 12px 0 16px 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+}
+
+body.railway-ui .registry-filter-grid.maintenance-filter-grid {
+    grid-template-columns: minmax(280px, 1fr) 220px 240px !important;
+}
+
+/* The base .registry-filter-grid rule above only ever defines 3 columns
+   (search, one select, one more select) - vendors.jsp's toolbar puts a 4th
+   item (the Reset Filters button) in that same grid, which grid
+   auto-placement then wraps onto its own row below instead of alongside the
+   other three, since there's no 4th column for it to land in. Same
+   3-column-only definition, explicit 4th column added only for this
+   modifier class so every other page still sharing the bare
+   .registry-filter-grid class (categories/assets/returns/etc., none of
+   which put a 4th control in that grid) is untouched. */
+body.railway-ui .registry-filter-grid.supplier-filter-grid {
+    grid-template-columns: minmax(260px, 1fr) 200px 170px auto !important;
+}
+
+@media (max-width: 900px) {
+    body.railway-ui .registry-filter-grid.supplier-filter-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+body.railway-ui .registry-search,
+body.railway-ui .allocation-search,
+body.railway-ui .department-search-wrap {
+    position: relative !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+}
+
+body.railway-ui .registry-search i,
+body.railway-ui .allocation-search i,
+body.railway-ui .department-search-wrap i {
+    position: absolute !important;
+    left: 16px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    color: var(--ir-blue) !important;
+    font-size: 15px !important;
+    z-index: 2 !important;
+}
+
+body.railway-ui .registry-search input,
+body.railway-ui .allocation-search input,
+body.railway-ui .department-search-control,
+body.railway-ui .department-select-control,
+body.railway-ui .status-filter-select {
+    height: 44px !important;
+    min-height: 44px !important;
+    border-radius: 16px !important;
+    border: 1px solid #dbe8f7 !important;
+    background: #ffffff !important;
+    color: var(--ir-blue) !important;
+    font-size: 13px !important;
+    font-weight: 850 !important;
+    outline: none !important;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.65) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+body.railway-ui .registry-search input,
+body.railway-ui .allocation-search input,
+body.railway-ui .department-search-control {
+    padding: 0 16px 0 44px !important;
+}
+
+body.railway-ui .status-filter-select,
+body.railway-ui .department-select-control {
+    padding: 0 14px !important;
+}
+
+body.railway-ui .registry-table-wrap,
+body.railway-ui .allocation-table-wrap,
+body.railway-ui .department-table-wrap {
+    width: 100% !important;
+    overflow-x: auto !important;
+    padding-bottom: 4px !important;
+    margin: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+}
+
+body.railway-ui .asset-table,
+body.railway-ui .supplier-table,
+body.railway-ui .allocation-table,
+body.railway-ui .return-table,
+body.railway-ui .maintenance-table,
+body.railway-ui .department-table,
+body.railway-ui .registry-table-wrap table {
+    width: 100% !important;
+    min-width: 1180px !important;
+    border-collapse: separate !important;
+    border-spacing: 0 10px !important;
+    table-layout: fixed !important;
+}
+
+body.railway-ui .asset-table thead th,
+body.railway-ui .supplier-table thead th,
+body.railway-ui .allocation-table thead th,
+body.railway-ui .return-table thead th,
+body.railway-ui .maintenance-table thead th,
+body.railway-ui .department-table thead th,
+body.railway-ui .registry-table-wrap table thead th {
+    padding: 10px 12px !important;
+    background: #f3f7fd !important;
+    color: #53647d !important;
+    font-size: 11px !important;
+    font-weight: 950 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.2px !important;
+    text-align: left !important;
+    border-top: 1px solid #e7eef9 !important;
+    border-bottom: 1px solid #e7eef9 !important;
+    white-space: normal !important;
+    line-height: 1.18 !important;
+}
+
+body.railway-ui .asset-table thead th:first-child,
+body.railway-ui .supplier-table thead th:first-child,
+body.railway-ui .allocation-table thead th:first-child,
+body.railway-ui .return-table thead th:first-child,
+body.railway-ui .maintenance-table thead th:first-child,
+body.railway-ui .department-table thead th:first-child,
+body.railway-ui .registry-table-wrap table thead th:first-child {
+    border-top-left-radius: 14px !important;
+    border-bottom-left-radius: 14px !important;
+    border-left: 1px solid #e7eef9 !important;
+}
+
+body.railway-ui .asset-table thead th:last-child,
+body.railway-ui .supplier-table thead th:last-child,
+body.railway-ui .allocation-table thead th:last-child,
+body.railway-ui .return-table thead th:last-child,
+body.railway-ui .maintenance-table thead th:last-child,
+body.railway-ui .department-table thead th:last-child,
+body.railway-ui .registry-table-wrap table thead th:last-child {
+    border-top-right-radius: 14px !important;
+    border-bottom-right-radius: 14px !important;
+    border-right: 1px solid #e7eef9 !important;
+}
+
+body.railway-ui .asset-table tbody td,
+body.railway-ui .supplier-table tbody td,
+body.railway-ui .allocation-table tbody td,
+body.railway-ui .return-table tbody td,
+body.railway-ui .maintenance-table tbody td,
+body.railway-ui .department-table tbody td,
+body.railway-ui .registry-table-wrap table tbody td {
+    padding: 14px 12px !important;
+    background: #ffffff !important;
+    border-top: 1px solid #e6eef9 !important;
+    border-bottom: 1px solid #e6eef9 !important;
+    color: var(--ir-blue) !important;
+    font-size: 12px !important;
+    font-weight: 820 !important;
+    vertical-align: middle !important;
+    overflow-wrap: anywhere !important;
+}
+
+body.railway-ui .asset-table tbody td:first-child,
+body.railway-ui .supplier-table tbody td:first-child,
+body.railway-ui .allocation-table tbody td:first-child,
+body.railway-ui .return-table tbody td:first-child,
+body.railway-ui .maintenance-table tbody td:first-child,
+body.railway-ui .department-table tbody td:first-child,
+body.railway-ui .registry-table-wrap table tbody td:first-child {
+    border-left: 1px solid #e6eef9 !important;
+    border-top-left-radius: 18px !important;
+    border-bottom-left-radius: 18px !important;
+}
+
+body.railway-ui .asset-table tbody td:last-child,
+body.railway-ui .supplier-table tbody td:last-child,
+body.railway-ui .allocation-table tbody td:last-child,
+body.railway-ui .return-table tbody td:last-child,
+body.railway-ui .maintenance-table tbody td:last-child,
+body.railway-ui .department-table tbody td:last-child,
+body.railway-ui .registry-table-wrap table tbody td:last-child {
+    border-right: 1px solid #e6eef9 !important;
+    border-top-right-radius: 18px !important;
+    border-bottom-right-radius: 18px !important;
+}
+
+body.railway-ui .kpi-grid,
+body.railway-ui .allocation-kpi-grid,
+body.railway-ui .department-kpi-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(188px, 1fr)) !important;
+    gap: 14px !important;
+    width: 100% !important;
+    overflow: visible !important;
+}
+
+body.railway-ui .kpi-card,
+body.railway-ui .allocation-kpi-card,
+body.railway-ui .department-kpi-card {
+    border-radius: 18px !important;
+    border: 1px solid var(--ir-line) !important;
+    background: rgba(255,255,255,0.98) !important;
+    box-shadow: var(--ir-shadow-soft) !important;
+    padding: 16px 17px !important;
+    min-height: 112px !important;
+    overflow: hidden !important;
+    display: grid !important;
+    grid-template-columns: 56px minmax(0, 1fr) !important;
+    grid-template-rows: auto auto auto !important;
+    align-items: center !important;
+    column-gap: 14px !important;
+    row-gap: 4px !important;
+}
+
+body.railway-ui .kpi-icon,
+body.railway-ui .department-kpi-icon {
+    grid-column: 1 !important;
+    grid-row: 1 / span 3 !important;
+    width: 52px !important;
+    height: 52px !important;
+    min-width: 52px !important;
+    border-radius: 16px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 20px !important;
+    flex-shrink: 0 !important;
+}
+
+body.railway-ui .kpi-card h3,
+body.railway-ui .kpi-title,
+body.railway-ui .allocation-kpi-card h3,
+body.railway-ui .department-kpi-card h3 {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    margin: 0 !important;
+    color: #5f6f8a !important;
+    font-size: 12px !important;
+    line-height: 1.05 !important;
+    font-weight: 950 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.15px !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    min-width: 0 !important;
+}
+
+body.railway-ui .kpi-card p,
+body.railway-ui .kpi-value,
+body.railway-ui .allocation-kpi-card p,
+body.railway-ui .department-kpi-card p {
+    grid-column: 2 !important;
+    grid-row: 2 !important;
+    margin: 0 !important;
+    color: var(--ir-blue) !important;
+    font-size: clamp(24px, 1.75vw, 32px) !important;
+    line-height: 1 !important;
+    font-weight: 950 !important;
+    text-align: left !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    font-variant-numeric: tabular-nums !important;
+    letter-spacing: -0.7px !important;
+}
+
+@media (max-width: 1180px) {
+    body.railway-ui .registry-filter-grid,
+    body.railway-ui .allocation-filter-grid,
+    body.railway-ui .department-filter-grid,
+    body.railway-ui .registry-filter-grid.maintenance-filter-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* =========================================================
+   SUPPLIER HERO BRIGHT COLORFUL IMAGE FINAL FIX
+   Scope: hero image brightness / colour / soft transition only
+========================================================= */
+body.railway-ui .supplier-hero {
+    position: relative !important;
+    overflow: hidden !important;
+    isolation: isolate !important;
+    background: #ffffff !important;
+}
+
+body.railway-ui .supplier-hero::after {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 0 !important;
+    pointer-events: none !important;
+    background-image: url("../images/vendors-hero-bg.png") !important;
+    background-repeat: no-repeat !important;
+    background-position: right center !important;
+    background-size: 100% 100% !important;
+    opacity: 1 !important;
+    filter: brightness(1.22) saturate(1.34) contrast(1.08) !important;
+}
+
+body.railway-ui .supplier-hero::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.68) 0%,
+            rgba(255,255,255,0.28) 32%,
+            rgba(255,255,255,0.10) 55%,
+            rgba(255,255,255,0.02) 100%
+        ) !important;
+}
+
+body.railway-ui .supplier-hero > * {
+    position: relative !important;
+    z-index: 2 !important;
+}

@@ -1,0 +1,22 @@
+
+        body.railway-ui .action-board{display:flex!important;flex-direction:column!important;gap:16px!important}
+        body.railway-ui .action-hero{border:1px solid var(--ir-line)!important;border-radius:22px!important;background:linear-gradient(135deg,rgba(255,255,255,.98),rgba(232,245,255,.96)),radial-gradient(circle at 92% 18%,rgba(8,52,143,.13),transparent 36%)!important;box-shadow:var(--ir-shadow-soft)!important;padding:24px!important;display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;gap:16px!important;align-items:center!important}
+        body.railway-ui .action-hero h1{margin:0!important;color:var(--ir-blue)!important;font-size:30px!important;font-weight:950!important;text-transform:uppercase!important}
+        body.railway-ui .action-hero p{margin:8px 0 0 0!important;color:#36527f!important;font-size:13px!important;font-weight:800!important}
+        body.railway-ui .action-count{min-width:150px!important;border-radius:18px!important;background:#fff!important;border:1px solid #d7e5f7!important;padding:15px 18px!important;text-align:center!important}
+        body.railway-ui .action-count strong{display:block!important;color:#d02d2d!important;font-size:32px!important;font-weight:950!important;line-height:1!important}
+        body.railway-ui .action-count span{display:block!important;margin-top:7px!important;color:#64748b!important;font-size:11px!important;font-weight:900!important;text-transform:uppercase!important}
+        body.railway-ui .action-panel{border-radius:18px!important;border:1px solid var(--ir-line)!important;background:rgba(255,255,255,.97)!important;box-shadow:var(--ir-shadow-soft)!important;padding:18px!important}
+        body.railway-ui .action-panel h2{margin:0 0 14px 0!important;color:var(--ir-blue)!important;font-size:16px!important;font-weight:950!important;text-transform:uppercase!important}
+        body.railway-ui .action-list{display:flex!important;flex-direction:column!important;gap:10px!important}
+        body.railway-ui .action-row{display:grid!important;grid-template-columns:46px minmax(0,1fr) auto!important;gap:12px!important;align-items:center!important;padding:13px!important;border:1px solid #e4edf9!important;border-radius:14px!important;background:#fff!important;text-decoration:none!important;color:var(--ir-blue)!important}
+        body.railway-ui .action-icon{width:46px!important;height:46px!important;border-radius:14px!important;background:#eef5ff!important;color:var(--ir-blue)!important;display:flex!important;align-items:center!important;justify-content:center!important;font-size:18px!important}
+        body.railway-ui .action-row.warning .action-icon{background:#fff7e8!important;color:#c46b00!important}
+        body.railway-ui .action-row.danger .action-icon{background:#fff0f0!important;color:#d02d2d!important}
+        body.railway-ui .action-main{min-width:0!important}
+        body.railway-ui .action-main strong{display:block!important;color:var(--ir-blue)!important;font-size:13px!important;font-weight:950!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}
+        body.railway-ui .action-main span{display:block!important;margin-top:4px!important;color:#64748b!important;font-size:11px!important;font-weight:760!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}
+        body.railway-ui .action-date{font-size:11px!important;font-weight:900!important;color:#36527f!important;white-space:nowrap!important}
+        body.railway-ui .empty-box{min-height:140px!important;border-radius:16px!important;border:1px dashed #c8daf3!important;background:linear-gradient(180deg,#fbfdff,#f5f9ff)!important;display:flex!important;align-items:center!important;justify-content:center!important;flex-direction:column!important;text-align:center!important;color:var(--ir-blue)!important;padding:20px!important}
+        @media(max-width:1200px){body.railway-ui .action-hero{grid-template-columns:1fr!important}}
+    

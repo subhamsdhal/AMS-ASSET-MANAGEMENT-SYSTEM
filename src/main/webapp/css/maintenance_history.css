@@ -1,0 +1,138 @@
+
+        body.railway-ui .history-board {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 16px !important;
+        }
+
+        body.railway-ui .history-hero {
+            border: 1px solid var(--ir-line) !important;
+            border-radius: 22px !important;
+            background:
+                linear-gradient(135deg, rgba(255,255,255,0.98), rgba(232,245,255,0.96)),
+                radial-gradient(circle at 92% 18%, rgba(8,52,143,0.13), transparent 36%) !important;
+            box-shadow: var(--ir-shadow-soft) !important;
+            padding: 24px !important;
+            display: grid !important;
+            grid-template-columns: minmax(0,1fr) auto !important;
+            gap: 16px !important;
+            align-items: center !important;
+        }
+
+        body.railway-ui .history-hero h1 {
+            margin: 0 !important;
+            color: var(--ir-blue) !important;
+            font-size: 30px !important;
+            font-weight: 950 !important;
+            text-transform: uppercase !important;
+        }
+
+        body.railway-ui .history-hero p {
+            margin: 8px 0 0 0 !important;
+            color: #36527f !important;
+            font-size: 13px !important;
+            font-weight: 800 !important;
+            line-height: 1.5 !important;
+        }
+
+        body.railway-ui .action-btn {
+            min-height: 38px !important;
+            padding: 0 14px !important;
+            border-radius: 999px !important;
+            border: 1px solid #d7e5f7 !important;
+            background: #ffffff !important;
+            color: var(--ir-blue) !important;
+            text-decoration: none !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 8px !important;
+            font-size: 12px !important;
+            font-weight: 900 !important;
+        }
+
+        body.railway-ui .action-btn.primary {
+            background: var(--ir-blue) !important;
+            color: #ffffff !important;
+            border-color: var(--ir-blue) !important;
+        }
+
+        body.railway-ui .timeline-panel {
+            border-radius: 20px !important;
+            border: 1px solid var(--ir-line) !important;
+            background: rgba(255,255,255,0.98) !important;
+            box-shadow: var(--ir-shadow-soft) !important;
+            padding: 18px !important;
+        }
+
+        body.railway-ui .timeline-panel h2 {
+            margin: 0 0 14px 0 !important;
+            color: var(--ir-blue) !important;
+            font-size: 16px !important;
+            font-weight: 950 !important;
+            text-transform: uppercase !important;
+            padding-bottom: 11px !important;
+            border-bottom: 1px solid #edf2fb !important;
+        }
+
+        body.railway-ui .timeline-list {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 10px !important;
+        }
+
+        body.railway-ui .timeline-row {
+            display: grid !important;
+            grid-template-columns: 48px minmax(0,1fr) auto !important;
+            gap: 12px !important;
+            align-items: center !important;
+            border: 1px solid #e2ecf8 !important;
+            background: #ffffff !important;
+            border-radius: 16px !important;
+            padding: 14px !important;
+            text-decoration: none !important;
+        }
+
+        body.railway-ui .timeline-icon {
+            width: 48px !important;
+            height: 48px !important;
+            border-radius: 15px !important;
+            background: #eef5ff !important;
+            color: var(--ir-blue) !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            font-size: 18px !important;
+            border: 1px solid #d7e5f7 !important;
+        }
+
+        body.railway-ui .timeline-text strong {
+            color: var(--ir-blue) !important;
+            font-size: 13px !important;
+            font-weight: 950 !important;
+            display: block !important;
+        }
+
+        body.railway-ui .timeline-text span {
+            margin-top: 5px !important;
+            color: #64748b !important;
+            font-size: 11px !important;
+            font-weight: 760 !important;
+            display: block !important;
+            line-height: 1.45 !important;
+        }
+
+        body.railway-ui .timeline-date {
+            color: #36527f !important;
+            font-size: 11px !important;
+            font-weight: 900 !important;
+            white-space: nowrap !important;
+        }
+
+        @media (max-width: 900px) {
+            body.railway-ui .history-hero,
+            body.railway-ui .timeline-row {
+                grid-template-columns: 1fr !important;
+            }
+        }
+    

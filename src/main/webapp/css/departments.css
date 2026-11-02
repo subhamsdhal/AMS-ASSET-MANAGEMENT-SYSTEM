@@ -1,0 +1,1085 @@
+
+        :root {
+            --ir-body-watermark-left: 50vw;
+            --ir-body-watermark-top: 54vh;
+        }
+
+        body.railway-ui .railway-main,
+        body.railway-ui .main {
+            position: fixed !important;
+            left: calc(var(--ir-sidebar-width) + var(--ir-left-strip-width)) !important;
+            top: 0 !important;
+            right: 0 !important;
+            bottom: 0 !important;
+            width: auto !important;
+            height: 100vh !important;
+            min-height: 100vh !important;
+            margin-left: 0 !important;
+            padding: 14px 17px 14px 17px !important;
+            overflow: hidden !important;
+            z-index: 2 !important;
+        }
+
+        body.sidebar-collapsed.railway-ui .railway-main,
+        body.sidebar-collapsed.railway-ui .main {
+            left: calc(var(--ir-sidebar-collapsed-width, 86px) + var(--ir-left-strip-width, 6px)) !important;
+        }
+
+        body.railway-ui .railway-topbar,
+        body.railway-ui .topbar {
+            position: relative !important;
+            z-index: 25 !important;
+            width: 100% !important;
+            height: 64px !important;
+            min-height: 64px !important;
+            margin: 0 !important;
+            overflow: visible !important;
+        }
+
+        body.railway-ui .main-scroll-content {
+            position: absolute !important;
+            left: 17px !important;
+            right: 17px !important;
+            top: 78px !important;
+            bottom: 14px !important;
+            width: auto !important;
+            height: auto !important;
+            min-height: 0 !important;
+            overflow-y: auto !important;
+            overflow-x: hidden !important;
+            padding: 0 7px 24px 0 !important;
+            margin: 0 !important;
+            z-index: 2 !important;
+            scrollbar-width: thin !important;
+            scrollbar-color: rgba(8, 52, 143, 0.28) transparent !important;
+        }
+
+        body.railway-ui .main-scroll-content::-webkit-scrollbar {
+            width: 7px !important;
+        }
+
+        body.railway-ui .main-scroll-content::-webkit-scrollbar-thumb {
+            background: rgba(8, 52, 143, 0.28) !important;
+            border-radius: 999px !important;
+        }
+
+        body.railway-ui .department-board {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 16px !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        body.railway-ui .department-hero {
+            width: 100% !important;
+            min-height: 318px !important;
+            height: 318px !important;
+            border-radius: 30px !important;
+            border: 1px solid rgba(255,255,255,0.86) !important;
+            box-shadow: var(--ir-shadow-soft) !important;
+            padding: 30px 40px 28px 40px !important;
+            overflow: hidden !important;
+            position: relative !important;
+            display: flex !important;
+            align-items: center !important;
+            margin: 0 !important;
+            z-index: 5 !important;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(255,255,255,1) 0%,
+                    rgba(255,255,255,1) 23%,
+                    rgba(247,252,255,0.98) 37%,
+                    rgba(232,247,255,0.88) 52%,
+                    rgba(232,247,255,0.52) 66%,
+                    rgba(255,255,255,0.08) 82%,
+                    rgba(255,255,255,0.00) 100%
+                ),
+                radial-gradient(
+                    ellipse at 25% 50%,
+                    rgba(255,255,255,0.98) 0%,
+                    rgba(255,255,255,0.82) 48%,
+                    rgba(255,255,255,0.00) 78%
+                ),
+                url("../images/assets-hero-bg.png") right bottom / auto 100% no-repeat !important;
+        }
+
+        body.railway-ui .department-hero::before,
+        body.railway-ui .department-hero::after {
+            content: none !important;
+            display: none !important;
+            background: none !important;
+        }
+
+        body.railway-ui .department-hero-copy {
+            width: 63% !important;
+            max-width: 845px !important;
+            position: relative !important;
+            z-index: 6 !important;
+        }
+
+        body.railway-ui .department-eyebrow {
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 8px !important;
+            min-height: 30px !important;
+            padding: 0 14px !important;
+            border-radius: 999px !important;
+            background: rgba(8,52,143,0.10) !important;
+            border: 1px solid rgba(8,52,143,0.16) !important;
+            color: var(--ir-blue) !important;
+            font-size: 10.5px !important;
+            font-weight: 950 !important;
+            text-transform: uppercase !important;
+            margin-bottom: 11px !important;
+            box-shadow: 0 8px 18px rgba(8,52,143,0.06) !important;
+            white-space: nowrap !important;
+        }
+
+        body.railway-ui .department-hero h1 {
+            margin: 0 !important;
+            color: var(--ir-blue) !important;
+            font-size: clamp(36px, 3.05vw, 49px) !important;
+            line-height: 1.03 !important;
+            font-weight: 950 !important;
+            letter-spacing: -1.45px !important;
+            text-transform: uppercase !important;
+            max-width: 760px !important;
+        }
+
+        body.railway-ui .department-hero p {
+            margin: 13px 0 0 0 !important;
+            color: #2d4778 !important;
+            font-size: 14px !important;
+            line-height: 1.5 !important;
+            font-weight: 820 !important;
+            max-width: 795px !important;
+        }
+
+        body.railway-ui .department-hero-pills {
+            display: flex !important;
+            gap: 10px !important;
+            flex-wrap: wrap !important;
+            margin-top: 17px !important;
+            max-width: 810px !important;
+        }
+
+        body.railway-ui .department-hero-pill {
+            min-height: 35px !important;
+            height: 35px !important;
+            padding: 0 13px !important;
+            border-radius: 999px !important;
+            background: rgba(255,255,255,0.94) !important;
+            border: 1px solid #dbe8f7 !important;
+            color: #163b78 !important;
+            font-size: 11.2px !important;
+            font-weight: 900 !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 7px !important;
+            box-shadow: 0 10px 22px rgba(8,52,143,0.08) !important;
+            white-space: nowrap !important;
+        }
+
+        body.railway-ui .department-kpi-grid {
+            display: grid !important;
+            grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+            gap: 14px !important;
+            margin: 0 !important;
+            position: relative !important;
+            z-index: 6 !important;
+        }
+
+        body.railway-ui .department-kpi-card {
+            border-radius: 20px !important;
+            border: 1px solid var(--ir-line) !important;
+            background: rgba(255,255,255,0.98) !important;
+            box-shadow: var(--ir-shadow-soft) !important;
+            padding: 16px 17px !important;
+            min-height: 116px !important;
+            overflow: hidden !important;
+            display: grid !important;
+            grid-template-columns: 58px minmax(0, 1fr) !important;
+            grid-template-rows: auto auto auto !important;
+            align-items: center !important;
+            column-gap: 14px !important;
+            row-gap: 4px !important;
+            position: relative !important;
+            text-decoration: none !important;
+        }
+
+        body.railway-ui .department-kpi-card::before {
+            content: "" !important;
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            height: 4px !important;
+            background: linear-gradient(90deg, #ff7a00, #ffffff, #078b3e) !important;
+        }
+
+        body.railway-ui .department-kpi-icon {
+            grid-column: 1 !important;
+            grid-row: 1 / span 3 !important;
+            width: 54px !important;
+            height: 54px !important;
+            border-radius: 17px !important;
+            background: #eef5ff !important;
+            color: var(--ir-blue) !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            font-size: 20px !important;
+            border: 1px solid #d7e5f7 !important;
+        }
+
+        body.railway-ui .department-kpi-icon.green {
+            background: #eaf7ef !important;
+            color: #04733b !important;
+            border-color: #bde8cf !important;
+        }
+
+        body.railway-ui .department-kpi-icon.red {
+            background: #fff0f0 !important;
+            color: #d02d2d !important;
+            border-color: #ffc7c7 !important;
+        }
+
+        body.railway-ui .department-kpi-icon.orange {
+            background: #fff8ea !important;
+            color: #9a5a00 !important;
+            border-color: #ffe0a8 !important;
+        }
+
+        body.railway-ui .department-kpi-icon.purple {
+            background: #f2eaff !important;
+            color: #7445e8 !important;
+            border-color: #dccbff !important;
+        }
+
+        body.railway-ui .department-kpi-card h3 {
+            grid-column: 2 !important;
+            grid-row: 1 !important;
+            margin: 0 !important;
+            color: #5f6f8a !important;
+            font-size: 11.5px !important;
+            line-height: 1.05 !important;
+            font-weight: 950 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.15px !important;
+            white-space: nowrap !important;
+        }
+
+        body.railway-ui .department-kpi-card p {
+            grid-column: 2 !important;
+            grid-row: 2 !important;
+            margin: 0 !important;
+            color: var(--ir-blue) !important;
+            font-size: clamp(25px, 2vw, 33px) !important;
+            line-height: 1 !important;
+            font-weight: 950 !important;
+            text-align: left !important;
+            white-space: nowrap !important;
+            overflow: hidden !important;
+            text-overflow: ellipsis !important;
+            font-variant-numeric: tabular-nums !important;
+            letter-spacing: -0.7px !important;
+        }
+
+        body.railway-ui .department-kpi-card span {
+            grid-column: 2 !important;
+            grid-row: 3 !important;
+            color: #078b3e !important;
+            font-size: 10.5px !important;
+            line-height: 1.2 !important;
+            font-weight: 900 !important;
+        }
+
+        body.railway-ui .department-control-panel {
+            border-radius: 22px !important;
+            border: 1px solid var(--ir-line) !important;
+            background: rgba(255,255,255,0.98) !important;
+            box-shadow: var(--ir-shadow-soft) !important;
+            padding: 20px !important;
+            overflow: hidden !important;
+            margin: 0 !important;
+            position: relative !important;
+            z-index: 6 !important;
+        }
+
+        body.railway-ui .department-panel-head {
+            display: flex !important;
+            align-items: flex-start !important;
+            justify-content: space-between !important;
+            gap: 16px !important;
+            flex-wrap: wrap !important;
+            margin-bottom: 14px !important;
+        }
+
+        body.railway-ui .department-panel-head h2 {
+            margin: 0 !important;
+            color: var(--ir-blue) !important;
+            font-size: 22px !important;
+            line-height: 1.12 !important;
+            font-weight: 950 !important;
+            text-transform: uppercase !important;
+        }
+
+        body.railway-ui .department-panel-head p {
+            margin: 4px 0 0 0 !important;
+            color: #64748b !important;
+            font-size: 12px !important;
+            font-weight: 760 !important;
+        }
+
+        body.railway-ui .department-toolbar {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: flex-end !important;
+            gap: 10px !important;
+            flex-wrap: wrap !important;
+        }
+
+        body.railway-ui .department-btn {
+            min-height: 38px !important;
+            padding: 0 14px !important;
+            border-radius: 999px !important;
+            border: 1px solid #d7e5f7 !important;
+            background: #ffffff !important;
+            color: var(--ir-blue) !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 8px !important;
+            text-decoration: none !important;
+            font-size: 12px !important;
+            font-weight: 950 !important;
+            cursor: pointer !important;
+            white-space: nowrap !important;
+            box-shadow: 0 8px 18px rgba(8,52,143,0.05) !important;
+        }
+
+        body.railway-ui .department-btn.primary {
+            background: var(--ir-blue) !important;
+            border-color: var(--ir-blue) !important;
+            color: #ffffff !important;
+        }
+
+        body.railway-ui .department-btn.green {
+            background: #eaf7ef !important;
+            border-color: #bde8cf !important;
+            color: #04733b !important;
+        }
+
+        body.railway-ui .department-btn.red {
+            background: #fff0f0 !important;
+            border-color: #ffc7c7 !important;
+            color: #d02d2d !important;
+        }
+
+        body.railway-ui .department-btn.disabled {
+            opacity: 0.55 !important;
+            cursor: not-allowed !important;
+            pointer-events: none !important;
+        }
+
+        body.railway-ui .department-filter-grid {
+            display: grid !important;
+            grid-template-columns: minmax(280px, 1fr) 220px 240px 160px !important;
+            gap: 12px !important;
+            align-items: center !important;
+            margin: 12px 0 16px 0 !important;
+        }
+
+        body.railway-ui .department-search-control,
+        body.railway-ui .department-select-control {
+            height: 44px !important;
+            border-radius: 16px !important;
+            border: 1px solid #dbe8f7 !important;
+            background: #ffffff !important;
+            color: var(--ir-blue) !important;
+            font-size: 13px !important;
+            font-weight: 850 !important;
+            outline: none !important;
+            box-shadow: inset 0 0 0 1px rgba(255,255,255,0.65) !important;
+        }
+
+        body.railway-ui .department-search-control {
+            padding: 0 16px 0 44px !important;
+            width: 100% !important;
+        }
+
+        body.railway-ui .department-select-control {
+            padding: 0 14px !important;
+            width: 100% !important;
+        }
+
+        body.railway-ui .department-search-wrap {
+            position: relative !important;
+        }
+
+        body.railway-ui .department-search-wrap i {
+            position: absolute !important;
+            left: 16px !important;
+            top: 50% !important;
+            transform: translateY(-50%) !important;
+            color: var(--ir-blue) !important;
+            font-size: 15px !important;
+        }
+
+        body.railway-ui .department-message {
+            border-radius: 16px !important;
+            padding: 12px 14px !important;
+            margin: 0 !important;
+            display: flex !important;
+            align-items: center !important;
+            gap: 10px !important;
+            font-size: 13px !important;
+            font-weight: 900 !important;
+            border: 1px solid #d7e5f7 !important;
+        }
+
+        body.railway-ui .department-message.success {
+            color: #04733b !important;
+            background: #eaf7ef !important;
+            border-color: #bde8cf !important;
+        }
+
+        body.railway-ui .department-message.error {
+            color: #d02d2d !important;
+            background: #fff0f0 !important;
+            border-color: #ffc7c7 !important;
+        }
+
+        body.railway-ui .department-table-wrap {
+            width: 100% !important;
+            overflow-x: auto !important;
+            padding-bottom: 4px !important;
+        }
+
+        body.railway-ui .department-table {
+            width: 100% !important;
+            min-width: 1180px !important;
+            border-collapse: separate !important;
+            border-spacing: 0 10px !important;
+        }
+
+        body.railway-ui .department-table thead th {
+            padding: 10px 12px !important;
+            background: #f3f7fd !important;
+            color: #53647d !important;
+            font-size: 11px !important;
+            font-weight: 950 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.2px !important;
+            text-align: left !important;
+            border-top: 1px solid #e7eef9 !important;
+            border-bottom: 1px solid #e7eef9 !important;
+        }
+
+        body.railway-ui .department-table thead th:first-child {
+            border-top-left-radius: 14px !important;
+            border-bottom-left-radius: 14px !important;
+            border-left: 1px solid #e7eef9 !important;
+        }
+
+        body.railway-ui .department-table thead th:last-child {
+            border-top-right-radius: 14px !important;
+            border-bottom-right-radius: 14px !important;
+            border-right: 1px solid #e7eef9 !important;
+        }
+
+        body.railway-ui .department-table tbody td {
+            padding: 14px 12px !important;
+            background: #ffffff !important;
+            border-top: 1px solid #e6eef9 !important;
+            border-bottom: 1px solid #e6eef9 !important;
+            color: var(--ir-blue) !important;
+            font-size: 12px !important;
+            font-weight: 820 !important;
+            vertical-align: middle !important;
+        }
+
+        body.railway-ui .department-table tbody td:first-child {
+            border-left: 1px solid #e6eef9 !important;
+            border-top-left-radius: 18px !important;
+            border-bottom-left-radius: 18px !important;
+        }
+
+        body.railway-ui .department-table tbody td:last-child {
+            border-right: 1px solid #e6eef9 !important;
+            border-top-right-radius: 18px !important;
+            border-bottom-right-radius: 18px !important;
+        }
+
+        body.railway-ui .department-identity {
+            display: grid !important;
+            grid-template-columns: 44px minmax(0, 1fr) !important;
+            gap: 12px !important;
+            align-items: center !important;
+        }
+
+        body.railway-ui .department-avatar {
+            width: 44px !important;
+            height: 44px !important;
+            border-radius: 16px !important;
+            background: #eef5ff !important;
+            color: var(--ir-blue) !important;
+            border: 1px solid #d7e5f7 !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            font-size: 13px !important;
+            font-weight: 950 !important;
+        }
+
+        body.railway-ui .department-identity strong,
+        body.railway-ui .department-main-text {
+            display: block !important;
+            color: var(--ir-blue) !important;
+            font-size: 13px !important;
+            line-height: 1.2 !important;
+            font-weight: 950 !important;
+            white-space: nowrap !important;
+            overflow: hidden !important;
+            text-overflow: ellipsis !important;
+        }
+
+        body.railway-ui .department-identity span,
+        body.railway-ui .department-sub-text {
+            display: block !important;
+            margin-top: 3px !important;
+            color: #64748b !important;
+            font-size: 10.5px !important;
+            line-height: 1.2 !important;
+            font-weight: 780 !important;
+            white-space: nowrap !important;
+            overflow: hidden !important;
+            text-overflow: ellipsis !important;
+        }
+
+        body.railway-ui .department-status {
+            height: 30px !important;
+            padding: 0 12px !important;
+            border-radius: 999px !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            font-size: 11px !important;
+            font-weight: 950 !important;
+            text-transform: uppercase !important;
+            white-space: nowrap !important;
+        }
+
+        body.railway-ui .department-status.success {
+            color: #04733b !important;
+            background: #eaf7ef !important;
+            border: 1px solid #bde8cf !important;
+        }
+
+        body.railway-ui .department-status.danger {
+            color: #d02d2d !important;
+            background: #fff0f0 !important;
+            border: 1px solid #ffc7c7 !important;
+        }
+
+        body.railway-ui .department-status.neutral {
+            color: #53647d !important;
+            background: #eef2f7 !important;
+            border: 1px solid #dbe3ed !important;
+        }
+
+        body.railway-ui .assigned-pill {
+            height: 32px !important;
+            min-width: 82px !important;
+            padding: 0 12px !important;
+            border-radius: 999px !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 7px !important;
+            background: #eef5ff !important;
+            border: 1px solid #d7e5f7 !important;
+            color: var(--ir-blue) !important;
+            font-size: 11px !important;
+            font-weight: 950 !important;
+            white-space: nowrap !important;
+        }
+
+        body.railway-ui .assigned-pill.green {
+            background: #eaf7ef !important;
+            border-color: #bde8cf !important;
+            color: #04733b !important;
+        }
+
+        body.railway-ui .department-action-grid {
+            display: grid !important;
+            grid-template-columns: repeat(2, minmax(90px, 1fr)) !important;
+            gap: 8px !important;
+            min-width: 190px !important;
+        }
+
+        body.railway-ui .department-action-btn {
+            min-height: 34px !important;
+            border-radius: 999px !important;
+            border: 1px solid #d7e5f7 !important;
+            background: #f7fbff !important;
+            color: var(--ir-blue) !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 7px !important;
+            text-decoration: none !important;
+            font-size: 11px !important;
+            font-weight: 950 !important;
+            cursor: pointer !important;
+            white-space: nowrap !important;
+        }
+
+        body.railway-ui .department-action-btn.orange {
+            background: #fff8ea !important;
+            border-color: #ffe0a8 !important;
+            color: #9a5a00 !important;
+        }
+
+        body.railway-ui .department-action-btn.red {
+            background: #fff0f0 !important;
+            border-color: #ffc7c7 !important;
+            color: #d02d2d !important;
+        }
+
+        body.railway-ui .department-no-records {
+            display: none;
+            border: 1px dashed #c8daf3 !important;
+            border-radius: 18px !important;
+            background: linear-gradient(180deg, #fbfdff, #f5f9ff) !important;
+            color: var(--ir-blue) !important;
+            text-align: center !important;
+            padding: 28px !important;
+            font-size: 13px !important;
+            font-weight: 850 !important;
+        }
+
+        body.railway-ui .department-no-records i {
+            display: block !important;
+            font-size: 28px !important;
+            margin-bottom: 10px !important;
+        }
+
+        body.railway-ui .irams-search-panel,
+        .irams-search-panel {
+            z-index: 99999 !important;
+        }
+
+        @media (max-width: 1500px) {
+            body.railway-ui .department-kpi-grid {
+                grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+            }
+
+            body.railway-ui .department-filter-grid {
+                grid-template-columns: 1fr 190px 210px 145px !important;
+            }
+
+            body.railway-ui .department-hero h1 {
+                font-size: clamp(34px, 2.85vw, 46px) !important;
+            }
+
+            body.railway-ui .department-hero-copy {
+                width: 64% !important;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            body.railway-ui .department-hero {
+                min-height: 318px !important;
+                height: auto !important;
+                padding: 28px !important;
+                background-size: auto 100% !important;
+            }
+
+            body.railway-ui .department-hero-copy {
+                width: 100% !important;
+            }
+
+            body.railway-ui .department-kpi-grid,
+            body.railway-ui .department-filter-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            body.railway-ui .department-toolbar {
+                justify-content: flex-start !important;
+            }
+        }
+    
+        /* ===== IR-AMS official restored hero image for this module ===== */
+        body.railway-ui .department-hero {
+            position: relative !important;
+            min-height: 272px !important;
+            border-radius: 24px !important;
+            overflow: hidden !important;
+            border: 1px solid #cfdff5 !important;
+            box-shadow: 0 14px 34px rgba(8, 52, 143, 0.10) !important;
+            background:
+                url("../images/dashboard-hero-train.png") 68% center / cover no-repeat,
+                linear-gradient(135deg, #ffffff 0%, #edf7ff 58%, #fff8ee 100%) !important;
+        }
+
+        body.railway-ui .department-hero::before {
+            content: "" !important;
+            position: absolute !important;
+            inset: 0 !important;
+            z-index: 1 !important;
+            pointer-events: none !important;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(255,255,255,0.985) 0%,
+                    rgba(247,251,255,0.965) 16%,
+                    rgba(231,244,255,0.86) 31%,
+                    rgba(214,236,255,0.62) 45%,
+                    rgba(236,246,255,0.32) 59%,
+                    rgba(255,255,255,0.08) 100%
+                ) !important;
+        }
+
+        body.railway-ui .department-hero > * {
+            position: relative !important;
+            z-index: 2 !important;
+        }
+
+        body.railway-ui .department-hero h1 {
+            color: var(--ir-blue) !important;
+            font-family: Georgia, "Times New Roman", serif !important;
+            font-weight: 950 !important;
+            letter-spacing: -0.7px !important;
+        }
+
+        body.railway-ui .department-hero p {
+            color: #18366f !important;
+            font-weight: 850 !important;
+        }
+
+    
+
+        /* ===== FINAL TABLE FIT + NAME VISIBILITY FIX (2026-06-30) ===== */
+        body.railway-ui .department-control-panel {
+            overflow: hidden !important;
+        }
+
+        body.railway-ui .department-table-wrap {
+            width: 100% !important;
+            max-width: 100% !important;
+            overflow-x: hidden !important;
+            padding-bottom: 0 !important;
+        }
+
+        body.railway-ui .department-table {
+            width: 100% !important;
+            min-width: 0 !important;
+            max-width: 100% !important;
+            table-layout: fixed !important;
+            border-spacing: 0 9px !important;
+        }
+
+        body.railway-ui .department-table thead th,
+        body.railway-ui .department-table tbody td {
+            white-space: normal !important;
+            overflow: hidden !important;
+            text-overflow: clip !important;
+            word-break: normal !important;
+            overflow-wrap: anywhere !important;
+            color: #082f73 !important;
+        }
+
+        body.railway-ui .department-table thead th {
+            padding: 9px 9px !important;
+            font-size: 10.5px !important;
+            line-height: 1.25 !important;
+            color: #18366f !important;
+        }
+
+        body.railway-ui .department-table tbody td {
+            padding: 12px 9px !important;
+            font-size: 11.5px !important;
+            line-height: 1.35 !important;
+        }
+
+        body.railway-ui .department-identity {
+            grid-template-columns: 40px minmax(0, 1fr) !important;
+            gap: 9px !important;
+            min-width: 0 !important;
+        }
+
+        body.railway-ui .department-avatar {
+            width: 40px !important;
+            height: 40px !important;
+            border-radius: 14px !important;
+            flex-shrink: 0 !important;
+        }
+
+        body.railway-ui .department-identity > div:last-child {
+            min-width: 0 !important;
+            overflow: visible !important;
+        }
+
+        body.railway-ui .department-identity strong,
+        body.railway-ui .department-main-text {
+            white-space: normal !important;
+            overflow: visible !important;
+            text-overflow: clip !important;
+            display: block !important;
+            color: #082f73 !important;
+            font-size: 12px !important;
+            line-height: 1.25 !important;
+            font-weight: 950 !important;
+            overflow-wrap: anywhere !important;
+        }
+
+        body.railway-ui .department-identity span,
+        body.railway-ui .department-sub-text {
+            white-space: normal !important;
+            overflow: visible !important;
+            text-overflow: clip !important;
+            color: #53647d !important;
+            font-size: 10px !important;
+            line-height: 1.25 !important;
+            overflow-wrap: anywhere !important;
+        }
+
+        body.railway-ui .department-status,
+        body.railway-ui .assigned-pill {
+            height: auto !important;
+            min-height: 28px !important;
+            min-width: 0 !important;
+            width: auto !important;
+            padding: 5px 8px !important;
+            font-size: 10px !important;
+            line-height: 1.1 !important;
+            white-space: normal !important;
+        }
+
+        body.railway-ui .department-action-grid {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: flex-start !important;
+            gap: 8px !important;
+            flex-wrap: nowrap !important;
+            min-width: 0 !important;
+            width: 100% !important;
+        }
+
+        body.railway-ui .department-action-btn {
+            min-height: 29px !important;
+            padding: 5px 12px !important;
+            font-size: 11px !important;
+            line-height: 1.1 !important;
+            white-space: nowrap !important;
+            min-width: 70px !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 5px !important;
+        }
+
+        @media (min-width: 1450px) {
+            body.railway-ui .department-action-grid {
+                justify-content: flex-start !important;
+            }
+        }
+
+/* =========================================================
+   DEPARTMENTS HERO ONLY - EXACT EMPLOYEE MODULE STYLE
+   Scope: hero section only
+========================================================= */
+body.railway-ui .department-hero {
+
+    width: 100% !important;
+    min-height: 318px !important;
+    height: 318px !important;
+    border-radius: 24px !important;
+    overflow: hidden !important;
+    border: 1px solid #cfdff5 !important;
+    box-shadow: 0 14px 34px rgba(8, 52, 143, 0.10) !important;
+    padding: 30px 40px 28px 40px !important;
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    margin: 0 !important;
+    z-index: 5 !important;
+    text-align: left !important;
+    background:
+        url("../images/employees-hero-bg.png") center center / cover no-repeat,
+        linear-gradient(135deg, #ffffff 0%, #edf7ff 58%, #fff8ee 100%) !important;
+}
+
+body.railway-ui .department-hero::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.92) 0%,
+            rgba(255,255,255,0.82) 20%,
+            rgba(255,255,255,0.52) 38%,
+            rgba(255,255,255,0.18) 55%,
+            rgba(255,255,255,0.00) 75%
+        ) !important;
+}
+
+body.railway-ui .department-hero::after {
+    content: none !important;
+    display: none !important;
+    background: none !important;
+}
+
+body.railway-ui .department-hero > * {
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+body.railway-ui .department-hero-copy {
+    width: 63% !important;
+    max-width: 845px !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    position: relative !important;
+    z-index: 6 !important;
+    display: block !important;
+    text-align: left !important;
+    transform: none !important;
+    left: auto !important;
+    right: auto !important;
+}
+
+body.railway-ui .department-hero h1 {
+    margin: 0 !important;
+    color: var(--ir-blue) !important;
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-size: clamp(36px, 3.05vw, 49px) !important;
+    line-height: 1.03 !important;
+    font-weight: 950 !important;
+    letter-spacing: -0.7px !important;
+    text-transform: uppercase !important;
+    max-width: 760px !important;
+    text-align: left !important;
+}
+
+body.railway-ui .department-hero p {
+    margin: 13px 0 0 0 !important;
+    color: #18366f !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    font-weight: 850 !important;
+    max-width: 795px !important;
+    text-align: left !important;
+}
+
+body.railway-ui .department-hero-pills {
+    display: flex !important;
+    gap: 10px !important;
+    flex-wrap: wrap !important;
+    margin-top: 17px !important;
+    max-width: 810px !important;
+    justify-content: flex-start !important;
+}
+
+body.railway-ui .department-hero-pill {
+    min-height: 35px !important;
+    height: 35px !important;
+    padding: 0 13px !important;
+    border-radius: 999px !important;
+    background: rgba(255,255,255,0.94) !important;
+    border: 1px solid #dbe8f7 !important;
+    color: #163b78 !important;
+    font-size: 11.2px !important;
+    font-weight: 900 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 7px !important;
+    box-shadow: 0 10px 22px rgba(8,52,143,0.08) !important;
+    white-space: nowrap !important;
+}
+
+/* =========================================================
+   DEPARTMENT REGISTER FULL-WIDTH COLUMN DISTRIBUTION FIX
+   Scope: departments.jsp table only
+   Purpose: remove odd right-side blank space and spread columns uniformly
+========================================================= */
+body.railway-ui #departmentTable {
+    width: 100% !important;
+    max-width: 100% !important;
+    table-layout: fixed !important;
+}
+
+body.railway-ui #departmentTable thead th,
+body.railway-ui #departmentTable tbody td {
+    vertical-align: middle !important;
+}
+
+body.railway-ui #departmentTable thead th:nth-child(4),
+body.railway-ui #departmentTable thead th:nth-child(5),
+body.railway-ui #departmentTable thead th:nth-child(6),
+body.railway-ui #departmentTable tbody td:nth-child(4),
+body.railway-ui #departmentTable tbody td:nth-child(5),
+body.railway-ui #departmentTable tbody td:nth-child(6) {
+    text-align: center !important;
+}
+
+body.railway-ui #departmentTable .department-status,
+body.railway-ui #departmentTable .assigned-pill {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    justify-content: center !important;
+}
+
+body.railway-ui #departmentTable tbody td:last-child {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+}
+
+body.railway-ui #departmentTable .department-action-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    align-items: center !important;
+    justify-items: stretch !important;
+    justify-content: stretch !important;
+    gap: 9px !important;
+    width: 100% !important;
+    min-width: 0 !important;
+}
+
+body.railway-ui #departmentTable .department-action-btn {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    min-height: 31px !important;
+    padding: 6px 8px !important;
+    border-radius: 999px !important;
+    font-size: 10.5px !important;
+    line-height: 1.1 !important;
+    font-weight: 950 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    text-align: center !important;
+}
+
+body.railway-ui #departmentTable .department-action-btn i {
+    flex: 0 0 auto !important;
+}
+
+@media (max-width: 1250px) {
+    body.railway-ui #departmentTable .department-action-grid {
+        grid-template-columns: 1fr !important;
+        gap: 6px !important;
+    }
+}
+

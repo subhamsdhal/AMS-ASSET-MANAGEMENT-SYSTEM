@@ -1,0 +1,153 @@
+
+        .profile-layout {
+            display: grid;
+            grid-template-columns: 1.35fr 0.65fr;
+            gap: 24px;
+            margin-top: 22px;
+        }
+
+        .profile-form-card,
+        .profile-preview-card {
+            padding: 30px;
+            border-radius: 28px;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.22);
+            backdrop-filter: blur(18px) saturate(140%);
+            -webkit-backdrop-filter: blur(18px) saturate(140%);
+        }
+
+        .profile-form-card h2,
+        .profile-preview-card h2 {
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .profile-form-card p,
+        .profile-preview-card p {
+            color: rgba(255, 255, 255, 0.82);
+            line-height: 1.65;
+            font-size: 14px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(240px, 1fr));
+            gap: 18px;
+            margin-top: 20px;
+        }
+
+        .form-group.full {
+            grid-column: 1 / -1;
+        }
+
+        .form-group label {
+            display: block;
+            color: white;
+            font-weight: 900;
+            margin-bottom: 9px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 16px;
+            border-radius: 16px;
+            outline: none;
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            background: rgba(255, 255, 255, 0.13);
+            color: white;
+            font-weight: 800;
+            font-family: inherit;
+            resize: vertical;
+        }
+
+        .form-group textarea {
+            min-height: 130px;
+            line-height: 1.6;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255, 255, 255, 0.55);
+        }
+
+        .profile-actions {
+            margin-top: 24px;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .submit-btn {
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        .preview-logo {
+            width: 90px;
+            height: 90px;
+            border-radius: 28px;
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 36px;
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
+            margin-bottom: 20px;
+        }
+
+        .profile-preview-row {
+            padding: 15px 16px;
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.10);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            margin-top: 13px;
+        }
+
+        .profile-preview-row span {
+            display: block;
+            color: rgba(255, 255, 255, 0.70);
+            font-size: 12px;
+            font-weight: 900;
+            margin-bottom: 6px;
+        }
+
+        .profile-preview-row strong {
+            color: white;
+            font-size: 14px;
+            word-break: break-word;
+        }
+
+        @media (max-width: 1050px) {
+            .profile-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 750px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    
+        body.railway-ui .asset-hero {
+            background: 
+                url("../images/employees-hero-bg.png") center center / cover no-repeat,
+                linear-gradient(135deg, rgba(255,255,255,0.96), rgba(232,245,255,0.93)) !important;
+        }
+        body.railway-ui .asset-hero::before {
+            content: "" !important;
+            position: absolute !important;
+            inset: 0 !important;
+            z-index: 1 !important;
+            pointer-events: none !important;
+            background: linear-gradient(90deg, rgba(255,255,255,0.98) 0%, rgba(247,251,255,0.92) 20%, rgba(255,255,255,0.0) 100%) !important;
+        }
+        body.railway-ui .asset-hero > * {
+            position: relative !important;
+            z-index: 2 !important;
+        }

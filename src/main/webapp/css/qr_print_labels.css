@@ -1,0 +1,347 @@
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #eef5ff;
+            color: #08348f;
+        }
+
+        .no-print {
+            padding: 18px;
+            background: #ffffff;
+            border-bottom: 1px solid #d8e6f7;
+            position: sticky;
+            top: 0;
+            z-index: 20;
+        }
+
+        .toolbar {
+            max-width: 1320px;
+            margin: 0 auto;
+            display: flex;
+            gap: 12px;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .toolbar h1 {
+            margin: 0;
+            font-size: 22px;
+            font-weight: 950;
+            text-transform: uppercase;
+            color: #08348f;
+        }
+
+        .toolbar p {
+            margin: 4px 0 0 0;
+            color: #60708d;
+            font-size: 12px;
+            font-weight: 760;
+        }
+
+        .btn-row {
+            display: flex;
+            gap: 9px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            min-height: 38px;
+            padding: 0 14px;
+            border-radius: 999px;
+            border: 1px solid #d7e5f7;
+            background: #ffffff;
+            color: #08348f;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 12px;
+            font-weight: 900;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        .btn.primary {
+            background: #08348f;
+            color: #ffffff;
+            border-color: #08348f;
+        }
+
+        .print-area {
+            max-width: 1320px;
+            margin: 18px auto;
+            padding: 0 16px 30px 16px;
+        }
+
+        .label-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+        }
+
+        .asset-label {
+            background: #ffffff;
+            border: 2px solid #08348f;
+            border-radius: 16px;
+            padding: 12px;
+            min-height: 245px;
+            display: grid;
+            grid-template-columns: 132px minmax(0, 1fr);
+            gap: 12px;
+            overflow: hidden;
+            page-break-inside: avoid;
+        }
+
+        .qr-side {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .qr-side img {
+            width: 118px;
+            height: 118px;
+            object-fit: contain;
+            border: 1px solid #d8e6f7;
+            border-radius: 10px;
+            padding: 5px;
+            background: #ffffff;
+        }
+
+        .qr-side strong {
+            font-size: 10px;
+            color: #08348f;
+            text-align: center;
+            line-height: 1.25;
+            word-break: break-word;
+        }
+
+        .label-info {
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .org {
+            border-bottom: 1px solid #d8e6f7;
+            padding-bottom: 7px;
+            margin-bottom: 4px;
+        }
+
+        .org h2 {
+            margin: 0;
+            font-size: 13px;
+            color: #08348f;
+            font-weight: 950;
+            text-transform: uppercase;
+            line-height: 1.15;
+        }
+
+        .org span {
+            display: block;
+            margin-top: 3px;
+            color: #04733b;
+            font-size: 9px;
+            font-weight: 950;
+            text-transform: uppercase;
+        }
+
+        .field {
+            display: grid;
+            grid-template-columns: 72px minmax(0, 1fr);
+            gap: 6px;
+            align-items: start;
+            font-size: 10px;
+            line-height: 1.25;
+        }
+
+        .field b {
+            color: #65758f;
+            text-transform: uppercase;
+            font-size: 9px;
+        }
+
+        .field span {
+            color: #14336f;
+            font-weight: 850;
+            word-break: break-word;
+        }
+
+        .status-pill {
+            display: inline-flex;
+            min-height: 20px;
+            padding: 0 8px;
+            border-radius: 999px;
+            align-items: center;
+            justify-content: center;
+            background: #eaf7ef;
+            color: #04733b;
+            border: 1px solid #bde8cf;
+            font-size: 9px;
+            font-weight: 950;
+            text-transform: uppercase;
+            width: fit-content;
+        }
+
+        .footer-line {
+            margin-top: auto;
+            padding-top: 7px;
+            border-top: 1px solid #d8e6f7;
+            color: #65758f;
+            font-size: 8.5px;
+            font-weight: 760;
+            line-height: 1.3;
+        }
+
+        .empty {
+            min-height: 280px;
+            background: #ffffff;
+            border: 1px dashed #b8cbed;
+            border-radius: 18px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #08348f;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .empty i {
+            font-size: 42px;
+            margin-bottom: 12px;
+        }
+
+        .empty strong {
+            font-size: 18px;
+            font-weight: 950;
+        }
+
+        .empty span {
+            margin-top: 7px;
+            color: #64748b;
+            font-size: 13px;
+            font-weight: 760;
+        }
+
+        @media print {
+            @page {
+                size: A4 portrait;
+                margin: 10mm;
+            }
+
+            body {
+                background: #ffffff;
+            }
+
+            .no-print {
+                display: none !important;
+            }
+
+            .print-area {
+                margin: 0;
+                padding: 0;
+                max-width: none;
+            }
+
+            .label-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 8mm;
+            }
+
+            .asset-label {
+                border: 1.6px solid #000000;
+                border-radius: 10px;
+                min-height: 61mm;
+                padding: 7mm;
+            }
+
+            .qr-side img {
+                width: 31mm;
+                height: 31mm;
+            }
+        }
+    
+        /* ===== PRINT / WORK ORDER OFFICIAL RAILWAY POLISH ===== */
+        :root {
+            --ir-blue: #08348f;
+            --ir-line: #d8e4f5;
+            --ir-text: #06215f;
+        }
+
+        body {
+            color: var(--ir-text) !important;
+            background: #ffffff !important;
+            font-family: "Segoe UI", Arial, sans-serif !important;
+        }
+
+        .print-header,
+        .header,
+        section.header,
+        .page-header {
+            border: 1px solid var(--ir-line) !important;
+            border-radius: 14px !important;
+            color: var(--ir-blue) !important;
+            background:
+                linear-gradient(90deg, rgba(255,255,255,0.98), rgba(238,248,255,0.96), rgba(255,248,238,0.86)) !important;
+            box-shadow: 0 8px 20px rgba(8, 52, 143, 0.08) !important;
+        }
+
+        .summary,
+        .sign-section,
+        .label-grid,
+        .label-card,
+        .qr-card,
+        .print-card,
+        .panel,
+        table {
+            position: relative !important;
+            border-color: var(--ir-line) !important;
+        }
+
+        .no-print,
+        .print-actions,
+        .action-bar {
+            position: relative !important;
+            z-index: 5 !important;
+        }
+
+        @media print {
+            body {
+                background: #ffffff !important;
+            }
+
+            .no-print,
+            .print-actions,
+            .action-bar,
+            button {
+                display: none !important;
+            }
+
+            .print-header,
+            .header,
+            section.header,
+            .page-header,
+            .summary,
+            .sign-section,
+            .label-grid,
+            .label-card,
+            .qr-card,
+            .print-card,
+            .panel,
+            table {
+                box-shadow: none !important;
+            }
+        }
+
+    

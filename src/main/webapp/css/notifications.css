@@ -1,0 +1,27 @@
+
+        body.railway-ui .notify-board{display:flex!important;flex-direction:column!important;gap:16px!important}
+        body.railway-ui .notify-hero{border:1px solid var(--ir-line)!important;border-radius:22px!important;background:linear-gradient(135deg,rgba(255,255,255,.98),rgba(232,245,255,.96)),radial-gradient(circle at 92% 18%,rgba(8,52,143,.13),transparent 36%)!important;box-shadow:var(--ir-shadow-soft)!important;padding:24px!important;display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;gap:16px!important;align-items:center!important}
+        body.railway-ui .notify-hero h1{margin:0!important;color:var(--ir-blue)!important;font-size:30px!important;font-weight:950!important;text-transform:uppercase!important}
+        body.railway-ui .notify-hero p{margin:8px 0 0 0!important;color:#36527f!important;font-size:13px!important;font-weight:800!important}
+        body.railway-ui .notify-count{min-width:150px!important;border-radius:18px!important;background:#fff!important;border:1px solid #d7e5f7!important;padding:15px 18px!important;text-align:center!important;box-shadow:0 8px 18px rgba(8,52,143,.06)!important}
+        body.railway-ui .notify-count strong{display:block!important;color:var(--ir-blue)!important;font-size:32px!important;font-weight:950!important;line-height:1!important}
+        body.railway-ui .notify-count span{display:block!important;margin-top:7px!important;color:#64748b!important;font-size:11px!important;font-weight:900!important;text-transform:uppercase!important}
+        body.railway-ui .notify-grid{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:14px!important}
+        body.railway-ui .notify-card{border-radius:18px!important;border:1px solid var(--ir-line)!important;background:rgba(255,255,255,.97)!important;box-shadow:var(--ir-shadow-soft)!important;padding:16px!important;min-height:105px!important;text-decoration:none!important}
+        body.railway-ui .notify-card span{display:block!important;color:#64748b!important;font-size:10px!important;font-weight:900!important;text-transform:uppercase!important;margin-bottom:8px!important}
+        body.railway-ui .notify-card strong{display:block!important;color:var(--ir-blue)!important;font-size:22px!important;font-weight:950!important}
+        body.railway-ui .notify-card small{display:block!important;margin-top:5px!important;color:#36527f!important;font-size:11px!important;font-weight:800!important}
+        body.railway-ui .notify-panel{border-radius:18px!important;border:1px solid var(--ir-line)!important;background:rgba(255,255,255,.97)!important;box-shadow:var(--ir-shadow-soft)!important;padding:18px!important}
+        body.railway-ui .notify-panel h2{margin:0 0 14px 0!important;color:var(--ir-blue)!important;font-size:16px!important;font-weight:950!important;text-transform:uppercase!important}
+        body.railway-ui .notify-list{display:flex!important;flex-direction:column!important;gap:9px!important}
+        body.railway-ui .notify-row{display:grid!important;grid-template-columns:44px minmax(0,1fr) auto!important;gap:12px!important;align-items:center!important;padding:12px!important;border:1px solid #e4edf9!important;border-radius:14px!important;background:#fff!important;text-decoration:none!important;color:var(--ir-blue)!important}
+        body.railway-ui .notify-icon{width:44px!important;height:44px!important;border-radius:14px!important;background:#eef5ff!important;color:var(--ir-blue)!important;display:flex!important;align-items:center!important;justify-content:center!important;font-size:18px!important}
+        body.railway-ui .notify-row.warning .notify-icon{background:#fff7e8!important;color:#c46b00!important}
+        body.railway-ui .notify-row.danger .notify-icon{background:#fff0f0!important;color:#d02d2d!important}
+        body.railway-ui .notify-main{min-width:0!important}
+        body.railway-ui .notify-main strong{display:block!important;color:var(--ir-blue)!important;font-size:13px!important;font-weight:950!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}
+        body.railway-ui .notify-main span{display:block!important;margin-top:4px!important;color:#64748b!important;font-size:11px!important;font-weight:760!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}
+        body.railway-ui .notify-date{font-size:11px!important;font-weight:900!important;color:#36527f!important;white-space:nowrap!important}
+        body.railway-ui .empty-box{min-height:130px!important;border-radius:16px!important;border:1px dashed #c8daf3!important;background:linear-gradient(180deg,#fbfdff,#f5f9ff)!important;display:flex!important;align-items:center!important;justify-content:center!important;flex-direction:column!important;text-align:center!important;color:var(--ir-blue)!important;padding:18px!important}
+        @media(max-width:1200px){body.railway-ui .notify-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}body.railway-ui .notify-hero{grid-template-columns:1fr!important}}
+    

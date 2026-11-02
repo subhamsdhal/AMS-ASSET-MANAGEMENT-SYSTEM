@@ -1,0 +1,418 @@
+/* =====================================================
+   Railway AMS Live DB + Laptop Screen UI Final Fix
+   Fixes faint cards, right-side clipped text, add-allocation cards,
+   QR tables, request/return/audit layout.
+   ===================================================== */
+
+body.railway-ui {
+    --ir-readable-blue: #082f73;
+    --ir-readable-blue-2: #0b3d91;
+    --ir-muted-text: #475569;
+    --ir-soft-border: #d7e6fb;
+}
+
+body.railway-ui .main-scroll-content {
+    overflow-x: hidden !important;
+}
+
+/* Keep all important text dark/readable instead of faded white */
+body.railway-ui .summary-card,
+body.railway-ui .stat-card,
+body.railway-ui .metric-card,
+body.railway-ui .dashboard-card,
+body.railway-ui .quick-card,
+body.railway-ui .settings-card,
+body.railway-ui .module-card,
+body.railway-ui .ir-card {
+    color: var(--ir-readable-blue) !important;
+    opacity: 1 !important;
+    text-shadow: none !important;
+}
+
+body.railway-ui .summary-card *,
+body.railway-ui .stat-card *,
+body.railway-ui .metric-card *,
+body.railway-ui .dashboard-card *,
+body.railway-ui .quick-card *,
+body.railway-ui .settings-card *,
+body.railway-ui .module-card *,
+body.railway-ui .ir-card * {
+    opacity: 1 !important;
+    text-shadow: none !important;
+}
+
+body.railway-ui .summary-card h3,
+body.railway-ui .summary-card h4,
+body.railway-ui .summary-card strong,
+body.railway-ui .stat-card h3,
+body.railway-ui .stat-card h4,
+body.railway-ui .stat-card strong,
+body.railway-ui .metric-card h3,
+body.railway-ui .metric-card h4,
+body.railway-ui .metric-card strong {
+    color: var(--ir-readable-blue) !important;
+    font-weight: 950 !important;
+}
+
+body.railway-ui .summary-card p,
+body.railway-ui .summary-card span,
+body.railway-ui .stat-card p,
+body.railway-ui .stat-card span,
+body.railway-ui .metric-card p,
+body.railway-ui .metric-card span {
+    color: #334155 !important;
+    font-weight: 850 !important;
+}
+
+/* Laptop-friendly stat-card row: readable and not clipped */
+body.railway-ui .stats-grid,
+body.railway-ui .summary-grid,
+body.railway-ui .kpi-grid,
+body.railway-ui .dashboard-summary-grid {
+    gap: 14px !important;
+}
+
+body.railway-ui .stats-grid > *,
+body.railway-ui .summary-grid > *,
+body.railway-ui .kpi-grid > *,
+body.railway-ui .dashboard-summary-grid > * {
+    min-width: 0 !important;
+    overflow: hidden !important;
+}
+
+/* Tables: default fit screen, keep action buttons readable */
+body.railway-ui table {
+    color: var(--ir-readable-blue) !important;
+}
+
+body.railway-ui table th {
+    color: var(--ir-readable-blue) !important;
+    font-weight: 950 !important;
+    white-space: normal !important;
+    line-height: 1.22 !important;
+}
+
+body.railway-ui table td {
+    color: var(--ir-readable-blue) !important;
+    font-weight: 800 !important;
+    line-height: 1.28 !important;
+    vertical-align: middle !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: anywhere !important;
+}
+
+body.railway-ui table td small,
+body.railway-ui table td .subtext,
+body.railway-ui table td .muted {
+    color: #475569 !important;
+    font-weight: 750 !important;
+}
+
+body.railway-ui .btn,
+body.railway-ui .action-btn,
+body.railway-ui .mini-btn,
+body.railway-ui .chip,
+body.railway-ui .status-pill,
+body.railway-ui .pill {
+    opacity: 1 !important;
+    text-shadow: none !important;
+    font-weight: 900 !important;
+}
+
+/* Permit horizontal scroll only where wide technical tables genuinely need it */
+body.railway-ui .audit-table-wrap,
+body.railway-ui .table-wrap,
+body.railway-ui .log-table-wrap {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    overflow-y: visible !important;
+    scrollbar-width: thin !important;
+    padding-bottom: 8px !important;
+}
+
+body.railway-ui .audit-table-wrap::-webkit-scrollbar,
+body.railway-ui .table-wrap::-webkit-scrollbar,
+body.railway-ui .log-table-wrap::-webkit-scrollbar {
+    height: 9px !important;
+}
+
+body.railway-ui .audit-table-wrap::-webkit-scrollbar-thumb,
+body.railway-ui .table-wrap::-webkit-scrollbar-thumb,
+body.railway-ui .log-table-wrap::-webkit-scrollbar-thumb {
+    background: #9db9e8 !important;
+    border-radius: 999px !important;
+}
+
+/* Audit must scroll right so full detail/date/action columns remain accessible */
+body.railway-ui .audit-table {
+    min-width: 1420px !important;
+    table-layout: fixed !important;
+}
+
+body.railway-ui .audit-table th:nth-child(1),
+body.railway-ui .audit-table td:nth-child(1) { width: 70px !important; }
+body.railway-ui .audit-table th:nth-child(2),
+body.railway-ui .audit-table td:nth-child(2) { width: 190px !important; }
+body.railway-ui .audit-table th:nth-child(3),
+body.railway-ui .audit-table td:nth-child(3) { width: 150px !important; }
+body.railway-ui .audit-table th:nth-child(4),
+body.railway-ui .audit-table td:nth-child(4) { width: 130px !important; }
+body.railway-ui .audit-table th:nth-child(5),
+body.railway-ui .audit-table td:nth-child(5) { width: 135px !important; }
+body.railway-ui .audit-table th:nth-child(6),
+body.railway-ui .audit-table td:nth-child(6) { width: 150px !important; }
+body.railway-ui .audit-table th:nth-child(7),
+body.railway-ui .audit-table td:nth-child(7) { width: 310px !important; }
+body.railway-ui .audit-table th:nth-child(8),
+body.railway-ui .audit-table td:nth-child(8) { width: 110px !important; }
+body.railway-ui .audit-table th:nth-child(9),
+body.railway-ui .audit-table td:nth-child(9) { width: 140px !important; }
+body.railway-ui .audit-table th:nth-child(10),
+body.railway-ui .audit-table td:nth-child(10) { width: 100px !important; }
+
+/* QR technical pages need controlled horizontal scroll, not invisible right side */
+body.railway-ui .asset-table,
+body.railway-ui .tag-table,
+body.railway-ui .log-table {
+    min-width: 1340px !important;
+    table-layout: fixed !important;
+}
+
+body.railway-ui .asset-table td,
+body.railway-ui .tag-table td,
+body.railway-ui .log-table td {
+    overflow: visible !important;
+}
+
+body.railway-ui .asset-table th:nth-child(1),
+body.railway-ui .asset-table td:nth-child(1) { width: 185px !important; }
+body.railway-ui .asset-table th:nth-child(2),
+body.railway-ui .asset-table td:nth-child(2) { width: 190px !important; }
+body.railway-ui .asset-table th:nth-child(3),
+body.railway-ui .asset-table td:nth-child(3) { width: 170px !important; }
+body.railway-ui .asset-table th:nth-child(4),
+body.railway-ui .asset-table td:nth-child(4) { width: 130px !important; }
+body.railway-ui .asset-table th:nth-child(5),
+body.railway-ui .asset-table td:nth-child(5) { width: 155px !important; }
+body.railway-ui .asset-table th:nth-child(6),
+body.railway-ui .asset-table td:nth-child(6) { width: 230px !important; }
+body.railway-ui .asset-table th:nth-child(7),
+body.railway-ui .asset-table td:nth-child(7) { width: 120px !important; }
+body.railway-ui .asset-table th:nth-child(8),
+body.railway-ui .asset-table td:nth-child(8) { width: 150px !important; }
+
+body.railway-ui .tag-table th:nth-child(1),
+body.railway-ui .tag-table td:nth-child(1) { width: 160px !important; }
+body.railway-ui .tag-table th:nth-child(2),
+body.railway-ui .tag-table td:nth-child(2) { width: 150px !important; }
+body.railway-ui .tag-table th:nth-child(3),
+body.railway-ui .tag-table td:nth-child(3) { width: 140px !important; }
+body.railway-ui .tag-table th:nth-child(4),
+body.railway-ui .tag-table td:nth-child(4) { width: 125px !important; }
+body.railway-ui .tag-table th:nth-child(5),
+body.railway-ui .tag-table td:nth-child(5) { width: 135px !important; }
+body.railway-ui .tag-table th:nth-child(6),
+body.railway-ui .tag-table td:nth-child(6) { width: 110px !important; }
+body.railway-ui .tag-table th:nth-child(7),
+body.railway-ui .tag-table td:nth-child(7) { width: 110px !important; }
+body.railway-ui .tag-table th:nth-child(8),
+body.railway-ui .tag-table td:nth-child(8) { width: 120px !important; }
+body.railway-ui .tag-table th:nth-child(9),
+body.railway-ui .tag-table td:nth-child(9) { width: 120px !important; }
+body.railway-ui .tag-table th:nth-child(10),
+body.railway-ui .tag-table td:nth-child(10) { width: 230px !important; }
+body.railway-ui .tag-table th:nth-child(11),
+body.railway-ui .tag-table td:nth-child(11) { width: 210px !important; }
+body.railway-ui .tag-table th:nth-child(12),
+body.railway-ui .tag-table td:nth-child(12) { width: 105px !important; }
+
+body.railway-ui .log-table th:nth-child(1),
+body.railway-ui .log-table td:nth-child(1) { width: 70px !important; }
+body.railway-ui .log-table th:nth-child(2),
+body.railway-ui .log-table td:nth-child(2) { width: 190px !important; }
+body.railway-ui .log-table th:nth-child(3),
+body.railway-ui .log-table td:nth-child(3) { width: 160px !important; }
+body.railway-ui .log-table th:nth-child(4),
+body.railway-ui .log-table td:nth-child(4) { width: 120px !important; }
+body.railway-ui .log-table th:nth-child(5),
+body.railway-ui .log-table td:nth-child(5) { width: 125px !important; }
+body.railway-ui .log-table th:nth-child(6),
+body.railway-ui .log-table td:nth-child(6) { width: 120px !important; }
+body.railway-ui .log-table th:nth-child(7),
+body.railway-ui .log-table td:nth-child(7) { width: 170px !important; }
+body.railway-ui .log-table th:nth-child(8),
+body.railway-ui .log-table td:nth-child(8) { width: 170px !important; }
+body.railway-ui .log-table th:nth-child(9),
+body.railway-ui .log-table td:nth-child(9) { width: 210px !important; }
+body.railway-ui .log-table th:nth-child(10),
+body.railway-ui .log-table td:nth-child(10) { width: 130px !important; }
+body.railway-ui .log-table th:nth-child(11),
+body.railway-ui .log-table td:nth-child(11) { width: 110px !important; }
+
+/* Request and return pages: keep cards readable */
+body.railway-ui .request-summary-card,
+body.railway-ui .return-summary-card,
+body.railway-ui .request-card,
+body.railway-ui .return-card {
+    background: rgba(255,255,255,0.96) !important;
+    color: var(--ir-readable-blue) !important;
+    border-color: var(--ir-soft-border) !important;
+}
+
+body.railway-ui .request-summary-card *,
+body.railway-ui .return-summary-card *,
+body.railway-ui .request-card *,
+body.railway-ui .return-card * {
+    color: var(--ir-readable-blue) !important;
+    opacity: 1 !important;
+    text-shadow: none !important;
+}
+
+/* Add allocation page: fix scrambled asset cards */
+body.railway-ui .allocation-smart-page .multi-asset-box {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)) !important;
+    gap: 12px !important;
+    max-height: 285px !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    padding: 14px !important;
+    border-radius: 22px !important;
+    background: rgba(255,255,255,0.78) !important;
+    border: 1px solid #d6e4f7 !important;
+}
+
+body.railway-ui .allocation-smart-page .multi-asset-item {
+    display: grid !important;
+    grid-template-columns: 24px minmax(0, 1fr) !important;
+    align-items: center !important;
+    gap: 14px !important;
+    min-height: 72px !important;
+    padding: 14px 16px !important;
+    border-radius: 18px !important;
+    background: #ffffff !important;
+    border: 1px solid #d7e6fb !important;
+    box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06) !important;
+    color: var(--ir-readable-blue) !important;
+    transform: none !important;
+}
+
+body.railway-ui .allocation-smart-page .multi-asset-item input[type="checkbox"] {
+    width: 18px !important;
+    height: 18px !important;
+    margin: 0 !important;
+    position: static !important;
+    transform: none !important;
+}
+
+body.railway-ui .allocation-smart-page .asset-card-text {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 4px !important;
+    min-width: 0 !important;
+    overflow: hidden !important;
+    color: var(--ir-readable-blue) !important;
+}
+
+body.railway-ui .allocation-smart-page .asset-card-text strong {
+    color: var(--ir-readable-blue) !important;
+    font-size: 14px !important;
+    font-weight: 950 !important;
+    line-height: 1.2 !important;
+    overflow-wrap: anywhere !important;
+}
+
+body.railway-ui .allocation-smart-page .asset-card-text small {
+    color: #334155 !important;
+    font-size: 12px !important;
+    font-weight: 850 !important;
+    line-height: 1.25 !important;
+}
+
+body.railway-ui .allocation-smart-page .asset-card-text em {
+    color: #64748b !important;
+    font-size: 11px !important;
+    font-weight: 800 !important;
+    line-height: 1.25 !important;
+}
+
+body.railway-ui .allocation-smart-page .multi-asset-item.selected {
+    background: #ecfdf5 !important;
+    border-color: #22c55e !important;
+}
+
+body.railway-ui .allocation-smart-page .selected-assets-panel,
+body.railway-ui .allocation-smart-page .allocation-policy-strip div {
+    background: rgba(255,255,255,0.92) !important;
+    border: 1px solid #d7e6fb !important;
+    color: var(--ir-readable-blue) !important;
+}
+
+body.railway-ui .allocation-smart-page .selected-assets-panel *,
+body.railway-ui .allocation-smart-page .allocation-policy-strip div * {
+    color: var(--ir-readable-blue) !important;
+    opacity: 1 !important;
+}
+
+/* Smaller action button text to stop clipping in employee/technical tables */
+body.railway-ui .table-actions,
+body.railway-ui .control-actions,
+body.railway-ui .row-actions {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 7px !important;
+}
+
+body.railway-ui .table-actions .btn,
+body.railway-ui .control-actions .btn,
+body.railway-ui .row-actions .btn,
+body.railway-ui table .btn,
+body.railway-ui table button {
+    min-width: 0 !important;
+    max-width: 128px !important;
+    white-space: normal !important;
+    line-height: 1.15 !important;
+    padding: 8px 11px !important;
+    border-radius: 14px !important;
+}
+
+/* QR remarks and public URL should wrap into 2-3 readable lines */
+body.railway-ui .qr-url,
+body.railway-ui .public-url,
+body.railway-ui .token-chip,
+body.railway-ui .remarks-chip,
+body.railway-ui .remark-pill {
+    max-width: 100% !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    overflow-wrap: anywhere !important;
+    line-height: 1.25 !important;
+}
+
+@media (max-width: 1500px) {
+    body.railway-ui .asset-table,
+    body.railway-ui .tag-table,
+    body.railway-ui .log-table {
+        min-width: 1280px !important;
+    }
+
+    body.railway-ui .allocation-smart-page .multi-asset-box {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Tricolour Aesthetic Touch */
+body.railway-ui .railway-topbar {
+    position: relative;
+    border-bottom: 3px solid transparent;
+    border-image: linear-gradient(to right, #FF9933, #ffffff, #138808) 1;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* Login Card Tricolour top border */
+body.railway-ui .login-card {
+    border-top: 4px solid transparent;
+    border-image: linear-gradient(to right, #FF9933, #ffffff, #138808) 1;
+}

@@ -1,0 +1,10 @@
+AI TOPBAR + PREMIUM SIDEBAR HIGHLIGHT UPDATE
+
+Changes made:
+1. Removed the visible Change View / dark-theme floating option from JSP pages.
+2. Added AI Copilot shortcut icon to the topbar.
+3. Disabled the injected dark theme toggle and forces official light railway UI if old browser cache/localStorage had dark mode saved.
+4. Reworked sidebar module hover/active highlight into a richer dynamic tricolour style.
+5. Reworked Logout hover/highlight so it is no longer blue.
+
+No backend Servlet/DAO/database/API/Gmail/AI logic was intentionally changed.

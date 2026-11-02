@@ -1,0 +1,1747 @@
+/*
+ * ams-pro.css — NEUTRALIZED (Railway UI compatibility patch)
+ *
+ * Conflicting body background and sidebar styles have been removed
+ * so ir-ams-railway-ui.css can control the main layout aesthetics.
+ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    /* background and color controlled by ir-ams-railway-ui.css */
+}
+
+/* Main Layout */
+.app {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    /* width, background, positioning controlled by ir-ams-railway-ui.css */
+}
+
+.logo-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 35px;
+}
+
+.logo-icon {
+    width: 42px;
+    height: 42px;
+    background: #2563eb;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.logo-text h2 {
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.logo-text span {
+    font-size: 12px;
+    color: #a7c7ff;
+}
+
+.menu a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #dbeafe;
+    text-decoration: none;
+    padding: 13px 15px;
+    margin-bottom: 8px;
+    border-radius: 12px;
+    font-size: 15px;
+    transition: 0.25s;
+}
+
+.menu a:hover,
+.menu a.active {
+    background: #2563eb;
+    color: white;
+    transform: translateX(4px);
+}
+
+.menu .logout {
+    margin-top: 25px;
+    background: rgba(239, 68, 68, 0.18);
+    color: #fecaca;
+}
+
+/* Main Area */
+.main {
+    margin-left: 260px;
+    width: calc(100% - 260px);
+}
+
+/* Topbar */
+.topbar {
+    height: 76px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 32px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.search-box input {
+    width: 380px;
+    padding: 12px 18px;
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+    outline: none;
+    font-size: 14px;
+}
+
+.search-box input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.15);
+}
+
+.user-box {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.notification {
+    position: relative;
+    font-size: 22px;
+    color: #1f2937;
+}
+
+.notification::after {
+    content: "";
+    width: 9px;
+    height: 9px;
+    background: #ef4444;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: -2px;
+}
+
+.user-pill {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f3f4f6;
+    padding: 9px 14px;
+    border-radius: 999px;
+}
+
+.avatar {
+    width: 36px;
+    height: 36px;
+    background: #2563eb;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-info strong {
+    font-size: 14px;
+}
+
+.user-info span {
+    display: block;
+    font-size: 12px;
+    color: #6b7280;
+}
+
+/* Content */
+.content {
+    padding: 32px;
+}
+
+.page-title {
+    margin-bottom: 24px;
+}
+
+.page-title h1 {
+    font-size: 28px;
+    color: #111827;
+}
+
+.breadcrumb {
+    margin-top: 6px;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+/* Cards */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+    border: 1px solid #eef2f7;
+    transition: 0.25s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 34px rgba(0,0,0,0.10);
+}
+
+.stat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 22px;
+}
+
+.blue {
+    background: #2563eb;
+}
+
+.green {
+    background: #16a34a;
+}
+
+.orange {
+    background: #f59e0b;
+}
+
+.red {
+    background: #dc2626;
+}
+
+.purple {
+    background: #7c3aed;
+}
+
+.cyan {
+    background: #0891b2;
+}
+
+.stat-card h3 {
+    color: #6b7280;
+    font-size: 15px;
+    margin-top: 18px;
+}
+
+.stat-card p {
+    font-size: 34px;
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+/* Panels */
+.panel {
+    background: white;
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+    border: 1px solid #eef2f7;
+    margin-bottom: 25px;
+}
+
+.panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.panel-header h2 {
+    font-size: 21px;
+}
+
+/* Table */
+.table-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.table-actions input {
+    padding: 11px 16px;
+    width: 320px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+}
+
+.btn {
+    border: none;
+    padding: 11px 16px;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: #2563eb;
+}
+
+.btn-success {
+    background: #16a34a;
+}
+
+.btn-warning {
+    background: #f59e0b;
+}
+
+.btn-danger {
+    background: #dc2626;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+th {
+    background: #f8fafc;
+    color: #374151;
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+td {
+    padding: 14px;
+    border-bottom: 1px solid #edf2f7;
+}
+
+tr:hover {
+    background: #f9fafb;
+}
+
+/* Badges */
+.badge {
+    padding: 6px 11px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.AVAILABLE,
+.ACTIVE,
+.FULFILLED,
+.RETURNED {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.ALLOCATED,
+.APPROVED {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.UNDER_MAINTENANCE,
+.PENDING {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.DISPOSED,
+.REJECTED,
+.INACTIVE {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+/* Responsive */
+@media(max-width: 900px) {
+    .sidebar {
+        width: 220px;
+    }
+
+    .main {
+        margin-left: 220px;
+        width: calc(100% - 220px);
+    }
+
+    .search-box input {
+        width: 220px;
+    }
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.action-group {
+    display: flex;
+    gap: 8px;
+}
+
+.icon-btn {
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.page-tools {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.filter-btn {
+    background: white;
+    color: #374151;
+    border: 1px solid #d1d5db;
+}
+
+.small-text {
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.logo-image-box {
+    width: 46px;
+    height: 46px;
+    background: white;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+}
+
+.railway-logo {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+}
+
+/* =====================================================
+   IR-NEO PREMIUM THEME OVERRIDE
+   Unique Indian Railway Enterprise Dashboard Style
+   ===================================================== */
+
+:root {
+    --rail-navy: #07182f;
+    --rail-blue: #1d4ed8;
+    --rail-gold: #f59e0b;
+    --rail-green: #16a34a;
+    --rail-red: #dc2626;
+    --rail-bg: #eef4fb;
+    --rail-card: rgba(255, 255, 255, 0.92);
+}
+
+/* Premium background */
+body {
+    background:
+        radial-gradient(circle at top left, rgba(37, 99, 235, 0.15), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(245, 158, 11, 0.12), transparent 35%),
+        linear-gradient(135deg, #eef4fb, #f8fafc);
+}
+
+/* Sidebar richer railway look */
+.sidebar {
+    width: 280px;
+    background:
+        linear-gradient(180deg, rgba(3, 18, 41, 0.98), rgba(7, 31, 68, 0.98)),
+        linear-gradient(45deg, rgba(255,255,255,0.05), transparent);
+    border-right: 1px solid rgba(255,255,255,0.12);
+    box-shadow: 10px 0 35px rgba(0,0,0,0.20);
+}
+
+/* Sidebar rail line accent */
+.sidebar::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 110px;
+    width: 5px;
+    height: 70%;
+    background: linear-gradient(180deg, #2563eb, #f59e0b, #16a34a);
+    border-radius: 0 8px 8px 0;
+}
+
+/* Logo upgrade */
+.logo-box {
+    padding: 12px;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.10);
+}
+
+.logo-text h2 {
+    font-size: 22px;
+    color: #ffffff;
+}
+
+.logo-text span {
+    font-size: 11px;
+    color: #bfdbfe;
+}
+
+/* Menu premium */
+.menu a {
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    border: 1px solid transparent;
+}
+
+.menu a:hover,
+.menu a.active {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    border: 1px solid rgba(255,255,255,0.20);
+    box-shadow: 0 10px 22px rgba(37,99,235,0.30);
+}
+
+/* Main adjusts to sidebar */
+.main {
+    margin-left: 280px;
+    width: calc(100% - 280px);
+}
+
+/* Topbar glass effect */
+.topbar {
+    background: rgba(255,255,255,0.82);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(226,232,240,0.9);
+    box-shadow: 0 10px 30px rgba(15,23,42,0.08);
+}
+
+/* Search box premium */
+.search-box input {
+    background: #ffffff;
+    border: 1px solid #dbeafe;
+    box-shadow: inset 0 0 0 1px rgba(37,99,235,0.04);
+}
+
+.search-box input::placeholder {
+    color: #64748b;
+}
+
+/* Page title hero */
+.page-title {
+    padding: 24px 28px;
+    border-radius: 24px;
+    background:
+        linear-gradient(135deg, rgba(37,99,235,0.12), rgba(245,158,11,0.10)),
+        rgba(255,255,255,0.75);
+    border: 1px solid rgba(255,255,255,0.9);
+    box-shadow: 0 14px 35px rgba(15,23,42,0.08);
+}
+
+.page-title h1 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.breadcrumb {
+    color: #475569;
+}
+
+/* Premium stat cards */
+.stat-card {
+    background:
+        linear-gradient(180deg, rgba(255,255,255,0.98), rgba(248,250,252,0.95));
+    border-radius: 24px;
+    border: 1px solid rgba(226,232,240,0.9);
+    box-shadow:
+        0 18px 40px rgba(15,23,42,0.08),
+        inset 0 1px 0 rgba(255,255,255,0.9);
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    background: linear-gradient(90deg, #2563eb, #f59e0b, #16a34a);
+}
+
+.stat-card:hover {
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 24px 55px rgba(15,23,42,0.16);
+}
+
+.stat-card h3 {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+}
+
+.stat-card p {
+    font-size: 38px;
+    color: #0f172a;
+}
+
+/* Icons more premium */
+.stat-icon {
+    width: 58px;
+    height: 58px;
+    border-radius: 18px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.18);
+}
+
+/* Panels */
+.panel {
+    border-radius: 26px;
+    background: rgba(255,255,255,0.94);
+    border: 1px solid rgba(226,232,240,0.9);
+    box-shadow: 0 18px 45px rgba(15,23,42,0.09);
+}
+
+/* Buttons */
+.btn {
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    box-shadow: 0 8px 18px rgba(37,99,235,0.22);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #16a34a, #15803d);
+}
+
+.btn-warning {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #dc2626, #b91c1c);
+}
+
+/* Table upgrade */
+table {
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+th {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: white;
+    font-weight: 700;
+}
+
+td {
+    background: rgba(255,255,255,0.85);
+}
+
+tr:hover td {
+    background: #eff6ff;
+}
+
+/* Badge upgrade */
+.badge {
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.5);
+}
+
+/* User pill */
+.user-pill {
+    background: linear-gradient(135deg, #ffffff, #eef4ff);
+    box-shadow: 0 8px 22px rgba(15,23,42,0.10);
+}
+
+/* Logout premium */
+.menu .logout {
+    background: linear-gradient(135deg, rgba(220,38,38,0.22), rgba(127,29,29,0.25));
+    border: 1px solid rgba(248,113,113,0.28);
+}
+
+/* =====================================================
+   IR COMMAND CENTER UNIQUE THEME
+   Not copied from reference PDF
+   ===================================================== */
+
+body {
+    background:
+        linear-gradient(120deg, rgba(7,24,47,0.06), rgba(255,153,51,0.08)),
+        radial-gradient(circle at top right, rgba(37,99,235,0.16), transparent 35%),
+        #eef3f8;
+}
+
+/* Make sidebar look like Indian Railway command console */
+.sidebar {
+    background:
+        linear-gradient(180deg, #06172d 0%, #09294f 55%, #07182f 100%);
+    border-right: 1px solid rgba(255,255,255,0.16);
+}
+
+.sidebar::after {
+    content: "INDIAN RAILWAY";
+    position: absolute;
+    bottom: 18px;
+    left: 30px;
+    color: rgba(255,255,255,0.10);
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    transform: rotate(-90deg);
+    transform-origin: left bottom;
+}
+
+.logo-box {
+    background: linear-gradient(135deg, rgba(255,255,255,0.10), rgba(255,255,255,0.04));
+    border: 1px solid rgba(255,255,255,0.18);
+    box-shadow: inset 0 0 25px rgba(255,255,255,0.04);
+}
+
+.menu a.active {
+    background: linear-gradient(135deg, #ff9933, #2563eb);
+}
+
+.menu a:hover {
+    background: linear-gradient(135deg, rgba(255,153,51,0.95), rgba(37,99,235,0.95));
+}
+
+/* Topbar command look */
+.topbar {
+    background: rgba(255,255,255,0.88);
+    backdrop-filter: blur(16px);
+}
+
+.search-box input {
+    border-radius: 18px;
+    border: 1px solid #c7d2fe;
+}
+
+/* Unique page hero */
+.ir-hero {
+    background:
+        linear-gradient(135deg, rgba(7,24,47,0.96), rgba(29,78,216,0.88)),
+        radial-gradient(circle at right, rgba(255,153,51,0.35), transparent 35%);
+    color: white;
+    border-radius: 30px;
+    padding: 34px;
+    margin-bottom: 26px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 24px 60px rgba(7,24,47,0.25);
+}
+
+.ir-hero::before {
+    content: "";
+    position: absolute;
+    right: -90px;
+    top: -90px;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    border: 28px solid rgba(255,255,255,0.08);
+}
+
+.ir-hero::after {
+    content: "";
+    position: absolute;
+    left: 34px;
+    bottom: 22px;
+    width: 250px;
+    height: 4px;
+    background: linear-gradient(90deg, #ff9933, #ffffff, #16a34a);
+    border-radius: 10px;
+}
+
+.ir-hero h1 {
+    font-size: 34px;
+    font-weight: 900;
+    letter-spacing: 0.4px;
+}
+
+.ir-hero p {
+    margin-top: 10px;
+    color: #dbeafe;
+    max-width: 700px;
+}
+
+.hero-meta {
+    margin-top: 22px;
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.hero-pill {
+    background: rgba(255,255,255,0.14);
+    padding: 10px 15px;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,0.22);
+    font-size: 13px;
+}
+
+/* Asset command toolbar */
+.command-toolbar {
+    background: white;
+    border-radius: 24px;
+    padding: 20px;
+    margin-bottom: 24px;
+    box-shadow: 0 18px 45px rgba(15,23,42,0.08);
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.command-search {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #f8fafc;
+    padding: 12px 16px;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    min-width: 380px;
+}
+
+.command-search input {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    font-size: 14px;
+}
+
+.command-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* Unique KPI mini cards */
+.asset-kpi-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+.asset-kpi {
+    background: rgba(255,255,255,0.92);
+    border-radius: 22px;
+    padding: 20px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 16px 38px rgba(15,23,42,0.07);
+    position: relative;
+    overflow: hidden;
+}
+
+.asset-kpi::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 7px;
+    height: 100%;
+    background: linear-gradient(180deg, #ff9933, #ffffff, #16a34a);
+}
+
+.asset-kpi span {
+    font-size: 13px;
+    color: #64748b;
+    font-weight: 700;
+}
+
+.asset-kpi h2 {
+    margin-top: 8px;
+    font-size: 30px;
+    color: #0f172a;
+}
+
+/* Premium table container */
+.ir-table-panel {
+    background: rgba(255,255,255,0.95);
+    border-radius: 28px;
+    padding: 24px;
+    box-shadow: 0 24px 60px rgba(15,23,42,0.10);
+    border: 1px solid rgba(226,232,240,0.9);
+}
+
+.ir-table-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.ir-table-title h2 {
+    font-size: 24px;
+}
+
+.ir-table-title p {
+    color: #64748b;
+    margin-top: 5px;
+}
+
+/* Table different from PDF */
+.ir-table {
+    border-collapse: separate;
+    border-spacing: 0 12px;
+}
+
+.ir-table thead th {
+    background: transparent;
+    color: #64748b;
+    text-transform: uppercase;
+    font-size: 12px;
+    border: none;
+}
+
+.ir-table tbody tr {
+    box-shadow: 0 10px 30px rgba(15,23,42,0.06);
+}
+
+.ir-table tbody td {
+    background: white;
+    border-top: 1px solid #edf2f7;
+    border-bottom: 1px solid #edf2f7;
+}
+
+.ir-table tbody td:first-child {
+    border-left: 5px solid #2563eb;
+    border-radius: 16px 0 0 16px;
+}
+
+.ir-table tbody td:last-child {
+    border-radius: 0 16px 16px 0;
+}
+
+.asset-code-chip {
+    background: #eff6ff;
+    color: #1d4ed8;
+    padding: 7px 11px;
+    border-radius: 999px;
+    font-weight: 800;
+    display: inline-block;
+}
+
+.qr-chip {
+    background: #f8fafc;
+    border: 1px dashed #94a3b8;
+    padding: 7px 10px;
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+.location-text {
+    font-weight: 600;
+    color: #334155;
+}
+
+/* =====================================================
+   IR-HORIZON THEME — COMPLETELY NEW LAYOUT
+   Horizontal railway command console, not PDF sidebar copy
+   ===================================================== */
+
+body {
+    background:
+        linear-gradient(135deg, #f8fafc 0%, #eef4ff 45%, #fff7ed 100%);
+    color: #0f172a;
+}
+
+/* Whole app becomes top-navigation layout */
+.app {
+    display: block;
+    min-height: 100vh;
+}
+
+/* Convert old sidebar into horizontal command navbar */
+.sidebar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: auto;
+    min-height: 86px;
+    padding: 12px 28px;
+    background:
+        linear-gradient(90deg, #07182f 0%, #0b2a52 55%, #102a43 100%);
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    overflow-x: auto;
+    z-index: 1000;
+    border-right: none;
+    border-bottom: 4px solid transparent;
+    border-image: linear-gradient(90deg, #ff9933, #ffffff, #138808) 1;
+    box-shadow: 0 16px 45px rgba(15, 23, 42, 0.25);
+}
+
+.sidebar::before,
+.sidebar::after {
+    display: none;
+}
+
+/* Logo becomes horizontal brand block */
+.logo-box {
+    min-width: 250px;
+    margin-bottom: 0;
+    padding: 10px 14px;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.08);
+    display: flex;
+    align-items: center;
+}
+
+.logo-text h2 {
+    font-size: 22px;
+    line-height: 1;
+}
+
+.logo-text span {
+    font-size: 11px;
+    line-height: 1.2;
+}
+
+/* Menu becomes top horizontal menu */
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+}
+
+.menu a {
+    margin-bottom: 0;
+    padding: 11px 14px;
+    border-radius: 999px;
+    font-size: 14px;
+    background: rgba(255,255,255,0.06);
+    color: #e0f2fe;
+}
+
+.menu a:hover,
+.menu a.active {
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #ff9933, #2563eb);
+    box-shadow: 0 10px 24px rgba(37,99,235,0.35);
+}
+
+.menu .logout {
+    margin-top: 0;
+    background: rgba(220,38,38,0.28);
+}
+
+/* Main area full width now */
+.main {
+    margin-left: 0;
+    width: 100%;
+}
+
+/* Topbar becomes floating command strip */
+.topbar {
+    margin: 24px auto 0 auto;
+    width: calc(100% - 70px);
+    height: 72px;
+    border-radius: 24px;
+    background: rgba(255,255,255,0.82);
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba(255,255,255,0.9);
+    box-shadow: 0 18px 40px rgba(15,23,42,0.10);
+}
+
+/* Content spacing */
+.content {
+    padding: 28px 36px 50px 36px;
+}
+
+/* New hero look */
+.ir-hero,
+.page-title {
+    background:
+        linear-gradient(120deg, rgba(7,24,47,0.96), rgba(30,64,175,0.88)),
+        radial-gradient(circle at right, rgba(255,153,51,0.35), transparent 38%);
+    color: white;
+    border-radius: 34px;
+    padding: 38px;
+    box-shadow: 0 28px 70px rgba(15,23,42,0.22);
+    border: 1px solid rgba(255,255,255,0.20);
+    position: relative;
+    overflow: hidden;
+}
+
+.page-title h1,
+.ir-hero h1 {
+    color: white;
+    font-size: 36px;
+    font-weight: 900;
+}
+
+.page-title .breadcrumb,
+.ir-hero p {
+    color: #dbeafe;
+}
+
+.page-title::after,
+.ir-hero::after {
+    content: "";
+    position: absolute;
+    right: 40px;
+    bottom: 28px;
+    width: 180px;
+    height: 8px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #ff9933, #ffffff, #138808);
+}
+
+/* Cards become railway command tiles */
+.stat-card,
+.asset-kpi {
+    border-radius: 28px;
+    background:
+        linear-gradient(145deg, rgba(255,255,255,0.98), rgba(241,245,249,0.92));
+    box-shadow:
+        0 24px 60px rgba(15,23,42,0.10),
+        inset 0 1px 0 rgba(255,255,255,0.95);
+    border: 1px solid rgba(226,232,240,0.95);
+}
+
+.stat-card::before,
+.asset-kpi::before {
+    background: linear-gradient(180deg, #ff9933, #ffffff, #138808);
+}
+
+/* Panels become glass command boards */
+.panel,
+.ir-table-panel,
+.command-toolbar {
+    border-radius: 32px;
+    background: rgba(255,255,255,0.88);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255,255,255,0.95);
+    box-shadow: 0 30px 80px rgba(15,23,42,0.12);
+}
+
+/* Table becomes modern white capsules */
+.ir-table {
+    border-collapse: separate;
+    border-spacing: 0 14px;
+}
+
+.ir-table thead th {
+    background: transparent;
+    color: #475569;
+    text-transform: uppercase;
+    font-size: 12px;
+    border: none;
+}
+
+.ir-table tbody tr {
+    box-shadow: 0 16px 38px rgba(15,23,42,0.08);
+}
+
+.ir-table tbody td {
+    background: white;
+    border-top: 1px solid #e5e7eb;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.ir-table tbody td:first-child {
+    border-left: 6px solid #ff9933;
+    border-radius: 18px 0 0 18px;
+}
+
+.ir-table tbody td:last-child {
+    border-radius: 0 18px 18px 0;
+}
+
+/* Action buttons stronger */
+.icon-btn {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+}
+
+/* Responsive horizontal nav */
+@media(max-width: 1100px) {
+    .sidebar {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+    }
+
+    .main {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .topbar {
+        width: calc(100% - 30px);
+    }
+}
+
+/* =========================================
+   SMART DYNAMIC RAILWAY BACKGROUND SYSTEM
+   ========================================= */
+
+body {
+    --rail-bg: url("../images/rail-bg-1.jpg");
+    --rail-overlay: linear-gradient(rgba(248,250,252,0.80), rgba(248,250,252,0.86));
+
+    background-image: var(--rail-overlay), var(--rail-bg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    transition: background-image 1s ease-in-out, background 1s ease-in-out;
+}
+
+/* If image is DARK → keep overlay slightly lighter so image is still visible */
+body.bg-dark {
+    --rail-overlay: linear-gradient(rgba(248,250,252,0.70), rgba(248,250,252,0.78));
+}
+
+/* If image is LIGHT → stronger overlay so dark text stays visible */
+body.bg-light {
+    --rail-overlay: linear-gradient(rgba(248,250,252,0.88), rgba(248,250,252,0.93));
+}
+
+/* Main content cards */
+.topbar,
+.panel,
+.ir-table-panel,
+.command-toolbar,
+.asset-kpi,
+.stat-card {
+    background: rgba(255,255,255,0.90);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* Hero/banner */
+.ir-hero,
+.page-title {
+    background: linear-gradient(135deg, rgba(7,24,47,0.92), rgba(29,78,216,0.84));
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.ir-hero h1,
+.page-title h1 {
+    color: white;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.28);
+}
+
+.ir-hero p,
+.page-title .breadcrumb,
+.hero-pill {
+    color: #e0ecff;
+}
+
+/* Better readability */
+.small-text {
+    color: #475569;
+}
+
+table td,
+table th {
+    vertical-align: middle;
+}
+
+/* Floating manual change button */
+.bg-change-btn {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 9999;
+    border: none;
+    border-radius: 999px;
+    padding: 13px 18px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    background: linear-gradient(135deg, #ff9933, #2563eb);
+    box-shadow: 0 12px 30px rgba(15,23,42,0.20);
+}
+
+.bg-change-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* =====================================================
+   FINAL IR CONTROL ROOM SIDE THEME
+   Forces LEFT SIDEBAR + visible railway background
+   ===================================================== */
+
+/* Keep real side layout */
+.app {
+    display: flex !important;
+    min-height: 100vh;
+}
+
+.sidebar {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    width: 285px !important;
+    height: 100vh !important;
+    padding: 22px 18px !important;
+    display: block !important;
+    overflow-y: auto !important;
+    background:
+        linear-gradient(180deg, rgba(3,15,35,0.96), rgba(6,32,64,0.96)) !important;
+    border-right: 1px solid rgba(255,255,255,0.14) !important;
+    border-bottom: none !important;
+    box-shadow: 12px 0 40px rgba(0,0,0,0.25) !important;
+}
+
+.sidebar::before {
+    display: block !important;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 130px;
+    width: 5px;
+    height: 65%;
+    background: linear-gradient(180deg, #ff9933, #ffffff, #138808);
+    border-radius: 0 8px 8px 0;
+}
+
+.sidebar::after {
+    display: none !important;
+}
+
+.main {
+    margin-left: 285px !important;
+    width: calc(100% - 285px) !important;
+}
+
+/* Sidebar menu vertical again */
+.menu {
+    display: block !important;
+}
+
+.menu a {
+    margin-bottom: 10px !important;
+    padding: 13px 15px !important;
+    border-radius: 14px !important;
+    background: transparent !important;
+}
+
+.menu a.active,
+.menu a:hover {
+    background: linear-gradient(135deg, #2563eb, #0f52ba) !important;
+    transform: translateX(5px) !important;
+}
+
+/* Background image more visible */
+body {
+    --rail-bg: url("../images/rail-bg-1.jpg");
+    --rail-overlay: linear-gradient(rgba(245,248,252,0.58), rgba(245,248,252,0.68));
+
+    background-image: var(--rail-overlay), var(--rail-bg) !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+}
+
+/* Dark image overlay */
+body.bg-dark {
+    --rail-overlay: linear-gradient(rgba(245,248,252,0.50), rgba(245,248,252,0.62));
+}
+
+/* Light image overlay */
+body.bg-light {
+    --rail-overlay: linear-gradient(rgba(245,248,252,0.72), rgba(245,248,252,0.82));
+}
+
+/* Topbar: railway control panel, not generic admin */
+.topbar {
+    margin: 20px 28px 0 28px !important;
+    width: calc(100% - 56px) !important;
+    height: 78px !important;
+    border-radius: 26px !important;
+    background: rgba(255,255,255,0.78) !important;
+    backdrop-filter: blur(16px) !important;
+    border: 1px solid rgba(255,255,255,0.95) !important;
+    box-shadow: 0 18px 40px rgba(15,23,42,0.12) !important;
+}
+
+/* Hero background less copied, more railway-like */
+.ir-hero {
+    background:
+        linear-gradient(135deg, rgba(3,15,35,0.88), rgba(30,64,175,0.72)),
+        var(--rail-bg) !important;
+    background-size: cover !important;
+    background-position: center !important;
+    border-radius: 34px !important;
+    min-height: 230px;
+    border: 1px solid rgba(255,255,255,0.25);
+}
+
+.ir-hero h1 {
+    font-size: 42px !important;
+    text-shadow: 0 4px 18px rgba(0,0,0,0.45);
+}
+
+.ir-hero p {
+    font-size: 17px;
+    line-height: 1.6;
+    max-width: 780px;
+    text-shadow: 0 3px 12px rgba(0,0,0,0.38);
+}
+
+/* Railway control status */
+.control-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #fff7ed, #ffffff);
+    border: 1px solid #fed7aa;
+    color: #9a3412;
+    padding: 11px 16px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.live-dot {
+    width: 10px;
+    height: 10px;
+    background: #22c55e;
+    border-radius: 50%;
+    box-shadow: 0 0 0 6px rgba(34,197,94,0.18);
+}
+
+/* Railway officer card */
+.control-user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(135deg, #eff6ff, #ffffff);
+    border: 1px solid #dbeafe;
+    border-radius: 18px;
+    padding: 8px 15px;
+    box-shadow: 0 10px 24px rgba(37,99,235,0.12);
+}
+
+.control-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #0f172a, #2563eb);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+}
+
+.control-user-text strong {
+    display: block;
+    font-size: 14px;
+    color: #0f172a;
+}
+
+.control-user-text span {
+    font-size: 12px;
+    color: #64748b;
+}
+
+/* Completely different action buttons */
+.rail-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.rail-action {
+    border: none;
+    border-radius: 999px;
+    padding: 8px 11px;
+    font-size: 12px;
+    font-weight: 800;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 8px 18px rgba(15,23,42,0.12);
+    transition: 0.25s;
+}
+
+.rail-action:hover {
+    transform: translateY(-3px);
+}
+
+.inspect-action {
+    background: #e0f2fe;
+    color: #075985;
+}
+
+.custody-action {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.qr-action {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+/* Hide old circular action style influence */
+.icon-btn {
+    display: none !important;
+}
+
+/* =========================================
+   SHOW BACKGROUND MORE CLEARLY
+   REMOVE WHITE FROM EMPTY BIG AREAS
+   KEEP WHITE ONLY ON CONTENT CARDS
+   ========================================= */
+
+/* 1. Make train background more visible */
+body {
+    --rail-bg: url("../images/rail-bg-1.jpg");
+    --rail-overlay: linear-gradient(rgba(245,248,252,0.10), rgba(245,248,252,0.18)) !important;
+
+    background-image: var(--rail-overlay), var(--rail-bg) !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+}
+
+/* If dark image is used */
+body.bg-dark {
+    --rail-overlay: linear-gradient(rgba(245,248,252,0.16), rgba(245,248,252,0.24)) !important;
+}
+
+/* If light image is used */
+body.bg-light {
+    --rail-overlay: linear-gradient(rgba(245,248,252,0.30), rgba(245,248,252,0.40)) !important;
+}
+
+/* 2. Remove big white empty panel backgrounds */
+.panel,
+.ir-table-panel,
+.command-toolbar {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* 3. Keep actual content cards white */
+.stat-card,
+.asset-kpi,
+table.ir-table tbody td,
+table tbody td,
+.topbar,
+.control-user,
+.control-status,
+.search-box input {
+    background-color: rgba(255,255,255,0.92) !important;
+}
+
+/* 4. Section headings can stay clean without big box */
+.panel-header,
+.ir-table-title {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* 5. Optional: keep hero strong */
+.ir-hero,
+.page-title {
+    background:
+        linear-gradient(135deg, rgba(3,15,35,0.82), rgba(30,64,175,0.68)),
+        var(--rail-bg) !important;
+    background-size: cover !important;
+    background-position: center !important;
+}
+
+/* 6. Make operational summary cards separate, not boxed in white */
+.panel .stats-grid,
+.ir-table-panel .table-responsive {
+    background: transparent !important;
+}
+
+/* =========================================
+   READABILITY FIX AFTER BACKGROUND REMOVAL
+   Keeps train visible but makes text readable
+   ========================================= */
+
+/* Section headings on transparent background */
+.panel-header h2,
+.ir-table-title h2,
+.content > h2 {
+    color: #ffffff !important;
+    text-shadow: 0 3px 12px rgba(0,0,0,0.65);
+    font-weight: 900;
+}
+
+/* Small description text when placed over background */
+.panel-header p,
+.ir-table-title p {
+    color: #e2e8f0 !important;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.55);
+}
+
+/* Make dashboard cards readable but slightly glassy */
+.stat-card,
+.asset-kpi {
+    background: rgba(255,255,255,0.86) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+}
+
+/* Keep card titles dark because they are on white cards */
+.stat-card h3,
+.asset-kpi span {
+    color: #475569 !important;
+}
+
+.stat-card p,
+.asset-kpi h2 {
+    color: #0f172a !important;
+}
+
+/* Operational summary button should stand out */
+.panel-header .btn {
+    box-shadow: 0 10px 25px rgba(37,99,235,0.35) !important;
+}
+
+/* Topbar readable but not too white */
+.topbar {
+    background: rgba(255,255,255,0.72) !important;
+}
+
+/* Make train background visible but not too harsh */
+body {
+    --rail-overlay: linear-gradient(
+        rgba(245,248,252,0.24),
+        rgba(245,248,252,0.34)
+    ) !important;
+}
+
+/* For dark railway images */
+body.bg-dark {
+    --rail-overlay: linear-gradient(
+        rgba(245,248,252,0.18),
+        rgba(245,248,252,0.28)
+    ) !important;
+}
+
+/* For light railway images */
+body.bg-light {
+    --rail-overlay: linear-gradient(
+        rgba(245,248,252,0.38),
+        rgba(245,248,252,0.48)
+    ) !important;
+}
+
+/* Keep floating change button readable */
+.bg-change-btn {
+    background: linear-gradient(135deg, #ff9933, #2563eb) !important;
+    color: white !important;
+    box-shadow: 0 14px 35px rgba(0,0,0,0.35) !important;
+}
+
+/* =========================================================
+   FINAL SIDEBAR MODULE HIGHLIGHT - TRICOLOUR EFFECT
+   Applied only to sidebar module hover/active state.
+   Keeps all module links/functions unchanged.
+========================================================= */
+.menu a:hover:not(.logout),
+.menu a.active:not(.logout),
+.sidebar .menu a:hover:not(.logout),
+.sidebar .menu a.active:not(.logout),
+.railway-sidebar .menu a:hover:not(.logout),
+.railway-sidebar .menu a.active:not(.logout),
+body.railway-ui .menu a:hover:not(.logout),
+body.railway-ui .sidebar .menu a:hover:not(.logout),
+body.railway-ui .railway-sidebar .menu a:hover:not(.logout),
+body.railway-ui .menu a.active:not(.logout),
+body.railway-ui .sidebar .menu a.active:not(.logout),
+body.railway-ui .railway-sidebar .menu a.active:not(.logout),
+body.railway-ui.ir-theme-dark .menu a:hover:not(.logout),
+body.railway-ui.ir-theme-dark .sidebar .menu a:hover:not(.logout),
+body.railway-ui.ir-theme-dark .railway-sidebar .menu a:hover:not(.logout),
+body.railway-ui.ir-theme-dark .menu a.active:not(.logout),
+body.railway-ui.ir-theme-dark .sidebar .menu a.active:not(.logout),
+body.railway-ui.ir-theme-dark .railway-sidebar .menu a.active:not(.logout) {
+    color: #06337a !important;
+    background:
+        linear-gradient(90deg,
+            rgba(255,143,31,0.96) 0%,
+            rgba(255,177,92,0.96) 18%,
+            rgba(255,255,255,0.98) 44%,
+            rgba(255,255,255,0.98) 56%,
+            rgba(20,146,69,0.95) 82%,
+            rgba(7,125,58,0.96) 100%) !important;
+    border-color: rgba(8, 52, 143, 0.18) !important;
+    box-shadow:
+        0 12px 25px rgba(8, 52, 143, 0.14),
+        inset 4px 0 0 rgba(255, 143, 31, 0.95),
+        inset -4px 0 0 rgba(20, 146, 69, 0.92) !important;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.88) !important;
+    transform: none !important;
+}
+
+.menu a:hover:not(.logout) i,
+.menu a.active:not(.logout) i,
+.sidebar .menu a:hover:not(.logout) i,
+.sidebar .menu a.active:not(.logout) i,
+.railway-sidebar .menu a:hover:not(.logout) i,
+.railway-sidebar .menu a.active:not(.logout) i,
+body.railway-ui .menu a:hover:not(.logout) i,
+body.railway-ui .menu a.active:not(.logout) i,
+body.railway-ui .sidebar .menu a:hover:not(.logout) i,
+body.railway-ui .sidebar .menu a.active:not(.logout) i,
+body.railway-ui .railway-sidebar .menu a:hover:not(.logout) i,
+body.railway-ui .railway-sidebar .menu a.active:not(.logout) i {
+    color: #06337a !important;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.88) !important;
+}
+

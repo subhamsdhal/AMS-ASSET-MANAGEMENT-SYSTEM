@@ -1,0 +1,206 @@
+
+        body.railway-ui .help-board {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 16px !important;
+        }
+
+        body.railway-ui .help-hero {
+            border: 1px solid var(--ir-line) !important;
+            border-radius: 22px !important;
+            background:
+                linear-gradient(135deg, rgba(255,255,255,0.98), rgba(232,245,255,0.96)),
+                radial-gradient(circle at 92% 18%, rgba(8,52,143,0.13), transparent 36%) !important;
+            box-shadow: var(--ir-shadow-soft) !important;
+            padding: 24px !important;
+            display: grid !important;
+            grid-template-columns: minmax(0, 1fr) auto !important;
+            gap: 16px !important;
+            align-items: center !important;
+        }
+
+        body.railway-ui .help-hero h1 {
+            margin: 0 !important;
+            color: var(--ir-blue) !important;
+            font-size: 30px !important;
+            line-height: 1.1 !important;
+            font-weight: 950 !important;
+            text-transform: uppercase !important;
+        }
+
+        body.railway-ui .help-hero p {
+            margin: 8px 0 0 0 !important;
+            color: #36527f !important;
+            font-size: 13px !important;
+            font-weight: 800 !important;
+            line-height: 1.5 !important;
+        }
+
+        body.railway-ui .help-status {
+            min-width: 170px !important;
+            border-radius: 18px !important;
+            background: #ffffff !important;
+            border: 1px solid #d7e5f7 !important;
+            padding: 15px 18px !important;
+            text-align: center !important;
+            box-shadow: 0 8px 18px rgba(8,52,143,0.06) !important;
+        }
+
+        body.railway-ui .help-status strong {
+            display: block !important;
+            color: var(--ir-green) !important;
+            font-size: 25px !important;
+            font-weight: 950 !important;
+            line-height: 1 !important;
+        }
+
+        body.railway-ui .help-status span {
+            display: block !important;
+            margin-top: 7px !important;
+            color: #64748b !important;
+            font-size: 11px !important;
+            font-weight: 900 !important;
+            text-transform: uppercase !important;
+        }
+
+        body.railway-ui .help-grid {
+            display: grid !important;
+            grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+            gap: 14px !important;
+        }
+
+        body.railway-ui .help-card {
+            min-height: 166px !important;
+            border-radius: 18px !important;
+            border: 1px solid var(--ir-line) !important;
+            background: rgba(255,255,255,0.97) !important;
+            box-shadow: var(--ir-shadow-soft) !important;
+            padding: 18px !important;
+            color: var(--ir-blue) !important;
+            text-decoration: none !important;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: space-between !important;
+            transition: 0.18s ease !important;
+        }
+
+        body.railway-ui .help-card:hover {
+            transform: translateY(-2px) !important;
+            border-color: #9ebeed !important;
+            box-shadow: 0 16px 30px rgba(8,52,143,0.13) !important;
+        }
+
+        body.railway-ui .help-card i {
+            width: 46px !important;
+            height: 46px !important;
+            border-radius: 14px !important;
+            background: #eef5ff !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            font-size: 20px !important;
+            margin-bottom: 13px !important;
+        }
+
+        body.railway-ui .help-card strong {
+            display: block !important;
+            color: var(--ir-blue) !important;
+            font-size: 15px !important;
+            line-height: 1.25 !important;
+            font-weight: 950 !important;
+        }
+
+        body.railway-ui .help-card span {
+            display: block !important;
+            margin-top: 7px !important;
+            color: #64748b !important;
+            font-size: 12px !important;
+            line-height: 1.45 !important;
+            font-weight: 760 !important;
+        }
+
+        body.railway-ui .help-panel {
+            border-radius: 18px !important;
+            border: 1px solid var(--ir-line) !important;
+            background: rgba(255,255,255,0.97) !important;
+            box-shadow: var(--ir-shadow-soft) !important;
+            padding: 18px !important;
+        }
+
+        body.railway-ui .help-panel h2 {
+            margin: 0 0 14px 0 !important;
+            color: var(--ir-blue) !important;
+            font-size: 16px !important;
+            font-weight: 950 !important;
+            text-transform: uppercase !important;
+        }
+
+        body.railway-ui .workflow-grid {
+            display: grid !important;
+            grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+            gap: 12px !important;
+        }
+
+        body.railway-ui .workflow-step {
+            border: 1px solid #e2ecf8 !important;
+            border-radius: 15px !important;
+            padding: 14px !important;
+            background: #ffffff !important;
+            min-height: 128px !important;
+        }
+
+        body.railway-ui .workflow-step b {
+            width: 32px !important;
+            height: 32px !important;
+            border-radius: 50% !important;
+            background: var(--ir-blue) !important;
+            color: #ffffff !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            font-size: 13px !important;
+            font-weight: 950 !important;
+            margin-bottom: 10px !important;
+        }
+
+        body.railway-ui .workflow-step strong {
+            display: block !important;
+            color: var(--ir-blue) !important;
+            font-size: 13px !important;
+            font-weight: 950 !important;
+            margin-bottom: 5px !important;
+        }
+
+        body.railway-ui .workflow-step span {
+            color: #64748b !important;
+            font-size: 11px !important;
+            line-height: 1.45 !important;
+            font-weight: 750 !important;
+        }
+
+        body.railway-ui .help-note {
+            border-radius: 16px !important;
+            border: 1px solid #d8e4f5 !important;
+            background: linear-gradient(135deg, #ffffff, #f4f9ff) !important;
+            padding: 17px 20px !important;
+            color: #06215f !important;
+            font-size: 13px !important;
+            line-height: 1.6 !important;
+            font-weight: 760 !important;
+            box-shadow: 0 10px 25px rgba(8,52,143,0.075) !important;
+        }
+
+        @media (max-width: 1200px) {
+            body.railway-ui .help-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            }
+
+            body.railway-ui .workflow-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            }
+
+            body.railway-ui .help-hero {
+                grid-template-columns: 1fr !important;
+            }
+        }
+    

@@ -1,0 +1,76 @@
+/* Fault: this page shares asset_requests.css for its base layout, but that
+   stylesheet's .kpi-grid is a 6-column grid sized for assets.jsp's 6 KPI
+   cards. This page only renders 4 cards (Assets in Service / Total Purchase
+   Cost / Accumulated Depreciation / Current Book Value), so under the
+   6-column grid each card was squeezed into a 1/6-width column - leaving two
+   empty column-widths at the end of the row, and letting the long,
+   white-space: nowrap currency values (e.g. "Rs. 1,650,500.00") overflow
+   past their narrow column and get clipped by .main-scroll-content's
+   overflow-x: hidden. Overriding to a grid sized for this page's actual
+   4-card count fixes both the clipped values and the lopsided row. */
+body.railway-ui .kpi-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+}
+
+@media (max-width: 1450px) {
+    body.railway-ui .kpi-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+
+@media (max-width: 760px) {
+    body.railway-ui .kpi-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Fault: this page's search + reset button row uses the bare
+   .registry-filter-grid class, but asset_requests.css only styles the
+   ".registry-filter-grid.request-filter-grid" combination (built for
+   asset_requests.jsp's own toolbar). With no matching CSS rule at all, the
+   two controls fell back to block-level default layout and stacked one per
+   line instead of sitting on one row like every other module's search bar
+   (see returns.css / vendors.css / assets.css for the same pattern).
+   Reproducing that same grid layout here, scoped to this page's own
+   2-control row (search, reset button - no status select on this page). */
+body.railway-ui .registry-filter-grid {
+    display: grid !important;
+    grid-template-columns: minmax(420px, 1fr) auto !important;
+    gap: 12px 14px !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin: 12px 0 20px 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+}
+
+body.railway-ui .registry-filter-grid .registry-search {
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    height: 44px !important;
+    min-height: 44px !important;
+    margin: 0 !important;
+}
+
+body.railway-ui .registry-filter-grid > .btn,
+body.railway-ui .registry-filter-grid > button.btn {
+    justify-self: end !important;
+    width: max-content !important;
+    min-width: 150px !important;
+    height: 44px !important;
+    min-height: 44px !important;
+    margin: 0 !important;
+}
+
+@media (max-width: 1180px) {
+    body.railway-ui .registry-filter-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    body.railway-ui .registry-filter-grid > .btn,
+    body.railway-ui .registry-filter-grid > button.btn {
+        justify-self: start !important;
+        width: max-content !important;
+    }
+}

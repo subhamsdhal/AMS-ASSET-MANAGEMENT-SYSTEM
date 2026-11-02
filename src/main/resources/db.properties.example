@@ -1,0 +1,9 @@
+# ============================================================
+# Railway AMS — Local Development Database Configuration Example
+# Copy this file to src/main/resources/db.properties for local execution.
+# Production environments should use AMS_DB_URL, AMS_DB_USER, and AMS_DB_PASSWORD env vars.
+# ============================================================
+
+db.url=jdbc:mysql://localhost:3306/asset_management_system?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Kolkata
+db.user=root
+db.password=root

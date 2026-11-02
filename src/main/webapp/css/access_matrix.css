@@ -1,0 +1,225 @@
+
+        .matrix-kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(180px, 1fr));
+            gap: 18px;
+            margin-bottom: 24px;
+        }
+
+        .matrix-kpi-card {
+            padding: 24px;
+            border-radius: 24px;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.22);
+            backdrop-filter: blur(18px) saturate(140%);
+            -webkit-backdrop-filter: blur(18px) saturate(140%);
+        }
+
+        .matrix-kpi-card i {
+            font-size: 28px;
+            color: white;
+            margin-bottom: 12px;
+        }
+
+        .matrix-kpi-card span {
+            display: block;
+            color: rgba(255, 255, 255, 0.78);
+            font-size: 13px;
+            font-weight: 800;
+            margin-bottom: 7px;
+        }
+
+        .matrix-kpi-card strong {
+            display: block;
+            color: white;
+            font-size: 28px;
+            font-weight: 950;
+        }
+
+        .role-card-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(240px, 1fr));
+            gap: 18px;
+        }
+
+        .role-card {
+            padding: 22px;
+            border-radius: 22px;
+            background: rgba(255, 255, 255, 0.10);
+            border: 1px solid rgba(255, 255, 255, 0.16);
+        }
+
+        .role-card-head {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 12px;
+        }
+
+        .role-card-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 18px;
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 22px;
+            box-shadow: 0 16px 30px rgba(0, 0, 0, 0.22);
+        }
+
+        .role-card h3 {
+            color: white;
+            margin: 0;
+        }
+
+        .role-card small {
+            color: rgba(255, 255, 255, 0.72);
+            font-weight: 800;
+        }
+
+        .role-card p {
+            color: rgba(255, 255, 255, 0.82);
+            line-height: 1.6;
+            font-size: 13px;
+        }
+
+        .matrix-scroll {
+            overflow-x: auto;
+            padding-bottom: 8px;
+        }
+
+        .matrix-table {
+            width: 100%;
+            min-width: 1900px;
+            border-collapse: collapse;
+        }
+
+        .matrix-table th,
+        .matrix-table td {
+            padding: 14px 12px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.11);
+            white-space: nowrap;
+        }
+
+        .matrix-table th {
+            color: white;
+            font-size: 12px;
+            font-weight: 950;
+            background: rgba(15, 23, 42, 0.38);
+            position: sticky;
+            top: 0;
+            z-index: 2;
+        }
+
+        .matrix-table td {
+            color: rgba(255, 255, 255, 0.86);
+            font-size: 13px;
+        }
+
+        .matrix-role-cell {
+            text-align: left !important;
+            position: sticky;
+            left: 0;
+            z-index: 3;
+            background: rgba(15, 23, 42, 0.82);
+            min-width: 240px;
+        }
+
+        .matrix-role-main {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .matrix-role-main i {
+            width: 36px;
+            height: 36px;
+            border-radius: 13px;
+            background: rgba(59, 130, 246, 0.25);
+            border: 1px solid rgba(59, 130, 246, 0.35);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .matrix-role-main strong {
+            color: white;
+            display: block;
+        }
+
+        .matrix-role-main span {
+            color: rgba(255, 255, 255, 0.68);
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+        .matrix-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            padding: 8px 11px;
+            border-radius: 999px;
+            font-size: 11px;
+            font-weight: 950;
+            min-width: 102px;
+        }
+
+        .matrix-badge.allowed {
+            background: rgba(34, 197, 94, 0.18);
+            border: 1px solid rgba(34, 197, 94, 0.35);
+            color: #dcfce7;
+        }
+
+        .matrix-badge.restricted {
+            background: rgba(239, 68, 68, 0.17);
+            border: 1px solid rgba(239, 68, 68, 0.34);
+            color: #fee2e2;
+        }
+
+        .policy-note-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(240px, 1fr));
+            gap: 16px;
+            margin-top: 18px;
+        }
+
+        .policy-note {
+            padding: 18px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.10);
+            border: 1px solid rgba(255, 255, 255, 0.16);
+        }
+
+        .policy-note h3 {
+            color: white;
+            margin-bottom: 8px;
+        }
+
+        .policy-note p {
+            color: rgba(255, 255, 255, 0.80);
+            line-height: 1.6;
+            font-size: 13px;
+        }
+
+        @media (max-width: 1200px) {
+            .matrix-kpi-grid,
+            .role-card-grid,
+            .policy-note-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 700px) {
+            .matrix-kpi-grid,
+            .role-card-grid,
+            .policy-note-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    

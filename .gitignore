@@ -1,0 +1,79 @@
+# ============================================================
+# .gitignore — Railway AMS (Asset Management System)
+# ============================================================
+
+# --- Build & Output Artifacts ---
+target/
+*.war
+*.ear
+*.class
+*.jar
+!/.mvn/wrapper/*.jar
+
+# --- Maven & Tomcat Distributions / Archives ---
+apache-maven-*/
+apache-tomcat-*/
+maven/
+maven.zip
+*.tar.gz
+*.zip
+
+# --- IDEs & Editors ---
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+.settings/
+.project
+.classpath
+nbproject/private/
+nb-configuration.xml.bak
+*.nbattrs
+*.bak
+*.swp
+*.swo
+*~
+
+# --- Operating System Artifacts ---
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# --- Local Environment & Secrets ---
+.env
+.env.local
+.env.*.local
+src/main/resources/db.properties
+src/main/webapp/WEB-INF/notification.properties
+src/main/webapp/WEB-INF/db_backups/
+seed_user_passwords.sql
+test_users.txt
+
+# --- AI Assistant / Tool Scratch Dirs ---
+.claude/
+.agents/
+scratch/
+nb_config_backup*/
+
+# --- Logs & Test Dumps ---
+*.log
+mvn_*_out.txt
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# --- Database Dumps & Backups ---
+ams_backup.sql
+*.sql.gz
+*.sql.bak
+
+# --- Uploads / Runtime Storage ---
+src/main/webapp/uploads/assets/*
+!src/main/webapp/uploads/assets/.gitkeep
+src/main/webapp/uploads/asset-documents/*
+!src/main/webapp/uploads/asset-documents/.gitkeep
+
+# --- Legacy / Unused Reports ---
+SIRE_Report/

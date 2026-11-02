@@ -1,0 +1,475 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body.login-page {
+            font-family: "Segoe UI", Arial, sans-serif;
+            color: white;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(3, 7, 18, 0.18) 0%,
+                    rgba(3, 7, 18, 0.08) 45%,
+                    rgba(3, 7, 18, 0.64) 100%
+                ),
+                url("../images/login-train-bg.png");
+
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        body.login-page::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background:
+                radial-gradient(circle at 82% 32%, rgba(8, 52, 143, 0.28), transparent 30%),
+                radial-gradient(circle at 75% 58%, rgba(255, 140, 36, 0.18), transparent 30%),
+                linear-gradient(to bottom, rgba(2, 6, 23, 0.12), rgba(2, 6, 23, 0.45));
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .page {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            z-index: 1;
+        }
+
+        .brand {
+            position: absolute;
+            top: 42px;
+            left: 54px;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            z-index: 10;
+        }
+
+        .brand img {
+            width: 76px;
+            height: 76px;
+            border-radius: 50%;
+            background: white;
+            padding: 5px;
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
+        }
+
+        .brand h1 {
+            font-size: 40px;
+            line-height: 1;
+            letter-spacing: 1px;
+            font-weight: 950;
+        }
+
+        .brand p {
+            margin-top: 7px;
+            color: rgba(255, 255, 255, 0.92);
+            font-size: 15px;
+            line-height: 1.35;
+            font-weight: 600;
+        }
+
+        .login-area {
+            position: absolute;
+            top: 90px;
+            right: 118px;
+            width: 465px;
+            height: 565px;
+            z-index: 5;
+        }
+
+        .login-area::before {
+            content: "";
+            position: absolute;
+            width: 430px;
+            height: 430px;
+            right: -115px;
+            top: -76px;
+            border-radius: 50%;
+            border: 1px solid rgba(8, 52, 143, 0.40);
+            box-shadow:
+                0 0 55px rgba(8, 52, 143, 0.24),
+                inset 0 0 45px rgba(255, 140, 36, 0.10);
+            z-index: -2;
+        }
+
+        .login-area::after {
+            content: "";
+            position: absolute;
+            width: 330px;
+            height: 330px;
+            right: -76px;
+            top: 82px;
+            border-radius: 44px;
+            border: 1px solid rgba(255, 140, 36, 0.42);
+            box-shadow: 0 0 65px rgba(255, 140, 36, 0.26);
+            z-index: -1;
+        }
+
+        .login-card {
+            width: 100%;
+            /* .login-card is now a non-scrolling OUTER shell only: box size,
+               background, border, backdrop-filter, box-shadow, and the two
+               decorative pseudo-elements below (::before gradient border ring,
+               ::after top accent line). None of that may ever move - the box
+               stays locked to exactly 565px, matching .login-area's frame (see
+               the earlier note on this in CHANGELOG-fixes.md, Login module /
+               "Visual QA pass").
+               Scrolling now happens on .login-card-inner instead (see below),
+               a child that wraps the actual content. Earlier this element
+               (.login-card) had BOTH the decorations AND overflow-y:auto on
+               itself - that put ::before/::after inside the same box whose
+               content scrolls, so the gradient border and accent line scrolled
+               up and out of position along with the form fields instead of
+               staying pinned to the card's edge. Splitting decoration (outer,
+               static) from content (inner, scrollable) fixes that structurally
+               instead of chasing it with more overflow/positioning tweaks. */
+            height: 100%;
+            border-radius: 34px;
+            position: relative;
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(15, 23, 42, 0.74),
+                    rgba(17, 24, 39, 0.90)
+                );
+
+            border: 1px solid rgba(255, 255, 255, 0.24);
+            backdrop-filter: blur(22px);
+            -webkit-backdrop-filter: blur(22px);
+
+            box-shadow:
+                0 38px 90px rgba(0, 0, 0, 0.52),
+                inset 0 1px 0 rgba(255, 255, 255, 0.22),
+                0 0 0 1px rgba(8, 52, 143, 0.22);
+        }
+
+        .login-card-inner {
+            /* The actual scrollable content area - everything that used to be
+               a direct child of .login-card (title, fields, buttons, links)
+               now lives inside this wrapper instead. Scrolling stays functional
+               (mouse wheel / touch / keyboard) for the rare case content
+               doesn't fit, but the scrollbar itself is hidden - a visible track
+               was rendering as a line cutting through the card's rounded corner
+               and border decoration. */
+            height: 100%;
+            padding: 52px 48px 34px;
+            overflow-x: hidden;
+            overflow-y: auto;
+            scrollbar-width: none;      /* Firefox */
+            -ms-overflow-style: none;   /* old Edge/IE */
+        }
+
+        .login-card-inner::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+            display: none;
+        }
+
+        .login-card::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 34px;
+            padding: 2px;
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(8, 52, 143, 0.75),
+                    rgba(255, 140, 36, 0.95),
+                    rgba(255, 255, 255, 0.16)
+                );
+            -webkit-mask:
+                linear-gradient(#fff 0 0) content-box,
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+
+        .login-card::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 90px;
+            width: 190px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #ff8c24, #08348f, transparent);
+            box-shadow: 0 0 28px #ff8c24;
+        }
+
+        .login-title {
+            font-size: 48px;
+            line-height: 1;
+            font-weight: 950;
+            letter-spacing: -1px;
+            margin-bottom: 14px;
+        }
+
+        .login-subtitle {
+            color: #cbd5e1;
+            font-size: 16px;
+            margin-bottom: 32px;
+        }
+
+        .error-box {
+            padding: 12px 15px;
+            margin-bottom: 16px;
+            border-radius: 14px;
+            background: rgba(239, 68, 68, 0.16);
+            border: 1px solid rgba(239, 68, 68, 0.35);
+            color: #fecaca;
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        .success-box {
+            padding: 12px 15px;
+            margin-bottom: 16px;
+            border-radius: 14px;
+            background: rgba(34, 197, 94, 0.16);
+            border: 1px solid rgba(34, 197, 94, 0.35);
+            color: #bbf7d0;
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        .form-group {
+            margin-bottom: 22px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 900;
+            color: #f8fafc;
+            margin-bottom: 10px;
+        }
+
+        .input-box {
+            height: 58px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 0 18px;
+            border-radius: 15px;
+            background: rgba(15, 23, 42, 0.38);
+            border: 1px solid rgba(203, 213, 225, 0.24);
+            transition: 0.25s ease;
+        }
+
+        .input-box:focus-within {
+            border-color: rgba(147, 197, 253, 0.72);
+            box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.12);
+        }
+
+        .input-box i {
+            color: #93c5fd;
+            font-size: 19px;
+        }
+
+        .input-box input {
+            flex: 1;
+            height: 100%;
+            border: none;
+            outline: none;
+            background: transparent;
+            color: white;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .input-box,
+        .input-box input {
+            pointer-events: auto !important;
+        }
+
+        .input-box input {
+            position: relative;
+            z-index: 10;
+            user-select: text;
+            -webkit-user-select: text;
+            caret-color: white;
+        }
+
+        .login-card::before,
+        .login-card::after,
+        .login-area::before,
+        .login-area::after {
+            pointer-events: none !important;
+        }
+
+        .input-box input::placeholder {
+            color: #94a3b8;
+            font-weight: 500;
+        }
+
+        .input-box input:-webkit-autofill,
+        .input-box input:-webkit-autofill:hover,
+        .input-box input:-webkit-autofill:focus {
+            -webkit-text-fill-color: white !important;
+            transition: background-color 9999s ease-in-out 0s;
+            box-shadow: 0 0 0 1000px transparent inset !important;
+        }
+
+        .eye-btn {
+            border: none;
+            outline: none;
+            background: transparent;
+            color: #dbeafe;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .options {
+            margin: 4px 0 26px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #d1d5db;
+            font-size: 14px;
+        }
+
+        .remember {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+        }
+
+        .remember input {
+            width: 17px;
+            height: 17px;
+            accent-color: #ff8c24;
+        }
+
+        .options a {
+            text-decoration: none;
+            color: #ff8c24;
+            font-weight: 800;
+        }
+
+        .login-btn {
+            width: 100%;
+            height: 64px;
+            border: none;
+            border-radius: 16px;
+            color: white;
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: 950;
+            background: linear-gradient(135deg, #08348f 0%, #062a7a 100%);
+            box-shadow:
+                0 20px 45px rgba(8, 52, 143, 0.48),
+                inset 0 1px 0 rgba(255, 255, 255, 0.25);
+            transition: 0.25s ease;
+
+            display: grid;
+            grid-template-columns: 40px 1fr 40px;
+            align-items: center;
+            text-align: center;
+        }
+
+        .login-btn .btn-left {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+        }
+
+        .login-btn .btn-text {
+            text-align: center;
+            font-size: 20px;
+            font-weight: 950;
+        }
+
+        .login-btn .btn-right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+        }
+
+        .login-btn:hover {
+            transform: translateY(-2px);
+            box-shadow:
+                0 26px 60px rgba(6, 42, 122, 0.60),
+                inset 0 1px 0 rgba(255, 255, 255, 0.28);
+        }
+
+        .signup-box {
+            margin-top: 20px;
+            padding-top: 17px;
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            text-align: center;
+            color: #cbd5e1;
+            font-size: 15px;
+        }
+
+        .signup-box a {
+            margin-left: 8px;
+            color: #ff8c24;
+            font-weight: 900;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 1000px) {
+            html,
+            body {
+                overflow-y: auto;
+            }
+
+            .page {
+                min-height: 100vh;
+                height: auto;
+                padding-bottom: 50px;
+            }
+
+            .brand {
+                position: relative;
+                top: auto;
+                left: auto;
+                padding: 35px;
+            }
+
+            .login-area {
+                position: relative;
+                top: auto;
+                right: auto;
+                margin: 40px auto;
+                width: min(465px, calc(100% - 40px));
+                height: auto;
+            }
+
+            .login-card {
+                height: auto;
+                overflow: visible;
+            }
+
+            .login-card-inner {
+                /* The whole page already scrolls on mobile (body/.page rules
+                   above), so the content doesn't need its own inner scroll
+                   region - that would just mean two nested scrollbars fighting
+                   each other. .login-area is also height:auto on mobile
+                   (above), so there's no fixed decorative frame to stay
+                   aligned with here either. */
+                height: auto;
+                overflow-y: visible;
+            }
+        }
+    

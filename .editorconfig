@@ -1,0 +1,24 @@
+# http://editorconfig.org
+root = true
+
+[*]
+indent_style = space
+indent_size = 4
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.{js,css,json,yml,yaml,md}]
+indent_size = 2
+
+[*.{bat,cmd,ps1}]
+end_of_line = crlf
+
+[pom.xml]
+indent_size = 4
+
+[*.{png,jpg,jpeg,gif,ico,jar,war,zip,pdf}]
+indent_style = unset
+trim_trailing_whitespace = false
+insert_final_newline = false

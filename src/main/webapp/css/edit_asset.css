@@ -1,0 +1,436 @@
+﻿
+        body.railway-ui .edit-asset-board {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 16px !important;
+        }
+
+        body.railway-ui .edit-panel {
+            border-radius: 22px !important;
+            border: 1px solid var(--ir-line) !important;
+            background: rgba(255,255,255,0.98) !important;
+            box-shadow: var(--ir-shadow-soft) !important;
+            padding: 22px !important;
+            overflow: hidden !important;
+        }
+
+        body.railway-ui .edit-panel-head {
+            display: flex !important;
+            align-items: flex-start !important;
+            justify-content: space-between !important;
+            gap: 16px !important;
+            flex-wrap: wrap !important;
+            border-bottom: 1px solid #edf2fb !important;
+            padding-bottom: 14px !important;
+            margin-bottom: 18px !important;
+        }
+
+        body.railway-ui .edit-panel-head h2 {
+            margin: 0 !important;
+            color: var(--ir-blue) !important;
+            font-size: 24px !important;
+            line-height: 1.1 !important;
+            font-weight: 950 !important;
+            text-transform: uppercase !important;
+        }
+
+        body.railway-ui .edit-panel-head p {
+            margin: 6px 0 0 0 !important;
+            color: #64748b !important;
+            font-size: 12px !important;
+            line-height: 1.45 !important;
+            font-weight: 760 !important;
+        }
+
+        body.railway-ui .asset-status-pill {
+            min-height: 34px !important;
+            padding: 0 13px !important;
+            border-radius: 999px !important;
+            border: 1px solid #bde8cf !important;
+            background: #eaf7ef !important;
+            color: #04733b !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 8px !important;
+            font-size: 11px !important;
+            font-weight: 950 !important;
+            white-space: nowrap !important;
+        }
+
+        body.railway-ui .edit-form-grid {
+            display: grid !important;
+            grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            gap: 16px !important;
+        }
+
+        body.railway-ui .edit-form-group {
+            min-width: 0 !important;
+            position: relative !important;
+        }
+
+        body.railway-ui .edit-form-group::before,
+        body.railway-ui .edit-form-group::after {
+            display: none !important;
+            content: none !important;
+        }
+
+        body.railway-ui .edit-form-group label {
+            display: flex !important;
+            align-items: center !important;
+            gap: 8px !important;
+            margin-bottom: 8px !important;
+            color: var(--ir-blue) !important;
+            font-size: 12px !important;
+            line-height: 1.15 !important;
+            font-weight: 950 !important;
+            text-transform: uppercase !important;
+        }
+
+        body.railway-ui .edit-form-group input,
+        body.railway-ui .edit-form-group select {
+            width: 100% !important;
+            height: 52px !important;
+            border-radius: 15px !important;
+            border: 1px solid #d7e5f7 !important;
+            background: #ffffff !important;
+            color: #0a327f !important;
+            outline: none !important;
+            padding: 0 14px !important;
+            font-size: 13px !important;
+            font-weight: 850 !important;
+            font-family: inherit !important;
+            box-sizing: border-box !important;
+            box-shadow: none !important;
+        }
+
+        body.railway-ui .edit-form-group.file-upload-group {
+            grid-column: 1 / -1 !important;
+        }
+
+        body.railway-ui .edit-form-group input[type="file"] {
+            height: auto !important;
+            min-height: 52px !important;
+            padding: 13px 14px !important;
+            cursor: pointer !important;
+        }
+
+        body.railway-ui .asset-image-edit-row {
+            display: grid !important;
+            grid-template-columns: 112px minmax(0, 1fr) !important;
+            gap: 14px !important;
+            align-items: center !important;
+        }
+
+        body.railway-ui .asset-image-preview {
+            width: 112px !important;
+            height: 82px !important;
+            border-radius: 16px !important;
+            border: 1px solid #d7e5f7 !important;
+            background: #f8fbff !important;
+            object-fit: cover !important;
+            padding: 4px !important;
+        }
+
+        body.railway-ui .upload-hint {
+            margin-top: 7px !important;
+            color: #64748b !important;
+            font-size: 11px !important;
+            line-height: 1.35 !important;
+            font-weight: 760 !important;
+        }
+
+        body.railway-ui .edit-form-group select {
+            appearance: auto !important;
+            -webkit-appearance: menulist !important;
+            -moz-appearance: menulist !important;
+            cursor: pointer !important;
+            color: #0a327f !important;
+            background-color: #ffffff !important;
+        }
+
+        body.railway-ui .edit-form-group select option {
+            color: #0a327f !important;
+            background: #ffffff !important;
+            font-weight: 800 !important;
+        }
+
+        body.railway-ui .edit-form-group input:focus,
+        body.railway-ui .edit-form-group select:focus {
+            border-color: var(--ir-blue) !important;
+            box-shadow: 0 0 0 4px rgba(8,52,143,0.10) !important;
+        }
+
+        body.railway-ui .edit-form-group input[readonly],
+        body.railway-ui .edit-form-group input:disabled,
+        body.railway-ui .edit-form-group select:disabled {
+            background: #f5f8fd !important;
+            color: #667085 !important;
+            cursor: not-allowed !important;
+        }
+
+        body.railway-ui .edit-form-group input[type="date"] {
+            appearance: auto !important;
+            -webkit-appearance: auto !important;
+            color-scheme: light !important;
+            cursor: pointer !important;
+            padding-right: 14px !important;
+        }
+
+        body.railway-ui .edit-form-group input[type="date"]::-webkit-calendar-picker-indicator {
+            opacity: 1 !important;
+            display: block !important;
+            cursor: pointer !important;
+            width: 18px !important;
+            height: 18px !important;
+            margin-left: 8px !important;
+        }
+
+        body.railway-ui .qr-field-wrap {
+            display: grid !important;
+            grid-template-columns: minmax(0, 1fr) auto !important;
+            gap: 9px !important;
+            align-items: center !important;
+        }
+
+        body.railway-ui .qr-field-wrap input {
+            min-width: 0 !important;
+        }
+
+        body.railway-ui .qr-open-btn {
+            height: 52px !important;
+            padding: 0 14px !important;
+            border-radius: 15px !important;
+            border: 1px solid #bde8cf !important;
+            background: #eaf7ef !important;
+            color: #04733b !important;
+            text-decoration: none !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 8px !important;
+            font-size: 12px !important;
+            font-weight: 950 !important;
+            white-space: nowrap !important;
+        }
+
+        body.railway-ui .form-actions {
+            margin-top: 20px !important;
+            display: flex !important;
+            align-items: center !important;
+            gap: 10px !important;
+            flex-wrap: wrap !important;
+        }
+
+        body.railway-ui .edit-btn {
+            min-height: 44px !important;
+            padding: 0 16px !important;
+            border-radius: 999px !important;
+            border: 1px solid var(--ir-blue) !important;
+            background: var(--ir-blue) !important;
+            color: #ffffff !important;
+            text-decoration: none !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 8px !important;
+            font-size: 13px !important;
+            font-weight: 950 !important;
+            cursor: pointer !important;
+            font-family: inherit !important;
+        }
+
+        body.railway-ui .edit-btn.secondary {
+            background: #ffffff !important;
+            color: var(--ir-blue) !important;
+            border-color: #d7e5f7 !important;
+        }
+
+        body.railway-ui .edit-btn.green {
+            background: #eaf7ef !important;
+            color: #04733b !important;
+            border-color: #bde8cf !important;
+        }
+
+        body.railway-ui .edit-alert {
+            border-radius: 16px !important;
+            padding: 13px 14px !important;
+            margin-bottom: 16px !important;
+            border: 1px solid #ffc7c7 !important;
+            background: #fff0f0 !important;
+            color: #c62828 !important;
+            display: flex !important;
+            align-items: center !important;
+            gap: 10px !important;
+            font-size: 12px !important;
+            font-weight: 900 !important;
+        }
+
+        body.railway-ui .edit-note {
+            margin-top: 16px !important;
+            border-radius: 18px !important;
+            border: 1px solid #d7e5f7 !important;
+            background: linear-gradient(135deg, #f8fbff, #ffffff) !important;
+            padding: 14px !important;
+            color: #35517e !important;
+            font-size: 12px !important;
+            font-weight: 780 !important;
+            line-height: 1.45 !important;
+            display: flex !important;
+            gap: 10px !important;
+            align-items: flex-start !important;
+        }
+
+        body.railway-ui .edit-note i {
+            color: var(--ir-blue) !important;
+            margin-top: 2px !important;
+        }
+
+        @media (max-width: 1200px) {
+            body.railway-ui .edit-form-grid {
+                grid-template-columns: 1fr !important;
+            }
+
+            body.railway-ui .qr-field-wrap {
+                grid-template-columns: 1fr !important;
+            }
+        }
+
+        @media (max-width: 760px) {
+            body.railway-ui .edit-panel {
+                padding: 16px !important;
+            }
+        }
+    
+        /* ===== ASSET + ALLOCATION INNER PAGES - DASHBOARD/ASSETS REFERENCE SHELL ===== */
+        body.railway-ui .main,
+        body.railway-ui .railway-main {
+            position: fixed !important;
+            left: calc(var(--ir-sidebar-width) + var(--ir-left-strip-width)) !important;
+            top: 0 !important;
+            right: 0 !important;
+            bottom: 0 !important;
+            width: auto !important;
+            min-height: 100vh !important;
+            margin-left: 0 !important;
+            padding: 14px 17px 14px 17px !important;
+            overflow: hidden !important;
+        }
+
+        body.railway-ui.sidebar-collapsed .main,
+        body.railway-ui.sidebar-collapsed .railway-main {
+            left: var(--ir-left-strip-width) !important;
+        }
+
+        body.railway-ui .main-scroll-content {
+            position: absolute !important;
+            left: 17px !important;
+            right: 17px !important;
+            top: 83px !important;
+            bottom: 14px !important;
+            width: auto !important;
+            overflow-y: auto !important;
+            overflow-x: hidden !important;
+            padding: 0 7px 18px 0 !important;
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 12px !important;
+            z-index: 2 !important;
+        }
+
+
+        body.railway-ui .add-asset-hero-new,
+        body.railway-ui .allocation-command-hero,
+        body.railway-ui .asset-hero,
+        body.railway-ui .view-hero,
+        body.railway-ui .detail-hero {
+            min-height: 188px !important;
+            height: auto !important;
+            padding: 28px 34px !important;
+            margin: 0 !important;
+            border-radius: 17px !important;
+            border: 1px solid #cfdff5 !important;
+            box-shadow: 0 14px 34px rgba(8, 52, 143, 0.10) !important;
+            background:
+                linear-gradient(90deg, rgba(255,255,255,0.98) 0%, rgba(238,248,255,0.94) 46%, rgba(255,248,238,0.70) 100%),
+                linear-gradient(135deg, #ffffff 0%, #edf7ff 58%, #fff8ee 100%) !important;
+            color: var(--ir-blue) !important;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: center !important;
+            align-items: flex-start !important;
+            position: relative !important;
+            overflow: hidden !important;
+        }
+
+        body.railway-ui .add-asset-hero-new h1,
+        body.railway-ui .allocation-command-hero h1,
+        body.railway-ui .asset-hero h1,
+        body.railway-ui .view-hero h1,
+        body.railway-ui .detail-hero h1 {
+            color: var(--ir-blue) !important;
+            font-family: Georgia, "Times New Roman", serif !important;
+            font-size: clamp(28px, 2.8vw, 40px) !important;
+            line-height: 1.08 !important;
+            font-weight: 950 !important;
+            margin: 0 0 12px 0 !important;
+            text-shadow: none !important;
+        }
+
+        body.railway-ui .add-asset-hero-new p,
+        body.railway-ui .allocation-command-hero p,
+        body.railway-ui .asset-hero p,
+        body.railway-ui .view-hero p,
+        body.railway-ui .detail-hero p {
+            color: #18366f !important;
+            font-size: 14px !important;
+            line-height: 1.55 !important;
+            font-weight: 800 !important;
+            max-width: 850px !important;
+            margin: 0 !important;
+            text-shadow: none !important;
+        }
+
+        body.railway-ui .add-panel,
+        body.railway-ui .edit-panel,
+        body.railway-ui .info-panel,
+        body.railway-ui .glass-panel,
+        body.railway-ui .detail-panel,
+        body.railway-ui .dispose-grid,
+        body.railway-ui .view-grid,
+        body.railway-ui .panel {
+            background: rgba(255, 255, 255, 0.965) !important;
+            color: var(--ir-blue) !important;
+            border: 1px solid var(--ir-line) !important;
+            box-shadow: var(--ir-shadow-soft) !important;
+            border-radius: 18px !important;
+            position: relative !important;
+            z-index: 2 !important;
+        }
+
+        body.railway-ui .ir-global-body-watermark {
+            z-index: 3 !important;
+            pointer-events: none !important;
+        }
+
+        body.railway-ui .ir-global-body-watermark img {
+            opacity: 0.042 !important;
+        }
+
+    
+        body.railway-ui .add-asset-hero-new {
+            background: 
+                url("../images/assets-hero-bg.png") center center / cover no-repeat,
+                linear-gradient(135deg, rgba(255,255,255,0.96), rgba(232,245,255,0.93)) !important;
+        }
+        body.railway-ui .add-asset-hero-new::before {
+            content: "" !important;
+            position: absolute !important;
+            inset: 0 !important;
+            z-index: 1 !important;
+            pointer-events: none !important;
+            background: linear-gradient(90deg, rgba(255,255,255,0.98) 0%, rgba(247,251,255,0.92) 20%, rgba(255,255,255,0.0) 100%) !important;
+        }
+        body.railway-ui .add-asset-hero-new > * {
+            position: relative !important;
+            z-index: 2 !important;
+        }

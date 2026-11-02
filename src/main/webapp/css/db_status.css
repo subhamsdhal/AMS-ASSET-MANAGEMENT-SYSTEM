@@ -1,0 +1,163 @@
+
+        body.railway-ui .status-board {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 16px !important;
+        }
+
+        body.railway-ui .status-hero {
+            border: 1px solid var(--ir-line) !important;
+            border-radius: 22px !important;
+            background:
+                linear-gradient(135deg, rgba(255,255,255,0.98), rgba(232,245,255,0.96)),
+                radial-gradient(circle at 92% 18%, rgba(8,52,143,0.13), transparent 36%) !important;
+            box-shadow: var(--ir-shadow-soft) !important;
+            padding: 24px !important;
+            display: grid !important;
+            grid-template-columns: minmax(0, 1fr) auto !important;
+            gap: 16px !important;
+            align-items: center !important;
+        }
+
+        body.railway-ui .status-hero h1 {
+            margin: 0 !important;
+            color: var(--ir-blue) !important;
+            font-size: 30px !important;
+            font-weight: 950 !important;
+            text-transform: uppercase !important;
+        }
+
+        body.railway-ui .status-hero p {
+            margin: 8px 0 0 0 !important;
+            color: #36527f !important;
+            font-size: 13px !important;
+            font-weight: 800 !important;
+        }
+
+        body.railway-ui .live-pill {
+            min-width: 150px !important;
+            height: 54px !important;
+            border-radius: 18px !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            gap: 10px !important;
+        }
+        body.railway-ui .pill-ok {
+            background: #eaf7ef !important;
+            color: #04733b !important;
+            border: 1px solid #bde8cf !important;
+        }
+        body.railway-ui .pill-error {
+            background: #fff0f0 !important;
+            color: #c62828 !important;
+            border: 1px solid #ffc7c7 !important;
+        }
+        body.railway-ui .live-pill {
+            font-size: 14px !important;
+            font-weight: 950 !important;
+            text-transform: uppercase !important;
+        }
+
+        body.railway-ui .status-grid {
+            display: grid !important;
+            grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+            gap: 14px !important;
+        }
+
+        body.railway-ui .status-card {
+            border-radius: 18px !important;
+            border: 1px solid var(--ir-line) !important;
+            background: rgba(255,255,255,0.97) !important;
+            box-shadow: var(--ir-shadow-soft) !important;
+            padding: 16px !important;
+            min-height: 105px !important;
+        }
+
+        body.railway-ui .status-card span {
+            display: block !important;
+            color: #64748b !important;
+            font-size: 10px !important;
+            font-weight: 900 !important;
+            text-transform: uppercase !important;
+            margin-bottom: 8px !important;
+        }
+
+        body.railway-ui .status-card strong {
+            display: block !important;
+            color: var(--ir-blue) !important;
+            font-size: 20px !important;
+            line-height: 1.2 !important;
+            font-weight: 950 !important;
+            word-break: break-word !important;
+        }
+
+        body.railway-ui .status-panel {
+            border-radius: 18px !important;
+            border: 1px solid var(--ir-line) !important;
+            background: rgba(255,255,255,0.97) !important;
+            box-shadow: var(--ir-shadow-soft) !important;
+            padding: 18px !important;
+        }
+
+        body.railway-ui .status-panel h2 {
+            margin: 0 0 14px 0 !important;
+            color: var(--ir-blue) !important;
+            font-size: 16px !important;
+            font-weight: 950 !important;
+            text-transform: uppercase !important;
+        }
+
+        body.railway-ui .status-table {
+            width: 100% !important;
+            border-collapse: collapse !important;
+        }
+
+        body.railway-ui .status-table th {
+            text-align: left !important;
+            padding: 12px 10px !important;
+            color: #64748b !important;
+            font-size: 11px !important;
+            font-weight: 950 !important;
+            text-transform: uppercase !important;
+            border-bottom: 1px solid #e6eef9 !important;
+        }
+
+        body.railway-ui .status-table td {
+            padding: 12px 10px !important;
+            color: #14336f !important;
+            font-size: 12px !important;
+            font-weight: 850 !important;
+            border-bottom: 1px solid #edf2fb !important;
+        }
+
+        body.railway-ui .table-ok {
+            color: var(--ir-green) !important;
+            font-weight: 950 !important;
+        }
+
+        body.railway-ui .table-missing {
+            color: #c62828 !important;
+            font-weight: 950 !important;
+        }
+
+        body.railway-ui .error-box {
+            border-radius: 16px !important;
+            border: 1px solid #ffc7c7 !important;
+            background: #fff5f5 !important;
+            color: #b42318 !important;
+            padding: 16px !important;
+            font-size: 13px !important;
+            font-weight: 850 !important;
+        }
+
+        @media (max-width: 1200px) {
+            body.railway-ui .status-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            }
+
+            body.railway-ui .status-hero {
+                grid-template-columns: 1fr !important;
+            }
+        }
+    

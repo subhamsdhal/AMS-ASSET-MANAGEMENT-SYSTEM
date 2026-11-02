@@ -1,0 +1,103 @@
+
+        *{box-sizing:border-box}
+        body{margin:0;background:#edf4ff;font-family:Arial,Helvetica,sans-serif;color:#08348f}
+        .screen-bar{position:sticky;top:0;z-index:5;background:#08348f;color:#fff;padding:14px 18px;display:flex;justify-content:space-between;align-items:center;gap:12px;box-shadow:0 10px 25px rgba(8,52,143,.18)}
+        .screen-bar h1{margin:0;font-size:18px;text-transform:uppercase}
+        .screen-actions{display:flex;gap:10px;flex-wrap:wrap}
+        .screen-btn{min-height:36px;padding:0 14px;border-radius:999px;border:1px solid rgba(255,255,255,.45);background:#fff;color:#08348f;text-decoration:none;display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:900;cursor:pointer}
+        .print-sheet{padding:18px;display:grid;grid-template-columns:repeat(2, minmax(0, 1fr));gap:16px}
+        .qr-label{background:#fff;border:2px solid #08348f;border-radius:18px;overflow:hidden;min-height:320px;display:grid;grid-template-columns:180px minmax(0,1fr)}
+        .qr-side{padding:15px;background:#f8fbff;border-right:1px dashed #9db8df;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center}
+        .qr-side img{width:150px;height:150px;object-fit:contain;background:#fff;border:1px solid #dbe8f7;padding:6px;border-radius:10px}
+        .qr-side .missing{width:150px;height:150px;border:1px dashed #b8c8dd;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-direction:column;color:#c62828;font-size:12px;font-weight:850;padding:10px}
+        .label-body{padding:15px 16px}
+        .label-head{border-bottom:2px solid #08348f;padding-bottom:8px;margin-bottom:10px}
+        .label-head strong{display:block;font-size:16px;line-height:1.18;text-transform:uppercase;color:#08348f}
+        .label-head span{display:block;margin-top:3px;font-size:11px;font-weight:900;color:#36527f}
+        .label-table{width:100%;border-collapse:collapse}
+        .label-table th{width:36%;text-align:left;padding:6px 4px;font-size:9px;text-transform:uppercase;color:#66758d;border-bottom:1px solid #e6eef9;vertical-align:top}
+        .label-table td{padding:6px 4px;font-size:10px;font-weight:900;color:#0b2d6d;border-bottom:1px solid #e6eef9;vertical-align:top;word-break:break-word}
+        .rail-mark{margin-top:10px;font-size:10px;font-weight:950;text-align:center;color:#08348f;text-transform:uppercase;letter-spacing:.4px}
+        .scan-note{font-size:9px;color:#64748b;font-weight:750;text-align:center;margin-top:6px;line-height:1.35}
+        @media print{
+            body{background:#fff}
+            .screen-bar{display:none!important}
+            .print-sheet{padding:0;gap:8mm;grid-template-columns:repeat(2, 1fr)}
+            .qr-label{break-inside:avoid;page-break-inside:avoid;border:1.8px solid #000}
+            .qr-side{background:#fff}
+        }
+        @media(max-width:900px){.print-sheet{grid-template-columns:1fr}.qr-label{grid-template-columns:1fr}.qr-side{border-right:0;border-bottom:1px dashed #9db8df}}
+    
+        /* ===== PRINT / WORK ORDER OFFICIAL RAILWAY POLISH ===== */
+        :root {
+            --ir-blue: #08348f;
+            --ir-line: #d8e4f5;
+            --ir-text: #06215f;
+        }
+
+        body {
+            color: var(--ir-text) !important;
+            background: #ffffff !important;
+            font-family: "Segoe UI", Arial, sans-serif !important;
+        }
+
+        .print-header,
+        .header,
+        section.header,
+        .page-header {
+            border: 1px solid var(--ir-line) !important;
+            border-radius: 14px !important;
+            color: var(--ir-blue) !important;
+            background:
+                linear-gradient(90deg, rgba(255,255,255,0.98), rgba(238,248,255,0.96), rgba(255,248,238,0.86)) !important;
+            box-shadow: 0 8px 20px rgba(8, 52, 143, 0.08) !important;
+        }
+
+        .summary,
+        .sign-section,
+        .label-grid,
+        .label-card,
+        .qr-card,
+        .print-card,
+        .panel,
+        table {
+            position: relative !important;
+            border-color: var(--ir-line) !important;
+        }
+
+        .no-print,
+        .print-actions,
+        .action-bar {
+            position: relative !important;
+            z-index: 5 !important;
+        }
+
+        @media print {
+            body {
+                background: #ffffff !important;
+            }
+
+            .no-print,
+            .print-actions,
+            .action-bar,
+            button {
+                display: none !important;
+            }
+
+            .print-header,
+            .header,
+            section.header,
+            .page-header,
+            .summary,
+            .sign-section,
+            .label-grid,
+            .label-card,
+            .qr-card,
+            .print-card,
+            .panel,
+            table {
+                box-shadow: none !important;
+            }
+        }
+
+    

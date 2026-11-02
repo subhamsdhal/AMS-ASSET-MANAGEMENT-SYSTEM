@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+         https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0">
+
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+        <welcome-file>login.jsp</welcome-file>
+    </welcome-file-list>
+
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+
+    <!--
+        Explicit filter ordering for the two request-gating filters, both of which
+        are also annotated with @WebFilter(urlPatterns = {"/*"}) in their source
+        (SecurityHeadersFilter.java, RoleAuthorizationFilter.java). Per the Jakarta
+        Servlet spec, filter-mappings declared here in web.xml run - in this order -
+        before any purely-annotation-discovered filter, and annotation scan order
+        across containers is otherwise unspecified. Without this, which filter ran
+        first (and therefore which one's access decision "won" for borderline paths)
+        depended on undocumented container behavior. This does not change either
+        filter's rules, only makes their relative order deterministic. See
+        CHANGELOG-fixes.md (Login-5) - reconciling the two filters' differing
+        per-role rules into one source of truth is a separate, deferred task for the
+        User & Role Management module audit.
+    -->
+    <filter>
+        <filter-name>SecurityHeadersFilter</filter-name>
+        <filter-class>com.mycompany.asset_management_system_ams.SecurityHeadersFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>SecurityHeadersFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>RoleAuthorizationFilter</filter-name>
+        <filter-class>com.mycompany.asset_management_system_ams.RoleAuthorizationFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>RoleAuthorizationFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+</web-app>

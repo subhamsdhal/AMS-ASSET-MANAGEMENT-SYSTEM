@@ -1,0 +1,1970 @@
+.settings-wrap { max-width: 1280px; margin: 0 auto; padding: 0 0 40px; }
+
+.settings-hero {
+    position: relative;
+    min-height: 176px;
+    background-image:
+        linear-gradient(90deg, rgba(255,255,255,0.98) 0%, rgba(245,251,255,0.93) 45%, rgba(221,238,255,0.54) 72%, rgba(255,255,255,0.25) 100%),
+        url('../images/settings-hero-bg.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 12px;
+    padding: 32px 36px;
+    margin-bottom: 24px;
+    box-shadow: 0 8px 32px rgba(8, 52, 143, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.settings-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.9), inset 0 -1px 2px rgba(0, 0, 0, 0.05);
+    pointer-events: none;
+}
+
+.settings-hero > * {
+    position: relative;
+    z-index: 1;
+}
+
+.settings-hero-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.settings-kicker {
+    font-size: 13px;
+    font-weight: 950;
+    color: #0b55c7;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.settings-hero h1 {
+    font-family: var(--font-primary, 'Plus Jakarta Sans', sans-serif);
+    font-size: clamp(26px, 2.8vw, 36px);
+    font-weight: 950;
+    color: #063985;
+    margin: 0 0 12px 0;
+}
+
+.settings-hero p {
+    font-size: 16px;
+    font-weight: 700;
+    color: #334155;
+    margin: 0;
+    max-width: 800px;
+}
+
+.settings-status {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(135px, 1fr));
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.status-tile {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 12px;
+    padding: 16px 20px;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+}
+
+.status-tile span {
+    display: block;
+    font-size: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    color: #475569;
+    margin-bottom: 6px;
+}
+
+.status-tile strong {
+    display: block;
+    font-size: 26px;
+    font-weight: 950;
+    line-height: 1;
+    color: #063985;
+}
+
+.settings-tabs {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 0 0 24px;
+    padding: 10px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+}
+
+.stab {
+    height: 44px;
+    padding: 0 16px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    background: transparent;
+    color: #334155;
+    font-weight: 850;
+    font-size: 14px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all .2s ease;
+}
+
+.stab:hover {
+    background: #fff;
+    border-color: #cbd5e1;
+}
+
+.stab.active {
+    background: #0b55c7;
+    border-color: #0b55c7;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(11, 85, 199, 0.25);
+}
+
+.stab i {
+    font-size: 15px;
+    width: 18px;
+    text-align: center;
+}
+
+.stab-panel {
+    display: none;
+}
+
+.stab-panel.active {
+    display: block;
+}
+
+.settings-card {
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+}
+
+.settings-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 22px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.settings-card h2, .settings-card h3 {
+    margin: 0;
+    color: #063985;
+    font-size: 20px;
+    font-weight: 950;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.settings-card h2 i, .settings-card h3 i {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: #eef2ff;
+    color: #0b55c7;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.settings-card .subtext {
+    margin: 8px 0 0;
+    color: #475569;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-row.single {
+    grid-template-columns: 1fr;
+}
+
+.form-row.triple {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+.form-group label, .field-label {
+    font-size: 13px;
+    font-weight: 850;
+    color: #475569;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 15px;
+    color: #0f172a;
+    background: #f8fafc;
+    font-family: inherit;
+    transition: all .2s ease;
+}
+
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    outline: none;
+    background: #fff;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+}
+
+.form-group textarea {
+    min-height: 86px;
+    resize: vertical;
+}
+
+.hint {
+    font-size: 13px;
+    color: #64748b;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.section-divider {
+    font-size: 12px;
+    font-weight: 950;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: #0b55c7;
+    padding: 0 0 12px;
+    border-bottom: 1px solid #e2e8f0;
+    margin: 24px 0 20px;
+}
+
+.toggle-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.toggle-row:last-child {
+    border-bottom: none;
+}
+
+.toggle-row label {
+    font-weight: 850;
+    color: #1e293b;
+    font-size: 15px;
+}
+
+.toggle-desc {
+    font-size: 13px;
+    color: #64748b;
+    margin-top: 4px;
+    line-height: 1.5;
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 28px;
+    flex: 0 0 auto;
+}
+
+.toggle-switch input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    margin: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    inset: 0;
+    background: #cbd5e1;
+    border-radius: 28px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.toggle-slider:before {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    left: 3px;
+    bottom: 3px;
+    background: #fff;
+    border-radius: 50%;
+    transition: .2s;
+    box-shadow: 0 2px 4px rgba(15, 23, 42, 0.2);
+}
+
+.toggle-switch input:checked + .toggle-slider {
+    background: #16a34a;
+}
+
+.toggle-switch input:checked + .toggle-slider:before {
+    transform: translateX(22px);
+}
+
+.form-actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.btn-save, .btn-secondary, .btn-danger, .btn-green {
+    min-height: 44px;
+    border-radius: 8px;
+    padding: 0 20px;
+    font-size: 14px;
+    font-weight: 900;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+    transition: all .2s ease;
+}
+
+.btn-save {
+    background: #0b55c7;
+    border: 1px solid #0b55c7;
+    color: #fff;
+}
+
+.btn-save:hover {
+    background: #063985;
+    box-shadow: 0 4px 12px rgba(6, 57, 133, 0.25);
+}
+
+.btn-secondary {
+    background: #fff;
+    border: 1px solid #cbd5e1;
+    color: #0b55c7;
+}
+
+.btn-secondary:hover {
+    background: #f8fafc;
+}
+
+.btn-danger {
+    background: #fff;
+    border: 1px solid #fecaca;
+    color: #dc2626;
+}
+
+.btn-danger:hover {
+    background: #fef2f2;
+}
+
+.btn-green {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    color: #16a34a;
+}
+
+.btn-green:hover {
+    background: #dcfce7;
+}
+
+.alert-msg {
+    border-radius: 8px;
+    padding: 16px 20px;
+    font-weight: 850;
+    font-size: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.alert-msg.success {
+    background: #f0fdf4;
+    color: #166534;
+    border-color: #86efac;
+}
+
+.alert-msg.error {
+    background: #fff1f2;
+    color: #991b1b;
+    border-color: #fca5a5;
+}
+
+.close-alert {
+    margin-left: auto;
+    background: transparent;
+    border: 0;
+    color: inherit;
+    cursor: pointer;
+    font-size: 18px;
+    opacity: 0.7;
+}
+
+.notice {
+    border: 1px solid #bfdbfe;
+    background: #eff6ff;
+    color: #1e3a8a;
+    border-radius: 8px;
+    padding: 16px 20px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.notice.warning {
+    border-color: #fde68a;
+    background: #fffbeb;
+    color: #92400e;
+}
+
+.notice.success {
+    border-color: #bbf7d0;
+    background: #f0fdf4;
+    color: #166534;
+}
+
+.pw-field {
+    position: relative;
+}
+
+.pw-field input {
+    padding-right: 46px;
+}
+
+.pw-toggle {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 0;
+    background: transparent;
+    color: #64748b;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.inline-test {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+.inline-test input {
+    max-width: 360px;
+}
+
+.tunnel-box {
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 24px;
+    color: #1e293b;
+    margin-bottom: 20px;
+    border: 1px solid #cbd5e1;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03);
+}
+
+.tunnel-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.tunnel-title {
+    font-size: 18px;
+    font-weight: 950;
+    margin-bottom: 8px;
+    color: #063985;
+}
+
+.tunnel-text {
+    font-size: 14px;
+    opacity: 0.9;
+    max-width: 650px;
+    line-height: 1.5;
+    color: #475569;
+}
+
+.tunnel-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 900;
+    border: 1px solid transparent;
+}
+
+.tunnel-status.running {
+    background: #dcfce7;
+    color: #166534;
+    border-color: #bbf7d0;
+}
+
+.tunnel-status.stopped {
+    background: #f1f5f9;
+    color: #475569;
+    border-color: #e2e8f0;
+}
+
+.tunnel-url-display {
+    font-family: 'Consolas', monospace;
+    font-size: 15px;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin: 18px 0;
+    word-break: break-all;
+    color: #0369a1;
+    font-weight: 700;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.readonly-field {
+    background: #f1f5f9 !important;
+    color: #475569 !important;
+    border-color: #e2e8f0 !important;
+}
+
+.system-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+}
+
+.system-table tr {
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.system-table td {
+    padding: 14px 0;
+}
+
+.system-table td:first-child {
+    font-weight: 900;
+    color: #475569;
+    width: 260px;
+}
+
+.system-table td:last-child {
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 999px;
+    padding: 8px 14px;
+    font-size: 13px;
+    font-weight: 900;
+    border: 1px solid #e2e8f0;
+    background: #fff;
+    color: #1e293b;
+}
+
+.pill.ok {
+    border-color: #bbf7d0;
+    background: #f0fdf4;
+    color: #166534;
+}
+
+.pill.muted {
+    background: #f8fafc;
+    color: #475569;
+}
+
+/* =========================================================
+   AI COPILOT SETTINGS PANEL
+   Scoped to #panel-copilot so it can't leak into any other
+   settings tab, and specific enough (1 id + class) to win over
+   the generic ".form-row" rules used elsewhere without needing
+   to touch those shared, page-wide rules.
+   ========================================================= */
+
+.notice.error {
+    border-color: #fecaca;
+    background: #fef2f2;
+    color: #991b1b;
+}
+
+.notice i:first-child {
+    margin-right: 8px;
+    opacity: .85;
+}
+
+/* Fault: two OTHER stylesheets both already fight over ".form-row" with
+   !important - ir-ams-railway-ui.css forces "display:flex" (built for
+   filter bars elsewhere), settings.css's own body.railway-ui override
+   forces "display:grid" back. Both use !important, so a plain declaration
+   here - even with a more specific #id selector - would still lose to
+   whichever of THOSE wins the tie between themselves; this needs its own
+   !important to even enter that fight, at which point the extra #id
+   specificity is what lets it actually win. Confirmed live: without this,
+   AI Model Name / Custom API Endpoint (and everything else in two-column
+   form rows) silently stacked into one column at desktop width. */
+#panel-copilot .form-row {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+}
+
+#panel-copilot .form-row.triple {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+}
+
+#panel-copilot .form-row.single {
+    grid-template-columns: 1fr !important;
+}
+
+.copilot-section-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 28px 0 16px;
+}
+
+.copilot-section-head:first-of-type {
+    margin-top: 8px;
+}
+
+.copilot-section-head i {
+    width: 28px;
+    height: 28px;
+    flex: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    background: #eff6ff;
+    color: #0b55c7;
+    font-size: 12px;
+}
+
+.copilot-section-head h3 {
+    margin: 0;
+    font-size: 12.5px;
+    font-weight: 950;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    color: #0b55c7;
+}
+
+.copilot-section-sub {
+    margin-left: auto;
+    font-size: 12px;
+    font-weight: 700;
+    color: #94a3b8;
+}
+
+.copilot-provider-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.copilot-provider-grid.single {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 620px;
+}
+
+.copilot-provider-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 16px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 0;
+    transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+.copilot-provider-card:focus-within,
+.copilot-provider-card:hover {
+    border-color: #bfdbfe;
+    box-shadow: 0 6px 16px rgba(15, 23, 42, .05);
+}
+
+.copilot-provider-card-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.copilot-provider-icon {
+    width: 32px;
+    height: 32px;
+    flex: none;
+    border-radius: 9px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #fff;
+}
+
+.copilot-provider-icon.gemini { background: linear-gradient(135deg, #4f8cff, #8a5cff); }
+.copilot-provider-icon.groq { background: linear-gradient(135deg, #f97316, #ea580c); }
+.copilot-provider-icon.custom { background: linear-gradient(135deg, #475569, #1e293b); }
+
+.copilot-provider-name {
+    font-size: 13.5px;
+    font-weight: 900;
+    color: #0f172a;
+    line-height: 1.3;
+}
+
+.copilot-provider-sub {
+    font-size: 11px;
+    color: #94a3b8;
+    font-weight: 700;
+    line-height: 1.3;
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.copilot-status-pill {
+    margin-left: auto;
+    flex: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 10px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    border: 1px solid transparent;
+    white-space: nowrap;
+}
+
+.copilot-status-pill::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+
+.copilot-status-pill.set {
+    background: #f0fdf4;
+    color: #166534;
+    border-color: #bbf7d0;
+}
+
+.copilot-status-pill.set::before { background: #22c55e; }
+
+.copilot-status-pill.unset {
+    background: #f8fafc;
+    color: #94a3b8;
+    border-color: #e2e8f0;
+}
+
+.copilot-status-pill.unset::before { background: #cbd5e1; }
+
+.copilot-provider-actions {
+    display: flex;
+    gap: 8px;
+    align-items: stretch;
+}
+
+.copilot-provider-actions .pw-field {
+    flex: 1;
+    min-width: 0;
+}
+
+.copilot-provider-actions .btn-secondary {
+    flex: none;
+    padding: 0 14px;
+}
+
+.test-result-inline {
+    margin-top: 4px;
+    padding: 8px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.5;
+    word-break: break-word;
+    border: 1px solid transparent;
+    animation: test-result-in .15s ease;
+}
+
+.test-result-inline i {
+    margin-right: 5px;
+}
+
+.test-result-inline.ok {
+    background: #f0fdf4;
+    border-color: #bbf7d0;
+    color: #166534;
+}
+
+.test-result-inline.fail {
+    background: #fef2f2;
+    border-color: #fecaca;
+    color: #991b1b;
+}
+
+@keyframes test-result-in {
+    from { opacity: 0; transform: translateY(-3px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.copilot-chain-flow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.copilot-chain-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: #fff;
+    border: 1px solid #bfdbfe;
+    color: #0b55c7;
+    font-size: 12px;
+    font-weight: 900;
+    white-space: nowrap;
+}
+
+.copilot-chain-chip i {
+    font-size: 10px;
+    color: #22c55e;
+}
+
+.copilot-chain-chip.fallback-node {
+    background: #f8fafc;
+    border-color: #e2e8f0;
+    color: #64748b;
+}
+
+.copilot-chain-chip.fallback-node i {
+    color: #94a3b8;
+}
+
+.copilot-chain-arrow {
+    color: #cbd5e1;
+    font-size: 12px;
+}
+
+/* Draggable answer-chain chips (Settings → AI Copilot). An arrow is drawn
+   with ::after instead of a separate DOM element between chips, so reorder
+   logic only ever has to move one chip node per drag, not a chip+arrow pair. */
+.copilot-chain-chip[draggable="true"] {
+    cursor: grab;
+    transition: opacity .15s ease, transform .15s ease, border-color .15s ease;
+}
+
+.copilot-chain-chip[draggable="true"]:active {
+    cursor: grabbing;
+}
+
+.copilot-chain-chip:not(:last-child)::after {
+    content: "\2192";
+    margin-left: 8px;
+    color: #cbd5e1;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.chain-drag-handle {
+    color: #94a3b8 !important;
+    font-size: 11px !important;
+}
+
+.copilot-chain-chip.dragging {
+    opacity: 0.4;
+}
+
+.copilot-chain-chip.drag-over {
+    border-color: #0b55c7;
+    box-shadow: 0 0 0 2px rgba(11, 85, 199, 0.25);
+    transform: scale(1.03);
+}
+
+@media (max-width: 1100px) {
+    .copilot-provider-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 900px) {
+    .settings-hero { padding: 24px; }
+    .settings-status, .form-row, .form-row.triple { grid-template-columns: 1fr; }
+    .settings-card { padding: 20px; }
+    .settings-tabs { position: static; }
+    .stab { flex: 1 1 160px; }
+    #panel-copilot .form-row,
+    #panel-copilot .form-row.triple {
+        grid-template-columns: 1fr !important;
+    }
+    .copilot-provider-grid,
+    .copilot-provider-grid.single {
+        grid-template-columns: 1fr;
+    }
+    .system-table td { display: block; width: auto !important; }
+    .system-table td:first-child { padding-bottom: 4px; border: none; }
+    .system-table td:last-child { padding-top: 0; }
+}
+
+/* =========================================================
+   SETTINGS MODULE - EMPLOYEE REFERENCE UI ONLY
+   Scope: settings.jsp visual styling only
+   Do not use this CSS on any other module.
+========================================================= */
+body.railway-ui .settings-wrap {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 0 24px 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 16px !important;
+}
+
+body.railway-ui .settings-wrap .ir-breadcrumb {
+    display: none !important;
+}
+
+/* ===== Hero: same layout, scale and text placement as Employee module ===== */
+body.railway-ui .settings-hero {
+    width: 100% !important;
+    min-height: 318px !important;
+    height: 318px !important;
+    border-radius: 30px !important;
+    border: 1px solid rgba(255,255,255,0.86) !important;
+    box-shadow: var(--ir-shadow-soft) !important;
+    padding: 30px 40px 28px 40px !important;
+    overflow: hidden !important;
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    margin: 0 !important;
+    z-index: 5 !important;
+    text-align: left !important;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,1) 0%,
+            rgba(255,255,255,1) 23%,
+            rgba(247,252,255,0.98) 37%,
+            rgba(232,247,255,0.88) 52%,
+            rgba(232,247,255,0.52) 66%,
+            rgba(255,255,255,0.08) 82%,
+            rgba(255,255,255,0.00) 100%
+        ),
+        radial-gradient(
+            ellipse at 25% 50%,
+            rgba(255,255,255,0.98) 0%,
+            rgba(255,255,255,0.82) 48%,
+            rgba(255,255,255,0.00) 78%
+        ),
+        url("../images/employees-hero-bg.png") right bottom / auto 100% no-repeat !important;
+}
+
+body.railway-ui .settings-hero::before,
+body.railway-ui .settings-hero::after {
+    content: none !important;
+    display: none !important;
+    background: none !important;
+}
+
+body.railway-ui .settings-hero > * {
+    position: relative !important;
+    z-index: 6 !important;
+}
+
+body.railway-ui .settings-hero-copy {
+    width: 63% !important;
+    max-width: 845px !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    position: relative !important;
+    z-index: 6 !important;
+    display: block !important;
+    text-align: left !important;
+    transform: none !important;
+    left: auto !important;
+    right: auto !important;
+}
+
+body.railway-ui .settings-eyebrow,
+body.railway-ui .settings-kicker {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    min-height: 30px !important;
+    padding: 0 14px !important;
+    border-radius: 999px !important;
+    background: rgba(8,52,143,0.10) !important;
+    border: 1px solid rgba(8,52,143,0.16) !important;
+    color: var(--ir-blue) !important;
+    font-size: 10.5px !important;
+    line-height: 1 !important;
+    font-weight: 950 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.15px !important;
+    margin: 0 0 11px 0 !important;
+    box-shadow: 0 8px 18px rgba(8,52,143,0.06) !important;
+    white-space: nowrap !important;
+}
+
+body.railway-ui .settings-hero h1 {
+    margin: 0 !important;
+    color: var(--ir-blue) !important;
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-size: clamp(36px, 3.05vw, 49px) !important;
+    line-height: 1.03 !important;
+    font-weight: 950 !important;
+    letter-spacing: -0.7px !important;
+    text-transform: uppercase !important;
+    max-width: 760px !important;
+    text-align: left !important;
+}
+
+body.railway-ui .settings-hero p {
+    margin: 13px 0 0 0 !important;
+    color: #18366f !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    font-weight: 850 !important;
+    max-width: 795px !important;
+    text-align: left !important;
+}
+
+body.railway-ui .settings-hero-pills {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 10px !important;
+    flex-wrap: wrap !important;
+    margin-top: 17px !important;
+    max-width: 810px !important;
+}
+
+body.railway-ui .settings-hero-pill {
+    min-height: 35px !important;
+    height: 35px !important;
+    padding: 0 13px !important;
+    border-radius: 999px !important;
+    background: rgba(255,255,255,0.94) !important;
+    border: 1px solid #dbe8f7 !important;
+    color: #163b78 !important;
+    font-size: 11.2px !important;
+    font-weight: 900 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 7px !important;
+    box-shadow: 0 10px 22px rgba(8,52,143,0.08) !important;
+    white-space: nowrap !important;
+}
+
+/* ===== Settings KPI cards: same card language as Employee module ===== */
+body.railway-ui .settings-status {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 14px !important;
+    margin: 0 !important;
+    position: relative !important;
+    z-index: 6 !important;
+}
+
+body.railway-ui .status-tile {
+    border-radius: 20px !important;
+    border: 1px solid var(--ir-line) !important;
+    background: rgba(255,255,255,0.98) !important;
+    box-shadow: var(--ir-shadow-soft) !important;
+    padding: 16px 17px !important;
+    min-height: 116px !important;
+    overflow: hidden !important;
+    display: grid !important;
+    grid-template-columns: 58px minmax(0, 1fr) !important;
+    grid-template-rows: auto auto auto !important;
+    align-items: center !important;
+    column-gap: 14px !important;
+    row-gap: 4px !important;
+    position: relative !important;
+}
+
+body.railway-ui .status-tile::before {
+    content: "" !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 4px !important;
+    background: linear-gradient(90deg, #ff7a00, #ffffff, #078b3e) !important;
+}
+
+body.railway-ui .status-icon {
+    grid-column: 1 !important;
+    grid-row: 1 / span 3 !important;
+    width: 54px !important;
+    height: 54px !important;
+    border-radius: 17px !important;
+    background: #eef5ff !important;
+    color: var(--ir-blue) !important;
+    border: 1px solid #d7e5f7 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 20px !important;
+}
+
+body.railway-ui .status-icon.green {
+    background: #eaf7ef !important;
+    color: #04733b !important;
+    border-color: #bde8cf !important;
+}
+
+body.railway-ui .status-icon.orange {
+    background: #fff8ea !important;
+    color: #9a5a00 !important;
+    border-color: #ffe0a8 !important;
+}
+
+body.railway-ui .status-icon.purple {
+    background: #f2eaff !important;
+    color: #7445e8 !important;
+    border-color: #dccbff !important;
+}
+
+body.railway-ui .status-tile span {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    display: block !important;
+    margin: 0 !important;
+    color: #5f6f8a !important;
+    font-size: 11.5px !important;
+    line-height: 1.05 !important;
+    font-weight: 950 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.15px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+body.railway-ui .status-tile strong {
+    grid-column: 2 !important;
+    grid-row: 2 !important;
+    display: block !important;
+    margin: 0 !important;
+    color: var(--ir-blue) !important;
+    font-size: clamp(25px, 2vw, 33px) !important;
+    line-height: 1 !important;
+    font-weight: 950 !important;
+    text-align: left !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    font-variant-numeric: tabular-nums !important;
+    letter-spacing: -0.7px !important;
+}
+
+body.railway-ui .status-tile em {
+    grid-column: 2 !important;
+    grid-row: 3 !important;
+    display: block !important;
+    margin: 0 !important;
+    color: #078b3e !important;
+    font-style: normal !important;
+    font-size: 10.5px !important;
+    line-height: 1.2 !important;
+    font-weight: 900 !important;
+}
+
+/* ===== Tabs and content cards: Employee-like spacing and polish ===== */
+body.railway-ui .settings-tabs {
+    display: grid !important;
+    grid-template-columns: repeat(8, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 10px !important;
+    background: rgba(255,255,255,0.98) !important;
+    border: 1px solid var(--ir-line) !important;
+    border-radius: 22px !important;
+    box-shadow: var(--ir-shadow-soft) !important;
+    position: relative !important;
+    z-index: 6 !important;
+}
+
+body.railway-ui .stab {
+    min-height: 38px !important;
+    height: 38px !important;
+    padding: 0 12px !important;
+    border-radius: 13px !important;
+    border: 1px solid transparent !important;
+    background: transparent !important;
+    color: #2d3b52 !important;
+    font-size: 12px !important;
+    font-weight: 950 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    cursor: pointer !important;
+    white-space: nowrap !important;
+    transition: 0.18s ease !important;
+}
+
+body.railway-ui .stab:hover {
+    background: #ffffff !important;
+    border-color: #d7e5f7 !important;
+    color: var(--ir-blue) !important;
+}
+
+body.railway-ui .stab.active {
+    background: var(--ir-blue) !important;
+    border-color: var(--ir-blue) !important;
+    color: #ffffff !important;
+    box-shadow: 0 12px 22px rgba(8,52,143,0.20) !important;
+}
+
+body.railway-ui .stab i {
+    font-size: 14px !important;
+    width: 16px !important;
+    text-align: center !important;
+}
+
+body.railway-ui .settings-card {
+    border-radius: 22px !important;
+    border: 1px solid var(--ir-line) !important;
+    background: rgba(255,255,255,0.98) !important;
+    box-shadow: var(--ir-shadow-soft) !important;
+    padding: 20px !important;
+    overflow: hidden !important;
+    margin: 0 0 16px 0 !important;
+    position: relative !important;
+    z-index: 6 !important;
+}
+
+body.railway-ui .settings-card-header {
+    display: flex !important;
+    align-items: flex-start !important;
+    justify-content: space-between !important;
+    gap: 16px !important;
+    flex-wrap: wrap !important;
+    margin: 0 0 18px 0 !important;
+    padding: 0 0 14px 0 !important;
+    border-bottom: 1px solid #e6eef9 !important;
+}
+
+body.railway-ui .settings-card h2,
+body.railway-ui .settings-card h3 {
+    margin: 0 !important;
+    color: var(--ir-blue) !important;
+    font-size: 22px !important;
+    line-height: 1.12 !important;
+    font-weight: 950 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+}
+
+body.railway-ui .settings-card h2 i,
+body.railway-ui .settings-card h3 i {
+    width: 38px !important;
+    height: 38px !important;
+    border-radius: 14px !important;
+    background: #eef5ff !important;
+    color: var(--ir-blue) !important;
+    border: 1px solid #d7e5f7 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 16px !important;
+    flex: 0 0 auto !important;
+}
+
+body.railway-ui .settings-card .subtext {
+    margin: 7px 0 0 50px !important;
+    color: #64748b !important;
+    font-size: 12.5px !important;
+    line-height: 1.45 !important;
+    font-weight: 760 !important;
+}
+
+/* ===== Form controls: same rounded railway control language ===== */
+body.railway-ui .form-row {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+    margin-bottom: 18px !important;
+}
+
+body.railway-ui .form-row.single {
+    grid-template-columns: 1fr !important;
+}
+
+body.railway-ui .form-row.triple {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+}
+
+body.railway-ui .form-group {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+    min-width: 0 !important;
+}
+
+body.railway-ui .form-group label,
+body.railway-ui .field-label {
+    font-size: 11px !important;
+    line-height: 1.1 !important;
+    font-weight: 950 !important;
+    color: var(--ir-blue) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.2px !important;
+}
+
+body.railway-ui .form-group input,
+body.railway-ui .form-group select,
+body.railway-ui .form-group textarea {
+    width: 100% !important;
+    min-height: 44px !important;
+    border-radius: 16px !important;
+    border: 1px solid #dbe8f7 !important;
+    background: #ffffff !important;
+    color: var(--ir-blue) !important;
+    font-size: 13px !important;
+    font-weight: 850 !important;
+    outline: none !important;
+    padding: 0 14px !important;
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.65) !important;
+}
+
+body.railway-ui .form-group textarea {
+    min-height: 90px !important;
+    padding-top: 12px !important;
+    resize: vertical !important;
+}
+
+body.railway-ui .form-group input:focus,
+body.railway-ui .form-group select:focus,
+body.railway-ui .form-group textarea:focus {
+    background: #ffffff !important;
+    border-color: rgba(8,52,143,0.42) !important;
+    box-shadow: 0 0 0 4px rgba(8,52,143,0.08) !important;
+}
+
+body.railway-ui .hint,
+body.railway-ui .toggle-desc {
+    color: #64748b !important;
+    font-size: 12px !important;
+    line-height: 1.45 !important;
+    font-weight: 700 !important;
+}
+
+body.railway-ui .section-divider {
+    font-size: 11px !important;
+    font-weight: 950 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.22px !important;
+    color: var(--ir-blue) !important;
+    padding: 0 0 12px !important;
+    border-bottom: 1px solid #e6eef9 !important;
+    margin: 22px 0 18px !important;
+}
+
+body.railway-ui .toggle-row {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 16px !important;
+    padding: 14px 0 !important;
+    border-bottom: 1px solid #e6eef9 !important;
+}
+
+body.railway-ui .toggle-row label {
+    font-weight: 950 !important;
+    color: var(--ir-blue) !important;
+    font-size: 13px !important;
+}
+
+body.railway-ui .form-actions {
+    display: flex !important;
+    gap: 10px !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+    margin-top: 22px !important;
+    padding-top: 18px !important;
+    border-top: 1px solid #e6eef9 !important;
+}
+
+body.railway-ui .btn-save,
+body.railway-ui .btn-secondary,
+body.railway-ui .btn-danger,
+body.railway-ui .btn-green {
+    min-height: 38px !important;
+    padding: 0 14px !important;
+    border-radius: 999px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    text-decoration: none !important;
+    font-size: 12px !important;
+    font-weight: 950 !important;
+    cursor: pointer !important;
+    white-space: nowrap !important;
+    box-shadow: 0 8px 18px rgba(8,52,143,0.05) !important;
+}
+
+body.railway-ui .btn-save {
+    background: var(--ir-blue) !important;
+    border: 1px solid var(--ir-blue) !important;
+    color: #ffffff !important;
+}
+
+body.railway-ui .btn-secondary {
+    background: #ffffff !important;
+    border: 1px solid #d7e5f7 !important;
+    color: var(--ir-blue) !important;
+}
+
+body.railway-ui .btn-green {
+    background: #eaf7ef !important;
+    border: 1px solid #bde8cf !important;
+    color: #04733b !important;
+}
+
+body.railway-ui .btn-danger {
+    background: #fff0f0 !important;
+    border: 1px solid #ffc7c7 !important;
+    color: #d02d2d !important;
+}
+
+body.railway-ui .notice,
+body.railway-ui .alert-msg,
+body.railway-ui .tunnel-box {
+    border-radius: 16px !important;
+    border: 1px solid #d7e5f7 !important;
+    box-shadow: 0 8px 18px rgba(8,52,143,0.05) !important;
+}
+
+body.railway-ui .system-table {
+    width: 100% !important;
+    border-collapse: separate !important;
+    border-spacing: 0 9px !important;
+    font-size: 13px !important;
+}
+
+body.railway-ui .system-table tr {
+    border-bottom: 0 !important;
+}
+
+body.railway-ui .system-table td {
+    padding: 13px 14px !important;
+    background: #ffffff !important;
+    border-top: 1px solid #e6eef9 !important;
+    border-bottom: 1px solid #e6eef9 !important;
+    color: var(--ir-blue) !important;
+    font-weight: 850 !important;
+    vertical-align: middle !important;
+}
+
+body.railway-ui .system-table td:first-child {
+    width: 260px !important;
+    border-left: 1px solid #e6eef9 !important;
+    border-top-left-radius: 16px !important;
+    border-bottom-left-radius: 16px !important;
+    color: #5f6f8a !important;
+    font-size: 11px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.2px !important;
+    font-weight: 950 !important;
+}
+
+body.railway-ui .system-table td:last-child {
+    border-right: 1px solid #e6eef9 !important;
+    border-top-right-radius: 16px !important;
+    border-bottom-right-radius: 16px !important;
+    color: var(--ir-blue) !important;
+    font-weight: 900 !important;
+}
+
+@media (max-width: 1500px) {
+    body.railway-ui .settings-status {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+
+    body.railway-ui .settings-tabs {
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    }
+
+    body.railway-ui .settings-hero h1 {
+        font-size: clamp(34px, 2.85vw, 46px) !important;
+    }
+
+    body.railway-ui .settings-hero-copy {
+        width: 64% !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    body.railway-ui .settings-hero {
+        min-height: 318px !important;
+        height: auto !important;
+        padding: 28px !important;
+        background-size: auto 100% !important;
+    }
+
+    body.railway-ui .settings-hero-copy {
+        width: 100% !important;
+    }
+
+    body.railway-ui .settings-status,
+    body.railway-ui .settings-tabs,
+    body.railway-ui .form-row,
+    body.railway-ui .form-row.triple {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (max-width: 760px) {
+    body.railway-ui .settings-hero {
+        padding: 24px !important;
+        border-radius: 22px !important;
+    }
+
+    body.railway-ui .settings-hero h1 {
+        font-size: 30px !important;
+    }
+
+    body.railway-ui .settings-card {
+        padding: 18px !important;
+    }
+
+    body.railway-ui .settings-card .subtext {
+        margin-left: 0 !important;
+    }
+
+    body.railway-ui .system-table td {
+        display: block !important;
+        width: auto !important;
+    }
+
+    body.railway-ui .system-table td:first-child,
+    body.railway-ui .system-table td:last-child {
+        border-left: 1px solid #e6eef9 !important;
+        border-right: 1px solid #e6eef9 !important;
+        border-radius: 0 !important;
+    }
+
+    body.railway-ui .system-table td:first-child {
+        border-top-left-radius: 16px !important;
+        border-top-right-radius: 16px !important;
+        border-bottom: 0 !important;
+        padding-bottom: 6px !important;
+    }
+
+    body.railway-ui .system-table td:last-child {
+        border-bottom-left-radius: 16px !important;
+        border-bottom-right-radius: 16px !important;
+        border-top: 0 !important;
+        padding-top: 6px !important;
+    }
+}
+
+/* =========================================================
+   SETTINGS HERO LEFT ALIGN + BRIGHT EMPLOYEE STYLE FINAL FIX
+   Scope: Settings hero section only
+   Reason: old settings.css had flex-direction: column, which centered
+   the hero-copy and created blank left space. This forces the same
+   row-based left placement used by the Employee hero.
+========================================================= */
+
+body.railway-ui .settings-hero {
+    width: 100% !important;
+    min-height: 318px !important;
+    height: 318px !important;
+    border-radius: 30px !important;
+    border: 1px solid rgba(255,255,255,0.86) !important;
+    box-shadow: var(--ir-shadow-soft) !important;
+    padding: 30px 40px 28px 40px !important;
+    overflow: hidden !important;
+    position: relative !important;
+
+    /* Important: Settings old CSS was column; Employee hero is row-like left text + right image */
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+
+    margin: 0 !important;
+    z-index: 5 !important;
+    text-align: left !important;
+
+    /* Bright, colourful, Employee-style hero treatment */
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,1) 0%,
+            rgba(255,255,255,0.98) 18%,
+            rgba(247,252,255,0.92) 34%,
+            rgba(232,247,255,0.62) 49%,
+            rgba(232,247,255,0.22) 62%,
+            rgba(255,255,255,0.00) 78%,
+            rgba(255,255,255,0.00) 100%
+        ),
+        radial-gradient(
+            ellipse at 23% 50%,
+            rgba(255,255,255,0.96) 0%,
+            rgba(255,255,255,0.68) 44%,
+            rgba(255,255,255,0.00) 72%
+        ),
+        url("../images/employees-hero-bg.png") right bottom / auto 100% no-repeat !important;
+}
+
+body.railway-ui .settings-hero::before,
+body.railway-ui .settings-hero::after {
+    content: none !important;
+    display: none !important;
+    background: none !important;
+}
+
+body.railway-ui .settings-hero > * {
+    position: relative !important;
+    z-index: 6 !important;
+}
+
+body.railway-ui .settings-hero-copy {
+    width: 63% !important;
+    max-width: 845px !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    position: relative !important;
+    z-index: 6 !important;
+    display: block !important;
+    text-align: left !important;
+    align-self: center !important;
+    transform: none !important;
+    left: auto !important;
+    right: auto !important;
+}
+
+body.railway-ui .settings-eyebrow,
+body.railway-ui .settings-kicker {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    min-height: 30px !important;
+    padding: 0 14px !important;
+    border-radius: 999px !important;
+    background: rgba(8,52,143,0.10) !important;
+    border: 1px solid rgba(8,52,143,0.16) !important;
+    color: var(--ir-blue) !important;
+    font-size: 10.5px !important;
+    line-height: 1 !important;
+    font-weight: 950 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.15px !important;
+    margin: 0 0 11px 0 !important;
+    box-shadow: 0 8px 18px rgba(8,52,143,0.06) !important;
+    white-space: nowrap !important;
+}
+
+body.railway-ui .settings-hero h1 {
+    margin: 0 !important;
+    color: var(--ir-blue) !important;
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-size: clamp(36px, 3.05vw, 49px) !important;
+    line-height: 1.03 !important;
+    font-weight: 950 !important;
+    letter-spacing: -0.7px !important;
+    text-transform: uppercase !important;
+    max-width: 760px !important;
+    text-align: left !important;
+}
+
+body.railway-ui .settings-hero p {
+    margin: 13px 0 0 0 !important;
+    color: #18366f !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    font-weight: 850 !important;
+    max-width: 795px !important;
+    text-align: left !important;
+}
+
+body.railway-ui .settings-hero-pills {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 10px !important;
+    flex-wrap: wrap !important;
+    margin-top: 17px !important;
+    max-width: 810px !important;
+}
+
+body.railway-ui .settings-hero-pill {
+    min-height: 35px !important;
+    height: 35px !important;
+    padding: 0 13px !important;
+    border-radius: 999px !important;
+    background: rgba(255,255,255,0.94) !important;
+    border: 1px solid #dbe8f7 !important;
+    color: #163b78 !important;
+    font-size: 11.2px !important;
+    font-weight: 900 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 7px !important;
+    box-shadow: 0 10px 22px rgba(8,52,143,0.08) !important;
+    white-space: nowrap !important;
+}
+
+@media (max-width: 1500px) {
+    body.railway-ui .settings-hero h1 {
+        font-size: clamp(34px, 2.85vw, 46px) !important;
+    }
+
+    body.railway-ui .settings-hero-copy {
+        width: 64% !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    body.railway-ui .settings-hero {
+        min-height: 318px !important;
+        height: auto !important;
+        padding: 28px !important;
+        background-size: auto 100% !important;
+    }
+
+    body.railway-ui .settings-hero-copy {
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 760px) {
+    body.railway-ui .settings-hero {
+        padding: 24px !important;
+        border-radius: 22px !important;
+    }
+
+    body.railway-ui .settings-hero h1 {
+        font-size: 30px !important;
+    }
+}
+
+/* =========================================================
+   SETTINGS HERO BRIGHT IMAGE FINAL FIX
+   Scope: Settings hero section only
+========================================================= */
+
+body.railway-ui .settings-hero {
+    width: 100% !important;
+    min-height: 318px !important;
+    height: 318px !important;
+    border-radius: 30px !important;
+    border: 1px solid rgba(255,255,255,0.86) !important;
+    box-shadow: var(--ir-shadow-soft) !important;
+    padding: 30px 40px 28px 40px !important;
+    overflow: hidden !important;
+    position: relative !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    margin: 0 !important;
+    z-index: 5 !important;
+    text-align: left !important;
+    background: #ffffff !important;
+}
+
+body.railway-ui .settings-hero::after {
+    content: "" !important;
+    display: block !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 0 !important;
+    pointer-events: none !important;
+    background: url("../images/employees-hero-bg.png") right bottom / auto 100% no-repeat !important;
+    opacity: 1 !important;
+    filter: brightness(1.18) saturate(1.24) contrast(1.08) !important;
+}
+
+body.railway-ui .settings-hero::before {
+    content: "" !important;
+    display: block !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.99) 0%,
+            rgba(255,255,255,0.95) 18%,
+            rgba(248,252,255,0.74) 34%,
+            rgba(235,247,255,0.44) 48%,
+            rgba(240,249,255,0.16) 60%,
+            rgba(255,255,255,0.00) 76%,
+            rgba(255,255,255,0.00) 100%
+        ),
+        radial-gradient(
+            ellipse at 21% 50%,
+            rgba(255,255,255,0.88) 0%,
+            rgba(255,255,255,0.54) 39%,
+            rgba(255,255,255,0.00) 67%
+        ) !important;
+}
+
+body.railway-ui .settings-hero > * {
+    position: relative !important;
+    z-index: 6 !important;
+}
+
+body.railway-ui .settings-hero-copy {
+    width: 63% !important;
+    max-width: 845px !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    position: relative !important;
+    z-index: 6 !important;
+    display: block !important;
+    text-align: left !important;
+    align-self: center !important;
+    transform: none !important;
+    left: auto !important;
+    right: auto !important;
+}
+
+body.railway-ui .settings-hero h1 {
+    margin: 0 !important;
+    color: var(--ir-blue) !important;
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-size: clamp(36px, 3.05vw, 49px) !important;
+    line-height: 1.03 !important;
+    font-weight: 950 !important;
+    letter-spacing: -0.7px !important;
+    text-transform: uppercase !important;
+    max-width: 760px !important;
+    text-align: left !important;
+}
+
+body.railway-ui .settings-hero p {
+    margin: 13px 0 0 0 !important;
+    color: #18366f !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    font-weight: 850 !important;
+    max-width: 795px !important;
+    text-align: left !important;
+}
+
+body.railway-ui .settings-hero-pills {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 10px !important;
+    flex-wrap: wrap !important;
+    margin-top: 17px !important;
+    max-width: 810px !important;
+}
+
+body.railway-ui .settings-hero-pill {
+    min-height: 35px !important;
+    height: 35px !important;
+    padding: 0 13px !important;
+    border-radius: 999px !important;
+    background: rgba(255,255,255,0.94) !important;
+    border: 1px solid #dbe8f7 !important;
+    color: #163b78 !important;
+    font-size: 11.2px !important;
+    font-weight: 900 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 7px !important;
+    box-shadow: 0 10px 22px rgba(8,52,143,0.08) !important;
+    white-space: nowrap !important;
+}
+
+/* Global Switch Checkbox Fix */
+.toggle-switch input[type="checkbox"],
+.switch input[type="checkbox"] {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    background: transparent !important;
+    border: none !important;
+    opacity: 0 !important;
+}
